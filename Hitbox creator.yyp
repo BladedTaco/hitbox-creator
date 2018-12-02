@@ -55,6 +55,22 @@
             }
         },
         {
+            "Key": "1ddde843-6d5b-4630-86f1-671447c204ff",
+            "Value": {
+                "id": "81426760-8471-4b2f-b238-f3c6149bb617",
+                "resourcePath": "scripts\\temp_directory_fmns\\temp_directory_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "42414976-220c-4fd5-a9ec-d5799bded34a",
+            "Value": {
+                "id": "22ad8341-de5d-4646-b1ea-49b4f3956b4a",
+                "resourcePath": "scripts\\set_working_directory_fmns\\set_working_directory_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "44066be5-7cee-4126-a92b-b9cf4a10caf3",
             "Value": {
                 "id": "1f33a677-caf7-4921-b779-9e9c08f84ffc",
@@ -87,6 +103,22 @@
             }
         },
         {
+            "Key": "5d90ce7e-cd2b-43c4-8295-9da7ceb9115c",
+            "Value": {
+                "id": "18b6999e-e8ee-4a34-b009-b4b1cc980f5b",
+                "resourcePath": "scripts\\program_directory_fmns\\program_directory_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6b91bd9e-96f0-4139-84c2-c6404554ffaf",
+            "Value": {
+                "id": "29d57901-80f5-4d8f-8f71-360dcf7a8021",
+                "resourcePath": "scripts\\directory_copy_fmns\\directory_copy_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "742e88aa-4659-4134-a5f7-3fd940dd1a18",
             "Value": {
                 "id": "33bc870f-66ad-4897-a5a5-8d14be2c5d77",
@@ -103,6 +135,22 @@
             }
         },
         {
+            "Key": "7c88065a-51cf-4ea0-935f-c2b624dd4781",
+            "Value": {
+                "id": "ec697d66-836c-4e2c-a3a8-bee9e0cd02d4",
+                "resourcePath": "datafiles_yy\\FileManager.dll.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "802e6592-a5b6-4cc4-83d0-a330e1ac9bf4",
+            "Value": {
+                "id": "a64be6ca-f998-4b84-8a91-934663b64b8e",
+                "resourcePath": "datafiles_yy\\FileManager.dylib.zip.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "80f2b7e1-1f8e-4ed4-9082-c82f7e3cb1a3",
             "Value": {
                 "id": "94e3a578-0a5d-40d1-806d-c92e075eb955",
@@ -111,11 +159,27 @@
             }
         },
         {
+            "Key": "869642b4-1676-4936-a27a-bc88ef0b9672",
+            "Value": {
+                "id": "34e9d142-af70-4ab8-a2d7-6d100ff9d0ac",
+                "resourcePath": "datafiles_yy\\FileManager.dylib.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "88d6620f-7ffa-4c14-a740-d2dca45679e6",
             "Value": {
                 "id": "b40a80f4-fba5-45c0-b62e-e49d0a7141af",
                 "resourcePath": "views\\88d6620f-7ffa-4c14-a740-d2dca45679e6.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8bd19ba0-2fc5-4052-819b-1bd4d5227d35",
+            "Value": {
+                "id": "69c3f4dd-5722-48ac-9b31-7ec284ba7a7f",
+                "resourcePath": "datafiles_yy\\FileManager.so.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -132,6 +196,30 @@
                 "id": "ee2202fa-6742-4d20-82dd-dadfca41d3ee",
                 "resourcePath": "views\\94460870-4176-4e05-81d4-f0ad7eadfe50.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9a7b3af7-72c0-40f2-9897-12a7f796746e",
+            "Value": {
+                "id": "3fd4948f-979c-44e0-b32f-d49197cddd05",
+                "resourcePath": "views\\9a7b3af7-72c0-40f2-9897-12a7f796746e.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "9dd2e1a3-7a0b-4292-b8ed-d10110334aec",
+            "Value": {
+                "id": "4bb41a27-8944-4179-81d9-4a3a63168112",
+                "resourcePath": "scripts\\working_directory_fmns\\working_directory_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "a20f6716-2e66-4782-9b62-8bcce124af93",
+            "Value": {
+                "id": "7aa592c4-b2ed-49d8-8238-43f38af21448",
+                "resourcePath": "datafiles_yy\\FileManager.dll.zip.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {
@@ -159,6 +247,38 @@
             }
         },
         {
+            "Key": "b0976ab1-686a-4bf9-aeb7-6f8b6f5e5f1c",
+            "Value": {
+                "id": "9a6a0578-3900-4fc5-8ef7-49ce8f4409fe",
+                "resourcePath": "scripts\\directory_rename_fmns\\directory_rename_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "bc4642c1-5548-4ad2-926a-e5db13dd7f4d",
+            "Value": {
+                "id": "2747df37-a06e-4d04-baff-f8f186900ecb",
+                "resourcePath": "scripts\\directory_destroy_fmns\\directory_destroy_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c3250b90-ee63-47e4-9788-11c47aad3a5c",
+            "Value": {
+                "id": "0e832cb6-b9a7-42cb-aec4-139df9d838b9",
+                "resourcePath": "scripts\\file_delete_fmns\\file_delete_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c7262f6b-c203-4a87-8dff-9250248a5230",
+            "Value": {
+                "id": "f4a644d6-0f06-4d64-b2cc-c6737804b95e",
+                "resourcePath": "scripts\\directory_create_fmns\\directory_create_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "cb2745f1-c583-4d92-ae76-683e926b163d",
@@ -175,6 +295,14 @@
             }
         },
         {
+            "Key": "d943663f-9f24-4c50-90b5-5740dfbf1274",
+            "Value": {
+                "id": "132d60ae-bf79-4f2c-a2f9-aa8edde2e5b3",
+                "resourcePath": "datafiles_yy\\FileManager.so.zip.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "db6067ac-a89b-47cb-b9b1-f02d8f3e0fb8",
             "Value": {
                 "id": "ea660e1f-0d30-4355-b61e-f6aefde324ec",
@@ -188,6 +316,22 @@
                 "id": "bf6e45fd-be9f-4434-b9dd-fcc36e44e1fa",
                 "resourcePath": "views\\de36cf62-0d2f-4597-90cb-7dc644f0554f.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e0cf815f-d445-4ac0-89b2-1c73fc1c2b53",
+            "Value": {
+                "id": "8cb58139-40e8-435c-8648-3cc3479ce245",
+                "resourcePath": "scripts\\file_rename_fmns\\file_rename_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e50d167c-56d9-4dbf-a472-c1edd82eae06",
+            "Value": {
+                "id": "d0b94840-91d6-47e7-8326-9582b2f4163e",
+                "resourcePath": "scripts\\file_exists_fmns\\file_exists_fmns.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -213,10 +357,39 @@
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
             }
+        },
+        {
+            "Key": "f6fec0ad-b77e-4d0e-8b26-3d9f3278e8f5",
+            "Value": {
+                "id": "f40c219f-29c5-40fb-9dce-a786b234baa8",
+                "resourcePath": "scripts\\directory_exists_fmns\\directory_exists_fmns.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "fce2bbd4-b642-44f8-8a21-cd16b77f4adf",
+            "Value": {
+                "id": "7aa61691-4e01-4a20-be89-d923de25b172",
+                "resourcePath": "scripts\\file_copy_fmns\\file_copy_fmns.yy",
+                "resourceType": "GMScript"
+            }
         }
     ],
     "script_order": [
-        "0159c1e0-43ce-4ba8-a5a3-9dd1be92b109"
+        "0159c1e0-43ce-4ba8-a5a3-9dd1be92b109",
+        "fce2bbd4-b642-44f8-8a21-cd16b77f4adf",
+        "e0cf815f-d445-4ac0-89b2-1c73fc1c2b53",
+        "e50d167c-56d9-4dbf-a472-c1edd82eae06",
+        "c3250b90-ee63-47e4-9788-11c47aad3a5c",
+        "c7262f6b-c203-4a87-8dff-9250248a5230",
+        "6b91bd9e-96f0-4139-84c2-c6404554ffaf",
+        "b0976ab1-686a-4bf9-aeb7-6f8b6f5e5f1c",
+        "f6fec0ad-b77e-4d0e-8b26-3d9f3278e8f5",
+        "bc4642c1-5548-4ad2-926a-e5db13dd7f4d",
+        "42414976-220c-4fd5-a9ec-d5799bded34a",
+        "9dd2e1a3-7a0b-4292-b8ed-d10110334aec",
+        "5d90ce7e-cd2b-43c4-8295-9da7ceb9115c",
+        "1ddde843-6d5b-4630-86f1-671447c204ff"
     ],
     "tutorial": ""
 }
