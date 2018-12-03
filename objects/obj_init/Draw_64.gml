@@ -1,2 +1,2 @@
 /// @description draw surface
-draw_surface(surface, 0, 0)
+draw_surface(surface, x, y)

@@ -4,10 +4,7 @@
 var _height, _width, _x, _y, _file, _str, _img
 _img = []
 //get the file
-_file = "C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\sprites\\"
-_file += argument[0] + "\\" + argument[0] + ".yy"
-_file = file_copy_fmns(_file, working_directory + "TEMP_FILE") //copy the file into the working directory
-_file = working_directory + "TEMP_FILE" 
+_file = working_directory + "SPRITES\\" + argument[0] + "\\" + argument[0] + ".yy"
 if (file_exists(_file)) { //check if the file exists
 	_file = file_text_open_read(_file) //open the file
 	
@@ -53,19 +50,15 @@ if (file_exists(_file)) { //check if the file exists
 	_y = real(string_digits(file_text_read_string(_file))) //read the height
 	
 	file_text_close(_file) //close the file
-	file_delete_fmns(working_directory + "TEMP_FILE") //delete the copied file
 	
 	//load the images
 	for (var i = 0; i < array_length_1d(_img); i++) {
-		_file = "C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\sprites\\" + argument[0] + "\\"
-		_file = file_copy_fmns(_file + _img[i] + ".png", working_directory + "TEMP_FILE") //copy the file into the working directory
-		_file = working_directory + "TEMP_FILE" 
+		_file = working_directory + "SPRITES\\" + argument[0] + "\\" + _img[i] + ".png" //get the file
 		if (file_exists(_file)) { //check if the file exists
 			sprite_replace(sprite, _file, 1, false, false, 0, 0)
 			surface_set_target(surface)
 			draw_sprite(sprite, 0, i*_width, sprite_y)
 			surface_reset_target()
-			file_delete_fmns(working_directory + "TEMP_FILE") //delete the copied file
 		}
 	}
 	sprite_array[sprite_num, 0] = argument[0] //name
@@ -76,8 +69,8 @@ if (file_exists(_file)) { //check if the file exists
 	sprite_array[sprite_num, 5] = _x //x offset
 	sprite_array[sprite_num, 6] = _y //y offset
 	
-	sprite_y += _height
-	sprite_num += 1
+	sprite_y += _height //add height on surface to prevent layering
+	sprite_num += 1 //add a sprite to the counter
 	return true //return a successful operation
 }
 return false //return a failure to load sprite data
