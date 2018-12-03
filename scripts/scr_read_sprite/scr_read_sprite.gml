@@ -6,8 +6,8 @@ _img = []
 //get the file
 _file = "C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\sprites\\"
 _file += argument[0] + "\\" + argument[0] + ".yy"
-_file = file_copy_fmns(_file, working_directory + "TEMP_FILE")
-_file = working_directory + "TEMP_FILE"
+_file = file_copy_fmns(_file, working_directory + "TEMP_FILE") //copy the file into the working directory
+_file = working_directory + "TEMP_FILE" 
 if (file_exists(_file)) { //check if the file exists
 	_file = file_text_open_read(_file) //open the file
 	
@@ -33,7 +33,7 @@ if (file_exists(_file)) { //check if the file exists
 			file_text_readln(_file)	
 		}
 	}
-	_height = string_digits(_str) //read the height
+	_height = real(string_digits(_str)) //read the height
 	
 	//read through the file until the width is found
 	while (true) {
@@ -44,7 +44,7 @@ if (file_exists(_file)) { //check if the file exists
 			file_text_readln(_file)	
 		}
 	}
-	_width = string_digits(_str) //read the height
+	_width = real(string_digits(_str)) //read the height
 	
 	//read the origin
 	file_text_readln(_file)
@@ -52,11 +52,32 @@ if (file_exists(_file)) { //check if the file exists
 	file_text_readln(_file)
 	_y = real(string_digits(file_text_read_string(_file))) //read the height
 	
-	show_debug_message(_img)
-	show_debug_message(_height)
-	
 	file_text_close(_file) //close the file
-	file_delete_fmns(working_directory + "TEMP_FILE")
+	file_delete_fmns(working_directory + "TEMP_FILE") //delete the copied file
+	
+	//load the images
+	for (var i = 0; i < array_length_1d(_img); i++) {
+		_file = "C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\sprites\\" + argument[0] + "\\"
+		_file = file_copy_fmns(_file + _img[i] + ".png", working_directory + "TEMP_FILE") //copy the file into the working directory
+		_file = working_directory + "TEMP_FILE" 
+		if (file_exists(_file)) { //check if the file exists
+			sprite_replace(sprite, _file, 1, false, false, 0, 0)
+			surface_set_target(surface)
+			draw_sprite(sprite, 0, i*_width, sprite_y)
+			surface_reset_target()
+			file_delete_fmns(working_directory + "TEMP_FILE") //delete the copied file
+		}
+	}
+	sprite_array[sprite_num, 0] = argument[0] //name
+	sprite_array[sprite_num, 1] = sprite_y //yposition
+	sprite_array[sprite_num, 2] = array_length_1d(_img) //image number
+	sprite_array[sprite_num, 3] = _width //width
+	sprite_array[sprite_num, 4] = _height //height
+	sprite_array[sprite_num, 5] = _x //x offset
+	sprite_array[sprite_num, 6] = _y //y offset
+	
+	sprite_y += _height
+	sprite_num += 1
 	return true //return a successful operation
 }
-return false //return a failure to load sprite
+return false //return a failure to load sprite data
