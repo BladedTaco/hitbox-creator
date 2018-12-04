@@ -1,2 +1,2 @@
 /// @description draw surface
-draw_surface(surface, x, y)
+draw_surface(surface[mode], x, y)
