@@ -1,9 +1,6 @@
 /// @description Load in sprites
 //create surface and sprite
-surface = surface_create(8192, 8192)
-surface_set_target(surface)
-draw_clear_alpha(c_white, 0.1)
-surface_reset_target()
+surface = []
 sprite = sprite_create_from_surface(surface, 0, 0, 1, 1, true, false, 0, 0)
 sprite_y = 0
 sprite_num = 0
@@ -16,13 +13,17 @@ var _char = []
 while (_file != "") {
 	_char[array_length_1d(_char)] = string_copy(_file, string_length(_file) - 2, 3)
 	_file = file_find_next()
+	surface[array_length_1d(surface)] = surface_create(8192, 8192)
+	surface_set_target(surface[array_length_1d(surface)-1])
+	draw_clear_alpha(c_white, 0.1)
+	surface_reset_target()
 }
 file_find_close();
 show_debug_message(_char)
 for (var i = 0; i < array_length_1d(_char); i++) {
 	_file = file_find_first(working_directory + "SPRITES\\spr_" + _char[i] + "*", fa_directory) //find the first balloony sprite
 	while (_file != "") {
-		if (scr_read_sprite(_file)) {
+		if (scr_read_sprite(_file, i)) {
 			show_debug_message("SUCCESS")
 		} else {
 			show_debug_message("FAILURE")	
@@ -30,6 +31,7 @@ for (var i = 0; i < array_length_1d(_char); i++) {
 		_file = file_find_next()
 	}
 	file_find_close()
+	sprite_y = 0
 }
 
 show_debug_message("CLEARING DIRECTORY")

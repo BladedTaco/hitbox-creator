@@ -1,5 +1,6 @@
-///@func scr_read_sprite(name)
+///@func scr_read_sprite(name, surface)
 ///@param name - the name of the sprite to load
+///@param surface - the surface number to draw to
 ///@desc loads the details of the sprite
 var _height, _width, _x, _y, _file, _str, _img
 _img = []
@@ -56,7 +57,7 @@ if (file_exists(_file)) { //check if the file exists
 		_file = working_directory + "SPRITES\\" + argument[0] + "\\" + _img[i] + ".png" //get the file
 		if (file_exists(_file)) { //check if the file exists
 			sprite_replace(sprite, _file, 1, false, false, 0, 0)
-			surface_set_target(surface)
+			surface_set_target(surface[argument[1]])
 			draw_sprite(sprite, 0, i*_width, sprite_y)
 			surface_reset_target()
 		}
@@ -68,6 +69,7 @@ if (file_exists(_file)) { //check if the file exists
 	sprite_array[sprite_num, 4] = _height //height
 	sprite_array[sprite_num, 5] = _x //x offset
 	sprite_array[sprite_num, 6] = _y //y offset
+	sprite_array[sprite_num, 7] = argument[1] //surface accessor
 	
 	sprite_y += _height //add height on surface to prevent layering
 	sprite_num += 1 //add a sprite to the counter
