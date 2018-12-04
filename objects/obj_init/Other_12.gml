@@ -1,4 +1,4 @@
-/// @description load old sprite sheets
+/// @description load/reload old sprite sheets
 //load sprite array
 if (file_exists("sprite_array")) {
 	var _data = ds_map_secure_load("sprite_array")

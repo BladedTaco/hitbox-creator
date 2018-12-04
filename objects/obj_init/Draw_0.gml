@@ -1,4 +1,7 @@
 /// @description 
+if !(surface_exists(surface[mode])) { //if surface missing
+	event_user(2) //update surfaces
+}
 draw_set_halign(fa_right)
 draw_set_colour(c_white)
 for (var i = 0; i < 9; i++) {
