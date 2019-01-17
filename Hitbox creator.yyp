@@ -74,7 +74,7 @@
             "Key": "44066be5-7cee-4126-a92b-b9cf4a10caf3",
             "Value": {
                 "id": "1f33a677-caf7-4921-b779-9e9c08f84ffc",
-                "resourcePath": "objects\\obj_UI\\obj_UI.yy",
+                "resourcePath": "objects\\obj_canvas\\obj_canvas.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -108,6 +108,14 @@
                 "id": "18b6999e-e8ee-4a34-b009-b4b1cc980f5b",
                 "resourcePath": "scripts\\program_directory_fmns\\program_directory_fmns.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6b2257a2-49fa-444d-9338-a1a818df687d",
+            "Value": {
+                "id": "78d65e90-e2a1-467f-8f3c-1a97155b8ff7",
+                "resourcePath": "objects\\obj_data\\obj_data.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -199,6 +207,14 @@
             }
         },
         {
+            "Key": "95a63951-7818-4ac2-a9cf-faaf1c0c8c45",
+            "Value": {
+                "id": "3d3e6a05-ce3a-4525-9280-99232f6dfa74",
+                "resourcePath": "scripts\\macros\\macros.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9a7b3af7-72c0-40f2-9897-12a7f796746e",
             "Value": {
                 "id": "3fd4948f-979c-44e0-b32f-d49197cddd05",
@@ -252,6 +268,14 @@
                 "id": "9a6a0578-3900-4fc5-8ef7-49ce8f4409fe",
                 "resourcePath": "scripts\\directory_rename_fmns\\directory_rename_fmns.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "b391a122-5636-407c-a2f2-d3cae117a389",
+            "Value": {
+                "id": "a483e22d-b703-4129-9a5d-f5990afcc4e5",
+                "resourcePath": "sprites\\spr_pixel\\spr_pixel.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -384,6 +408,7 @@
         }
     ],
     "script_order": [
+        "95a63951-7818-4ac2-a9cf-faaf1c0c8c45",
         "0159c1e0-43ce-4ba8-a5a3-9dd1be92b109",
         "fce2bbd4-b642-44f8-8a21-cd16b77f4adf",
         "e0cf815f-d445-4ac0-89b2-1c73fc1c2b53",

@@ -14,3 +14,5 @@ if (show_question("RELOAD SPRITE SHEETS?")) {
 } else {
 	event_user(2) //load old sprite sheets
 }
+
+event_user(3) //hand off data to data object
