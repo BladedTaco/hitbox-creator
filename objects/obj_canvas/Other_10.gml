@@ -10,7 +10,7 @@ draw_clear_alpha(c_ltgray, 1)
 if (sprite > -1) { //if there is a sprite to draw
 	//draw the sprite with appropirate zoom and offset
 	draw_surface_part_ext(	
-		obj_data.sprite_array[sprite, SURFACE], 
+		obj_data.surface[obj_data.sprite_array[sprite, SURFACE]], 
 		obj_data.sprite_array[sprite, WIDTH]*frame, 
 		obj_data.sprite_array[sprite, YPOS], 
 		obj_data.sprite_array[sprite, WIDTH], 
