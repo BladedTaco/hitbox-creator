@@ -9,3 +9,6 @@
 #macro X_OFF 5
 #macro Y_OFF 6
 #macro SURFACE 7
+
+//surface macros
+#macro SURFACE_POWER 13 //increase if sprites are getting cut off sprite sheet

@@ -73,6 +73,9 @@ if (file_exists(_file)) { //check if the file exists
 	
 	sprite_y += _height //add height on surface to prevent layering
 	sprite_num += 1 //add a sprite to the counter
+	//increase max surface width for later use
+	surface_width = max(surface_width, _width*array_length_1d(_img))
+	
 	return true //return a successful operation
 }
 return false //return a failure to load sprite data

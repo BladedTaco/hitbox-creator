@@ -9,7 +9,7 @@ var _char = []
 while (_file != "") {
 	_char[array_length_1d(_char)] = string_copy(_file, string_length(_file) - 2, 3)
 	_file = file_find_next()
-	surface[array_length_1d(surface)] = surface_create(8192, 8192)
+	surface[array_length_1d(surface)] = surface_create(power(2, SURFACE_POWER), power(2, SURFACE_POWER))
 	surface_set_target(surface[array_length_1d(surface)-1])
 	draw_clear_alpha(c_white, 0)
 	surface_reset_target()
@@ -27,7 +27,30 @@ for (var i = 0; i < array_length_1d(_char); i++) {
 		_file = file_find_next()
 	}
 	file_find_close()
+	
+	//trim surface
+	//get power of 2 surface width fits into
+	for (var o = SURFACE_POWER; o > 0; o--) {
+		if (surface_width > power(2, o-1)) {
+			break;
+		}
+	}
+	for (var j = SURFACE_POWER; j > 0; j--) {
+		if (sprite_y > power(2, j-1)) {
+			break;
+		}
+	}
+	//resize surface
+	var _surf = surface_create(power(2, SURFACE_POWER), power(2, SURFACE_POWER)) //create temporary surface
+	surface_copy(_surf, 0, 0, surface[i]) //copy surface to temp surface
+	surface_resize(surface[i], power(2, o), power(2, j)) //resize surface
+	surface_copy(surface[i], 0, 0, _surf) //copy temp surface back to resized surface
+	surface_free(_surf) //free the temp surface
+	show_debug_message(string(surface_get_width(surface[i])) + "  " + string(surface_get_height(surface[i])))
+
+	//reset variables and save the surface
 	sprite_y = 0
+	surface_width = 0
 	surface_save(surface[i], "Surfaces\\Surface_" + string(i))
 }
 
@@ -46,3 +69,6 @@ _data[? "sprite_array"] = ds_list_write(_temp)
 ds_map_secure_save(_data, "sprite_array")
 ds_map_destroy(_data)
 ds_list_destroy(_temp)
+
+
+event_user(3) //hand off data to data object

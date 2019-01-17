@@ -3,16 +3,8 @@
 //create surface
 canvas = surface_create(1024, 1024)
 surface_set_target(canvas)
-draw_clear_alpha(c_white, 0)
+draw_clear_alpha(c_ltgray, 1)
 
-//draw border
-draw_set_colour(c_black)
-var _width = 8 //half the width of the line
-//draw the border
-draw_line_width(0, 0, 1024, 0, _width)
-draw_line_width(1024, 0, 1024, 1024, _width)
-draw_line_width(1024, 1024, 0, 1024, _width)
-draw_line_width(0, 1024, 0, 0, _width)
 
 //draw sprite
 if (sprite > -1) { //if there is a sprite to draw
@@ -23,8 +15,8 @@ if (sprite > -1) { //if there is a sprite to draw
 		obj_data.sprite_array[sprite, YPOS], 
 		obj_data.sprite_array[sprite, WIDTH], 
 		obj_data.sprite_array[sprite, HEIGHT], 
-		512 + x_off,
-		512 + y_off, 
+		(image_xscale - zoom*obj_data.sprite_array[sprite, WIDTH])/2,
+		(image_yscale - zoom*obj_data.sprite_array[sprite, HEIGHT])/2, 
 		zoom, zoom, c_white, 1 //draw modifiers
 	)
 }

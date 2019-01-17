@@ -14,16 +14,6 @@ if (file_exists("sprite_array")) { //able to load sprite sheets
 show_debug_message(sprite_array)
 sprite_num = array_height_2d(sprite_array)
 
-for (var i = 0; true; i++) { //for as long as it takes
-	var _file = "Surfaces\\Surface_" + string(i) //get the surface file
-	if (file_exists(_file)) { //check if the file exists
-		//create and populate the surface
-		surface[i] = surface_create(8192, 8192)
-		sprite_replace(sprite, _file, 1, false, false, 0, 0)
-		surface_set_target(surface[i])
-		draw_sprite(sprite, 0, 0, 0)
-		surface_reset_target()
-	} else { //no more surfaces
-		break; //break the loop
-	}
-}
+event_user(0) //create surfaces
+
+event_user(3) //hand off data to data object
