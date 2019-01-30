@@ -31,7 +31,7 @@ if (sprite > -1) { //if there is a sprite to draw
 		}
 		//get place to draw next frame
 		_col++ //move one space across
-		if ((_col+1)*frame_width > 1024) { //if that space runs off the surface
+		if ((_col+1)*frame_width > surface_get_width(canvas)) { //if that space runs off the surface
 			_col = 0 //move back to starting column
 			_row++ //move down one row
 		}
@@ -39,3 +39,7 @@ if (sprite > -1) { //if there is a sprite to draw
 }
 
 surface_reset_target()
+
+//centre sprite
+x_off = (zoom*frame_width/2 - width/2  )/zoom
+y_off = (zoom*frame_height/2 - height/2)/zoom
