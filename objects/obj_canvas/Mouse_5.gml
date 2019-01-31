@@ -1,5 +1,3 @@
-/// @description reset position
-//x_off = 0
-//y_off = 0
-frame = (frame + 1) mod obj_data.sprite_array[sprite, NUM]
-event_user(1)
+/// @description centre sprite
+x_off = (zoom*frame_width/2 - width/2  )/zoom
+y_off = (zoom*frame_height/2 - height/2)/zoom
