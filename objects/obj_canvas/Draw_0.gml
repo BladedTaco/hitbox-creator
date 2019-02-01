@@ -1,4 +1,4 @@
-/// @description 
+/// @description draw canvas
 draw_self();
 draw_set_colour(c_ltgray)
 draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
