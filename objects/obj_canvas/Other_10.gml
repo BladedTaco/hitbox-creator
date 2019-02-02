@@ -3,7 +3,7 @@
 //create surface
 canvas = surface_create(1024, 1024)
 surface_set_target(canvas)
-draw_clear_alpha(c_ltgray, 0)
+draw_clear_alpha(c_white, 0)
 
 
 //draw sprite

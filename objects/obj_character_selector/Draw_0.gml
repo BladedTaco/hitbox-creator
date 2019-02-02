@@ -9,7 +9,11 @@ var u_bounds = shader_get_uniform(shd_clip, "u_bounds")
 shader_set_uniform_f(u_bounds, x + border, y + border, x + width, y + height);
 
 with (obj_button_character) { //draw character buttons
-	draw_self();
+	if (obj_list.character = character) {
+		draw_sprite_ext(sprite_index, image_index, x, y, 1, 1, 0, c_aqua, 1)
+	} else {
+		draw_self();
+	}
 	if !(surface_exists(surface)) {
 		event_user(0)	
 	}

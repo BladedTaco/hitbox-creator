@@ -1,4 +1,14 @@
 /// @description Load in sprites
+//reset some variables in case this is a recall
+surface = []
+surface_width = 0
+buffer = []
+sprite_y = 0
+sprite_num = 0
+sprite_array = [] // NAME | YPOS | NUM | WIDTH | HEIGHT | X_OFF | Y_OFF | SURFACE
+mode = 0
+image = 0
+
 //copy the directory
 show_debug_message("COPYING DIRECTORY")
 directory_copy_fmns("C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\sprites\\", working_directory + "SPRITES\\")

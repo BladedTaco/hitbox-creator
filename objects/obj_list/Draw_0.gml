@@ -7,6 +7,15 @@ draw_set_halign(fa_left)
 draw_set_valign(fa_middle)
 draw_set_colour(c_black)
 
+var _x, _y
 for (var i = 0 ; i < min(array_length_1d(list), 50); i++) {
-	draw_text(x + 2*border, y + 65 +  i*16, list[menu_index + i])
+	_x = x + 2*border
+	_y = y + 65 + i*16
+	if (point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), _x, _y - 7, _x + string_width(list[menu_index + i]), _y + 7)) {
+		draw_set_colour(c_white)
+		current_index = menu_index + i
+	} else {
+		draw_set_colour(c_black)
+	}
+	draw_text(_x, _y, list[menu_index + i])
 }

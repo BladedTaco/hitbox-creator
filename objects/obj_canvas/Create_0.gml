@@ -16,6 +16,7 @@ frame_x = 0
 frame_y = 0
 frame_width = 0
 frame_height = 0
+canvas_colour = c_ltgray
 
 frame = 2
 sprite = 0

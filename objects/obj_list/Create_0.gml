@@ -3,6 +3,7 @@ border = 4
 width = image_xscale - border
 height = image_yscale - border
 menu_index = 0;
+current_index = 0;
 active = false
 character = "bal"
 list = []
