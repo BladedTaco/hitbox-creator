@@ -1,4 +1,4 @@
 /// @description 
 if (active) {
-	menu_index = min(menu_index + 1, array_height_2d(obj_data.sprite_array) - 50)
+	menu_index = max(min(menu_index + 1, array_length_1d(list) - 50), 0)
 }
