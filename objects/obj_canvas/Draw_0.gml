@@ -1,5 +1,8 @@
 /// @description draw canvas
 draw_self();
+if (rainbow_mode) {
+	canvas_colour = make_colour_hsv((colour_get_hue(canvas_colour) + 1) mod 256, colour_get_saturation(canvas_colour), colour_get_value(canvas_colour))
+}
 draw_set_colour(canvas_colour)
 draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
 
@@ -9,7 +12,6 @@ var u_bounds = shader_get_uniform(shd_clip, "u_bounds")
 shader_set_uniform_f(u_bounds, x + border, y + border, x + width, y + height);
 
 draw_surface_part_ext(canvas, frame_x, frame_y, frame_width, frame_height, x + border - x_off*zoom, y + border - y_off*zoom, zoom, zoom, c_white, 1)
-
 
 shader_reset() //reset the shader
 

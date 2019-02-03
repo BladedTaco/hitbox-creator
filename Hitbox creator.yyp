@@ -439,6 +439,14 @@
             }
         },
         {
+            "Key": "ca3793f0-3748-4838-b73b-f989596202d8",
+            "Value": {
+                "id": "652e7d3d-5502-43d6-9f06-99e5ed0e7d06",
+                "resourcePath": "objects\\obj_button_canvas_colour\\obj_button_canvas_colour.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "cb2745f1-c583-4d92-ae76-683e926b163d",
