@@ -21,4 +21,4 @@ global.hitbox
 new system
 global.hitbox_list[hitbox and hurtbox arrays]
 global.hitbox_bal
-[640 sprites + 50 hitboxes, 960 frames + 33 entries]
+[3200 sprites + 10 hitboxes, 1280 frames + 25 entries]
