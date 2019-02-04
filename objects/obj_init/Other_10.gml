@@ -16,3 +16,6 @@ for (var i = 0; true; i++) { //for as long as it takes
 
 //hand off data to data object
 event_user(3)
+
+//get hitboxes and hand off to data object
+event_user(4)

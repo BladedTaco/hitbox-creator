@@ -399,6 +399,14 @@
             }
         },
         {
+            "Key": "b36698eb-1ec5-47cf-9849-f21de2a4f0c9",
+            "Value": {
+                "id": "fa095fd9-125d-4a02-bf8a-1202690b4964",
+                "resourcePath": "datafiles_yy\\Hitboxes.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "b391a122-5636-407c-a2f2-d3cae117a389",
             "Value": {
                 "id": "a483e22d-b703-4129-9a5d-f5990afcc4e5",
@@ -436,6 +444,14 @@
                 "id": "f4a644d6-0f06-4d64-b2cc-c6737804b95e",
                 "resourcePath": "scripts\\directory_create_fmns\\directory_create_fmns.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c7e6b15e-91b4-48bf-87b9-5b166e29fa4b",
+            "Value": {
+                "id": "67d98188-4240-4cdd-b086-d57cc5c1e6a0",
+                "resourcePath": "datafiles_yy\\Hurtboxes.txt.yy",
+                "resourceType": "GMIncludedFile"
             }
         },
         {

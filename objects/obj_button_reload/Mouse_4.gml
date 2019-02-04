@@ -8,6 +8,6 @@ if (show_question("Reload sprites, Are you sure?")) {
 		event_user(0) //repopulate sprite list	
 	}
 	with (obj_character_selector) {
-		
+		event_user(0) //recreate character buttons
 	}
 }
