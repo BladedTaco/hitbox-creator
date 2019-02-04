@@ -19,7 +19,7 @@ repeat (6) {
 //read through file
 while (true) {
 	_str = file_text_readln(_file)
-	if (_str != "    ],") { //not the end of the children
+	if (string_copy(_str, 5, 2) != "],") { //not the end of the children
 		scr_sort_ids(string_copy(_str, 10, 36))
 	} else {
 		file_text_close(_file)

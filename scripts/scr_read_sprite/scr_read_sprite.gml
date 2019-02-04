@@ -66,15 +66,15 @@ if (file_exists(_file)) { //check if the file exists
 			surface_reset_target()
 		}
 	}
-	sprite_array[sprite_num, 0] = argument[0] //name
-	sprite_array[sprite_num, 1] = sprite_y //yposition
-	sprite_array[sprite_num, 2] = array_length_1d(_img) //image number
-	sprite_array[sprite_num, 3] = _width //width
-	sprite_array[sprite_num, 4] = _height //height
-	sprite_array[sprite_num, 5] = _x //x offset
-	sprite_array[sprite_num, 6] = _y //y offset
-	sprite_array[sprite_num, 7] = argument[1] //surface accessor
-	sprite_array[sprite_num, 8] = _id //sprite id
+	sprite_array[sprite_num, NAME] = argument[0] //name
+	sprite_array[sprite_num, YPOS] = sprite_y //yposition
+	sprite_array[sprite_num, NUM] = array_length_1d(_img) //image number
+	sprite_array[sprite_num, WIDTH] = _width //width
+	sprite_array[sprite_num, HEIGHT] = _height //height
+	sprite_array[sprite_num, X_OFF] = _x //x offset
+	sprite_array[sprite_num, Y_OFF] = _y //y offset
+	sprite_array[sprite_num, SURFACE] = argument[1] //surface accessor
+	sprite_array[sprite_num, ID] = _id //sprite id
 	
 	sprite_y += _height //add height on surface to prevent layering
 	sprite_num += 1 //add a sprite to the counter
