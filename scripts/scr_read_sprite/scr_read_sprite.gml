@@ -2,12 +2,16 @@
 ///@param name - the name of the sprite to load
 ///@param surface - the surface number to draw to
 ///@desc loads the details of the sprite
-var _height, _width, _x, _y, _file, _str, _img
+var _height, _width, _x, _y, _file, _str, _img, _id;
 _img = []
 //get the file
 _file = working_directory + "SPRITES\\" + argument[0] + "\\" + argument[0] + ".yy"
 if (file_exists(_file)) { //check if the file exists
 	_file = file_text_open_read(_file) //open the file
+	
+	//read id
+	file_text_readln(_file);
+	_id = string_copy(file_text_readln(_file), 12, 36)
 	
 	//read through the file until the frame filenames are found and ordered
 	while (true) {
@@ -70,6 +74,7 @@ if (file_exists(_file)) { //check if the file exists
 	sprite_array[sprite_num, 5] = _x //x offset
 	sprite_array[sprite_num, 6] = _y //y offset
 	sprite_array[sprite_num, 7] = argument[1] //surface accessor
+	sprite_array[sprite_num, 8] = _id //sprite id
 	
 	sprite_y += _height //add height on surface to prevent layering
 	sprite_num += 1 //add a sprite to the counter

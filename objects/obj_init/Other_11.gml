@@ -5,7 +5,7 @@ surface_width = 0
 buffer = []
 sprite_y = 0
 sprite_num = 0
-sprite_array = [] // NAME | YPOS | NUM | WIDTH | HEIGHT | X_OFF | Y_OFF | SURFACE
+sprite_array = [] // NAME | YPOS | NUM | WIDTH | HEIGHT | X_OFF | Y_OFF | SURFACE | REAL NUMBER 
 mode = 0
 image = 0
 
@@ -68,6 +68,45 @@ show_debug_message("CLEARING DIRECTORY")
 if (directory_exists_fmns(working_directory + "SPRITES\\")) {
 	directory_destroy_fmns(working_directory + "SPRITES\\")	
 }
+
+//sort sprite ids
+directory_copy_fmns("C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\views\\", working_directory + "VIEWS\\")
+
+_file = []
+
+//"2842a6b5-5a70-40cb-a868-36a692e71c2e" sptire view
+_file[0] = file_find_first(working_directory + "VIEWS\\*", fa_directory) //find the first pallet sprite
+while (_file[0] != "") {
+	_file[1] = file_text_open_read(_file[0])
+	do {
+		if (file_text_readln(_file[1]) = "    \"folderName\": \"sprites\",") {
+			//sprites view has been found
+			file_text_close(_file[1])
+			file_find_close();
+			//call script to recursively sort ids
+			scr_sort_ids(_file[0])
+			break;
+		}
+	} until (file_text_eof(_file[1]))
+	//check if list has been ordered and if so break loop
+	if (file_text_eof(_file[1])) {
+		_file = file_find_next()
+	} else {
+		break;
+	}	
+}
+//add id data to sprite array
+for (i = 0; i < array_length_1d(sprite_list); i++) {
+	for (o = 0; o < array_height_2d(sprite_array); o++) {
+		if (sprite_array[o, ID] = sprite_list[i]) {
+			sprite_array[o, ID] = i
+			break;
+		}
+	}
+}
+
+//sort array
+sprite_array = array_sort_2d(sprite_array, 0, ID)
 
 show_debug_message(sprite_array)
 
