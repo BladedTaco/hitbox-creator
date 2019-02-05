@@ -66,6 +66,9 @@ if (file_exists(_file)) { //check if the file exists
 			surface_reset_target()
 		}
 	}
+	//add to frame max
+	frame_max = max(frame_max, array_length_1d(_img))
+	
 	sprite_array[sprite_num, NAME] = argument[0] //name
 	sprite_array[sprite_num, YPOS] = sprite_y //yposition
 	sprite_array[sprite_num, NUM] = array_length_1d(_img) //image number

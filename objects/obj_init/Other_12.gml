@@ -14,6 +14,11 @@ if (file_exists("sprite_array")) { //able to load sprite sheets
 show_debug_message(sprite_array)
 sprite_num = array_height_2d(sprite_array)
 
+//get frame max
+for (var i = sprite_num - 1; i >= 0; i--) {
+	frame_max = max(frame_max, sprite_array[i, NUM])	
+}
+
 event_user(0) //create surfaces
 
 event_user(3) //hand off data to data object

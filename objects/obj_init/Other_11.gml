@@ -5,6 +5,7 @@ surface_width = 0
 buffer = []
 sprite_y = 0
 sprite_num = 0
+frame_max = 0
 sprite_array = [] // NAME | YPOS | NUM | WIDTH | HEIGHT | X_OFF | Y_OFF | SURFACE | REAL NUMBER 
 mode = 0
 image = 0
