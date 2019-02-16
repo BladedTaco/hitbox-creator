@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "2cf996bc-4bf1-456c-b556-ed89dc3c06b9",
+            "Value": {
+                "id": "d742d7f7-3d04-48d9-8823-0f8efb2904e1",
+                "resourcePath": "datafiles_yy\\Hurtboxes.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "2ee62a63-acc3-4ef5-8b89-09bed8b0b8a3",
             "Value": {
                 "id": "3d8b69ad-bf14-497f-943c-68ccaa9546a4",
@@ -431,14 +439,6 @@
             }
         },
         {
-            "Key": "b36698eb-1ec5-47cf-9849-f21de2a4f0c9",
-            "Value": {
-                "id": "fa095fd9-125d-4a02-bf8a-1202690b4964",
-                "resourcePath": "datafiles_yy\\Hitboxes.txt.yy",
-                "resourceType": "GMIncludedFile"
-            }
-        },
-        {
             "Key": "b391a122-5636-407c-a2f2-d3cae117a389",
             "Value": {
                 "id": "a483e22d-b703-4129-9a5d-f5990afcc4e5",
@@ -482,7 +482,7 @@
             "Key": "c7e6b15e-91b4-48bf-87b9-5b166e29fa4b",
             "Value": {
                 "id": "67d98188-4240-4cdd-b086-d57cc5c1e6a0",
-                "resourcePath": "datafiles_yy\\Hurtboxes.txt.yy",
+                "resourcePath": "datafiles_yy\\Hitboxes.txt.yy",
                 "resourceType": "GMIncludedFile"
             }
         },

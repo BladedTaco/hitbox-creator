@@ -1,5 +1,5 @@
 {
-    "id": "b36698eb-1ec5-47cf-9849-f21de2a4f0c9",
+    "id": "c7e6b15e-91b4-48bf-87b9-5b166e29fa4b",
     "modelName": "GMIncludedFile",
     "mvc": "1.0",
     "name": "Hitboxes.txt",
