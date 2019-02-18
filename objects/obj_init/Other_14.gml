@@ -6,7 +6,7 @@ var i, o, j, k, _hitbox; //sprite number, frame number, hitbox number, data poin
 
 //set null value array
 for (i = sprite_num*10; i >= 0; i--) {
-	for (o = frame_max*25; o>= 0; o--) {
+	for (o = frame_max*25; o >= 0; o--) {
 		hurtbox[i, o] = -10
 		hitbox[i, o] = -10
 	}
