@@ -3,20 +3,47 @@
 var _str = "" 
 var _file = "" //file
 var i, o, j, k, _hitbox; //sprite number, frame number, hitbox number, data point number, loop index
+_hitbox = false
 
-//set null value array
-for (i = sprite_num*10; i >= 0; i--) {
-	for (o = frame_max*25; o >= 0; o--) {
-		hurtbox[i, o] = -10
-		hitbox[i, o] = -10
+
+
+
+//create arrays and sub arrays
+var _box, _box2;
+_box = []; _box2 = [];
+_box[0, 0] = sprite_num //number of previous 'base sprite'
+i = sprite_num
+//get the starting sprite numbers
+while (i > 0) {
+	i--
+	if (string_copy(sprite_array[i, NAME], 9, 4) = "base") { //if a new character
+		_box = array_create((_box[0, 0] - i)*10, -10) //create an array with height equal to sprites
+		_box[0, 0] = i //store the base sprite index
+		hitbox_list[array_length_1d(hitbox_list)] = _box
+		_box = array_create(array_height_2d(_box), -10) //create an array with height equal to sprites
+		hurtbox_list[array_length_1d(hurtbox_list)] = _box
+	}
+}
+
+for (var j = 0; j < array_length_1d(hitbox_list); j++) {
+	_box = hitbox_list[j]
+	_box2 = hurtbox_list[j]
+	//set null value array
+	for (i = array_height_2d(_box); i >= 0; i--) {
+		for (o = frame_max*25; o >= 0; o--) {
+			_box[i, o] = -10
+			_box2[i, o] = -10
+		}
 	}
 }
 
 repeat (2) { //once for hitboxes, once hurtboxes
 	if (_hitbox) { //hitboxes
 		_file = file_text_open_read("Hitboxes.txt")
+		_box = hitbox_list[0]
 	} else { //hurtboxes
 		_file = file_text_open_read("Hurtboxes.txt")	
+		_box = hurtbox_list[0]
 	}
 	i = 0;
 	while (!file_text_eof(_file)) { //while there is file left to read
@@ -53,11 +80,7 @@ repeat (2) { //once for hitboxes, once hurtboxes
 						_str = file_text_read_string(_file)//read first data
 						file_text_readln(_file)
 						while (_str != "}") { //read data
-							if (_hitbox) {
-								hitbox[i*10 + j, 25*o + k] = real(_str) //set data 
-							} else {
-								hurtbox[i*10 + j, 25*o + k] = real(_str) //set data 
-							}
+							_box[i*10 + j, 25*o + k] = real(_str) //set data 
 							_str = file_text_read_string(_file)//read next line
 							file_text_readln(_file)
 							k++
