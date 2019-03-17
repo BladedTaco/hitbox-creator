@@ -46,6 +46,7 @@ repeat (2) { //once for hitboxes, once hurtboxes
 		_box = hurtbox_list[0]
 	}
 	i = 0;
+	//--------------- TODO, HAVE THIS PUT STUFF INTO THE RIGHT ARRAY
 	while (!file_text_eof(_file)) { //while there is file left to read
 		_str = file_text_read_string(_file) //read name
 		file_text_readln(_file)
@@ -97,14 +98,18 @@ repeat (2) { //once for hitboxes, once hurtboxes
 	file_text_close(_file) //close the file
 	_hitbox = true
 }
-show_debug_message(hurtbox)
-show_debug_message(hitbox)
+
+for (i = 0; i < array_length_1d(hurtbox_list); i++) {
+	show_debug_message(hurtbox_list[i])
+	show_debug_message(hitbox_list[i])
+}
 
 
 //hand off data to data object
 with (obj_data) {
-	hitbox = other.hitbox
-	hurtbox = other.hurtbox
+	//SEE IF ARRAYS NEED TO BE INDIVIDUALLY COPIED
+	hurtbox_list = other.hurtbox_list
+	hitbox_list	= other.hitbox_list
 }
 
 
