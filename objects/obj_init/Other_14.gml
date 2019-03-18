@@ -36,7 +36,6 @@ for (var j = 0; j < array_length_1d(hitbox_list); j++) {
 	k = _box[0, 0]
 	//set null value array
 	for (i = array_height_2d(_box); i >= 0; i--) {
-		show_debug_message(i)
 		for (o = frame_max*25; o >= 0; o--) {
 			_box[@ i, o] = -10
 			_box2[@ i, o] = -10
@@ -93,7 +92,6 @@ repeat (2) { //once for hitboxes, once hurtboxes
 						k = 0; 
 						_str = file_text_read_string(_file)//read first data
 						file_text_readln(_file)
-						show_debug_message(string(i) + " " + string(_box[0, 0]) + " " + string(j) + " " + string(array_height_2d(_box)))
 						while (_str != "}") { //read data
 							_box[@ (i - _box[0, 0])*10 + j, 25*o + k] = real(_str) //set data 
 							_str = file_text_read_string(_file)//read next line
@@ -113,16 +111,6 @@ repeat (2) { //once for hitboxes, once hurtboxes
 	_hitbox = true
 }
 
-/*
-show_debug_message("---------HITBOXES AND HURTBOXES---------'")
-for (i = 0; i < array_length_1d(hurtbox_list); i++) {
-	show_debug_message(hurtbox_list[i])
-	show_debug_message("")
-	show_debug_message(hitbox_list[i])
-	show_debug_message("\n")
-}
-*/
-show_debug_message(hurtbox_list[0])
 
 //hand off data to data object
 with (obj_data) {
