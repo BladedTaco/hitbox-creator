@@ -11,6 +11,7 @@ _hitbox = false
 //create arrays and sub arrays
 var _box, _box2;
 _box = []; _box2 = [];
+_box[1, 1] = 0
 _box[0, 0] = sprite_num //number of previous 'base sprite'
 i = sprite_num
 //get the starting sprite numbers
@@ -18,10 +19,11 @@ while (i > 0) {
 	i--
 	if (string_copy(sprite_array[i, NAME], 9, 4) = "base") { //if a new character
 		_box = array_create((_box[0, 0] - i)*10, -10) //create an array with height equal to sprites
-		_box[0, 0] = i //store the base sprite index
-		show_debug_message(sprite_array[i, SURFACE])
+		_box[@ 1, 1] = -10
+		_box[@ 0, 0] = i //store the base sprite index
 		hitbox_list[sprite_array[i, SURFACE]] = _box
 		_box = array_create(array_height_2d(_box), -10) //create an array with height equal to sprites
+		_box[@ 1, 1] = -10
 		hurtbox_list[sprite_array[i, SURFACE]] = _box
 	}
 }
@@ -29,13 +31,17 @@ while (i > 0) {
 for (var j = 0; j < array_length_1d(hitbox_list); j++) {
 	_box = hitbox_list[j]
 	_box2 = hurtbox_list[j]
+	k = _box[0, 0]
 	//set null value array
 	for (i = array_height_2d(_box); i >= 0; i--) {
 		for (o = frame_max*25; o >= 0; o--) {
-			_box[i, o] = -10
-			_box2[i, o] = -10
+			_box[@ i, o] = -10
+			_box2[@ i, o] = -10
 		}
 	}
+	_box[@ 0, 0] = k
+	_box2[@ 0, 0] = k
+	k = 0
 }
 
 repeat (2) { //once for hitboxes, once hurtboxes
@@ -85,7 +91,7 @@ repeat (2) { //once for hitboxes, once hurtboxes
 						_str = file_text_read_string(_file)//read first data
 						file_text_readln(_file)
 						while (_str != "}") { //read data
-							_box[i*10 + j, 25*o + k] = real(_str) //set data 
+							_box[@ (i - _box[0, 0])*10 + j, 25*o + k] = real(_str) //set data 
 							_str = file_text_read_string(_file)//read next line
 							file_text_readln(_file)
 							k++
@@ -102,16 +108,17 @@ repeat (2) { //once for hitboxes, once hurtboxes
 	file_text_close(_file) //close the file
 	_hitbox = true
 }
-show_debug_message("HITBOXES AND HURTBOXES---------'")
-show_debug_message(hurtbox_list)
-show_debug_message(hitbox_list)
+
+/*
+show_debug_message("---------HITBOXES AND HURTBOXES---------'")
 for (i = 0; i < array_length_1d(hurtbox_list); i++) {
 	show_debug_message(hurtbox_list[i])
 	show_debug_message("")
 	show_debug_message(hitbox_list[i])
 	show_debug_message("\n")
 }
-
+*/
+show_debug_message(hurtbox_list[0])
 
 //hand off data to data object
 with (obj_data) {
