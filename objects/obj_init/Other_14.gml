@@ -19,6 +19,7 @@ while (i > 0) {
 	if (string_copy(sprite_array[i, NAME], 9, 4) = "base") { //if a new character
 		_box = array_create((_box[0, 0] - i)*10, -10) //create an array with height equal to sprites
 		_box[0, 0] = i //store the base sprite index
+		show_debug_message(sprite_array[i, SURFACE])
 		hitbox_list[sprite_array[i, SURFACE]] = _box
 		_box = array_create(array_height_2d(_box), -10) //create an array with height equal to sprites
 		hurtbox_list[sprite_array[i, SURFACE]] = _box
@@ -101,11 +102,14 @@ repeat (2) { //once for hitboxes, once hurtboxes
 	file_text_close(_file) //close the file
 	_hitbox = true
 }
-
+show_debug_message("HITBOXES AND HURTBOXES---------'")
+show_debug_message(hurtbox_list)
+show_debug_message(hitbox_list)
 for (i = 0; i < array_length_1d(hurtbox_list); i++) {
 	show_debug_message(hurtbox_list[i])
-	show_debug_message("\n")
+	show_debug_message("")
 	show_debug_message(hitbox_list[i])
+	show_debug_message("\n")
 }
 
 
