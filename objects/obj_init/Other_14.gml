@@ -18,13 +18,15 @@ i = sprite_num
 while (i > 0) {
 	i--
 	if (string_copy(sprite_array[i, NAME], 9, 4) = "base") { //if a new character
-		_box = array_create((_box[0, 0] - i)*10, -10) //create an array with height equal to sprites
-		_box[@ 1, 1] = -10
-		_box[@ 0, 0] = i //store the base sprite index
-		hitbox_list[sprite_array[i, SURFACE]] = _box
+		_box2 = (_box[0, 0] - i)*10
+		_box = array_create(_box2, -10) //create an array with height equal to sprites
+		_box[_box2, 1] = -10
+		_box[0, 0] = i //store the base sprite index
+		hitbox_list[@ sprite_array[i, SURFACE]] = _box
 		_box = array_create(array_height_2d(_box), -10) //create an array with height equal to sprites
-		_box[@ 1, 1] = -10
-		hurtbox_list[sprite_array[i, SURFACE]] = _box
+		_box[_box2, 1] = -10
+		_box[0, 0] = i //store the base sprite index
+		hurtbox_list[@ sprite_array[i, SURFACE]] = _box
 	}
 }
 
@@ -34,6 +36,7 @@ for (var j = 0; j < array_length_1d(hitbox_list); j++) {
 	k = _box[0, 0]
 	//set null value array
 	for (i = array_height_2d(_box); i >= 0; i--) {
+		show_debug_message(i)
 		for (o = frame_max*25; o >= 0; o--) {
 			_box[@ i, o] = -10
 			_box2[@ i, o] = -10
@@ -90,6 +93,7 @@ repeat (2) { //once for hitboxes, once hurtboxes
 						k = 0; 
 						_str = file_text_read_string(_file)//read first data
 						file_text_readln(_file)
+						show_debug_message(string(i) + " " + string(_box[0, 0]) + " " + string(j) + " " + string(array_height_2d(_box)))
 						while (_str != "}") { //read data
 							_box[@ (i - _box[0, 0])*10 + j, 25*o + k] = real(_str) //set data 
 							_str = file_text_read_string(_file)//read next line
