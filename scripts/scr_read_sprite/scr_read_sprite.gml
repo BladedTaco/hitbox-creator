@@ -35,7 +35,8 @@ if (file_exists(_file)) { //check if the file exists
 			file_text_readln(_file)	
 		}
 	}
-	_height = real(string_digits(_str)) //read the height
+	//TODO see if this +1 changes anything. One also below
+	_height = real(string_digits(_str)) + 1//read the height
 	
 	//read through the file until the width is found
 	while (true) {
@@ -46,7 +47,7 @@ if (file_exists(_file)) { //check if the file exists
 			file_text_readln(_file)	
 		}
 	}
-	_width = real(string_digits(_str)) //read the height
+	_width = real(string_digits(_str)) + 1//read the width
 	
 	//read the origin
 	file_text_readln(_file)
