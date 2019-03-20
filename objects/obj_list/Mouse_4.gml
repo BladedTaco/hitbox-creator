@@ -23,4 +23,9 @@ if (_spr > -1) {
 		event_user(0)
 		//event_user(1)
 	}
+	with (obj_hitbox_table) {
+		sprite = _spr
+		frame = 0
+		event_user(0)	
+	}
 }
