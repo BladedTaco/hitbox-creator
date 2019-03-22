@@ -1,0 +1,110 @@
+https://github.com/YellowAfterlife/steamworks.gml
+
+STEAMWORKS networking plugin
+
+TRAINING MODE
+ONLINE PLAY
+MAKE PROPER CUSTOM COLOUR PALLETES
+MAKE A FEW STAGES
+making one array equal another may just pass a memory reference
+
+idea - feints: being able to release a smash attack, then cancel it back into the charge within 2 frames at half power
+ - different parts of the body have different hitboxes that change knockback, damage, and spin chance
+ - dodge out of attacks for increased shield meter cost
+
+-character creator
+- mac down b chargeable helmet throw up. Huge spike infinite range
+- scale knockback based on part of body hit
+
+cool character idea
+ - is able to record last inputs and replay them
+ - could be used to make like a clone that constantly redoes a 3 second set of actions
+ - could be used to double up on attacks
+ - multihits
+ - can use rewind for recovery
+ - maybe heal percentage back?
+ - ghosting effect?
+ - horde type character
+
+another cool character idea
+-has some moves that are super fast, low knockback, combo extenders, but they heal the enemy
+-has other moves that are very damaging, but hard to combo with
+-has some moves which damage themself, but have very high hitstun on the enemy
+-very fast character, heal when shielding
+-low shield capacity, but faster recharge
+-have vacuum type windbox special move, used to extend combos
+-grabbing an enemy heals them significantly, but throws are extremely powerful
+-throws have a run up before the actual throw, where the character runs wiht the grabbed guy
+-shield meter takes half the damage the character receives while not empty
+-shield meter run out makes them explode in a healing cloud for the enemy
+
+
+
+
+
+
+
+
+
+
+
+
+
+FEATURES:
+hitbox list and details
+create/delete hitbox
+copy hitbox across frames and sprites
+frame movement. << < || > >>
+hitbox by hitbox enabling and disabling
+hitbox highlighting
+sprite selection
+saving
+export to game
+knockback visualiser
+
+SPRITE SHEET SURFACES MAY BE RECTANGULAR, BUT STILL 2 POWERED
+LOW ALPHA PIXELS BEING CUT FROM SPRITE SHEETS
+SEE IF SURFACE 0 ALPHA BLENDING CAN BE REMOVED
+
+
+
+
+
+
+
+
+
+
+
+
+NEW HITBOX PROPERTIES
+sprite
+image
+hitbox
+- - - - - - - - - - - - --  -- - - - -  - -- 
+shape - ADD TRIANGLE, allows isocles and equilateral; ADD SEMI-CIRCLE
+width
+height
+x
+y
+rotation
+damage,
+direction
+base
+scaling
+hitstun
+- - - - - - - - - - new properties
+fixed knockback?
+effect type
+groundedness/airness
+shield damage
+clang
+sound effect
+reflectiveness
+absorptiveness
+blockability
+rebound
+type?
+SDI mul
+directiveness?
+angle flipper?

@@ -669,6 +669,14 @@
                 "resourcePath": "scripts\\file_copy_fmns\\file_copy_fmns.yy",
                 "resourceType": "GMScript"
             }
+        },
+        {
+            "Key": "ff7550ef-a548-48c4-9d2a-1132150d24bd",
+            "Value": {
+                "id": "efba38b1-f858-4fc8-9730-b0c19fc35bf8",
+                "resourcePath": "notes\\sticky_notes_copyt.yy",
+                "resourceType": "GMNotes"
+            }
         }
     ],
     "script_order": [
