@@ -10,5 +10,3 @@ table_list = [] //holds an array for each table array frame for the sprite
 sprite = -1
 frame = -1
 hitbox = true
-
-event_user(0)

@@ -11,7 +11,7 @@ if (file_exists("sprite_array")) { //able to load sprite sheets
 } else { //failed to load, reload old sprite sheets
 	event_user(1)
 }
-show_debug_message(sprite_array)
+show_debug_message("SPRITE ARRAY LOADED")
 sprite_num = array_height_2d(sprite_array)
 
 //get frame max
