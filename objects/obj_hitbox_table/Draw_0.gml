@@ -2,6 +2,7 @@
 draw_self();
 draw_set_colour(c_white)
 draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
+draw_text_colour(x + width/2 - 95, y + height/2, "Please select a sprite", c_aqua, c_lime, c_fuchsia, c_maroon, 1)
 
 if ((sprite > -1) and (frame > -1)) {
 	if !(surface_exists(surface)) {
