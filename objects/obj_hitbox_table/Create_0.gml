@@ -11,7 +11,7 @@ sprite = -1
 frame = -1
 hitbox = true
 data = false
-hurtbox = -1
+hurtbox = []
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"
 , "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP"]

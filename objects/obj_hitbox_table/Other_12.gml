@@ -20,7 +20,6 @@ if (surface_exists(surface)) {
 		data = true
 		for (i = 0; i < array_height_2d(_table); i++) {
 			if (_table[i, 0] = -10) {
-				hurtbox = i
 				draw_text(width/2, (i+1)*23, string("/\\ /\\ /\\ /\\ HITBOXES ||||||  HURTBOXES \\/ \\/ \\/ \\/"))
 			} else {
 				for (var o = 0; o < array_length_2d(_table, i); o++) {

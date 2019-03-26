@@ -5,6 +5,7 @@ if ((sprite > -1) and (frame > -1)) {
 	table_list = []
 	y_off = []
 	max_y = []
+	hurtbox = []
 
 	var _table, _list, j;
 
@@ -24,13 +25,14 @@ if ((sprite > -1) and (frame > -1)) {
 			if (j = 0) {
 				j = array_height_2d(_table)
 				_table[j, 0] = -10
+				hurtbox[_frame] = j
 				j++
 				_list = obj_data.hurtbox_list[obj_data.sprite_array[sprite, SURFACE]] //get hitbox list of character
 			}
 		}
 		table_list[_frame] = _table //update frame table
 		y_off[_frame] = 0 //update y offset
-		max_y[_frame] = max(0, (array_height_2d(_table)-10)*23) //update max_y
+		max_y[_frame] = max(0, (array_height_2d(_table)-9)*23) //update max_y
 	}
 
 	event_user(2)
