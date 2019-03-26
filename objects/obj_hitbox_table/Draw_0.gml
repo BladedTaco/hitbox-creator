@@ -9,13 +9,11 @@ if ((sprite > -1) and (frame > -1)) {
 		surface = surface_create(1024, 512)
 		event_user(2)
 	}
-
-
+	
 	if (frame != obj_canvas.frame) {
 		frame = obj_canvas.frame
 		event_user(2)
 	}
-
 
 	surface_set_target(surface)
 	//ADD ANY SPECIAL PER FRAME DRAWS IN HERE
