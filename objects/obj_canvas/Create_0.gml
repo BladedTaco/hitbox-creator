@@ -10,7 +10,6 @@ y_off = 0
 border = 4
 width = image_xscale - border
 height = image_yscale - border
-reset = false
 active = false
 frame_x = 0
 frame_y = 0

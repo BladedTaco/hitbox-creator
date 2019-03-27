@@ -9,12 +9,11 @@ surface = -1
 table_list = [] //holds an array for each table array frame for the sprite
 sprite = -1
 frame = -1
-hitbox = true
-data = false
+hitbox = false
 hurtbox = []
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"
-, "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP"]
+, "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP", "DEL"]
 desc = ["SHP - SHAPE, the shape of the hitbox", 
 "WID - WIDTH, the horizontal size of the hitbox (pre rotation)", 
 "HEI - HEIGHT, the vertical size of the hitbox (pre rotation)", 
@@ -39,7 +38,8 @@ desc = ["SHP - SHAPE, the shape of the hitbox",
 "TYP - TYPE, The type group of the attack such as legs, arms, disjoint.", 
 "SDI - SDI MULTIPLIER, the multipler of how easy it is to smash DI out of the attack", 
 "IND - INDIRECTIVENESS, if the hitbox is disjointed and seperate from the character", 
-"FLP - ANGLE FLIPPER, if the hitbox knockback angle changes based on the relative position of the enemy"]
+"FLP - ANGLE FLIPPER, if the hitbox knockback angle changes based on the relative position of the enemy",
+"DEL - DELETE, to delete the hitbox, requires confirmation"]
 
 //["SHP", "WID", "HEI", "X", "Y", "ROT"]
 /*

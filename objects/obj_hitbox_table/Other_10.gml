@@ -24,7 +24,9 @@ if ((sprite > -1) and (frame > -1)) {
 			}
 			if (j = 0) {
 				j = array_height_2d(_table)
-				_table[j, 0] = -10
+				for (i = 0; i < 25; i++) {
+					_table[j, i] = -10
+				}
 				hurtbox[_frame] = j
 				j++
 				_list = obj_data.hurtbox_list[obj_data.sprite_array[sprite, SURFACE]] //get hitbox list of character
