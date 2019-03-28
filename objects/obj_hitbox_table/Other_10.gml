@@ -23,7 +23,13 @@ if ((sprite > -1) and (frame > -1)) {
 				}
 			}
 			if (j = 0) {
-				j = array_height_2d(_table)
+				if (_table[0, 0] != -10) {
+					j = array_height_2d(_table) //hitboxes
+				} else {
+					j = 0 //no hitboxes	
+					_table[1, 1] = -10
+					_table[1, 0] = -10
+				}
 				for (i = 0; i < 25; i++) {
 					_table[j, i] = -10
 				}
