@@ -1,4 +1,4 @@
-/// @description 
+/// @description init
 //create surface and sprite
 surface = []
 surface_width = 0
