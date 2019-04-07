@@ -13,7 +13,7 @@ hitbox = false
 hurtbox = []
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"
-, "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP", "DEL"]
+, "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP", "DEL", "*"]
 desc = ["SHP - SHAPE, the shape of the hitbox", 
 "WID - WIDTH, the horizontal size of the hitbox (pre rotation)", 
 "HEI - HEIGHT, the vertical size of the hitbox (pre rotation)", 
@@ -39,7 +39,8 @@ desc = ["SHP - SHAPE, the shape of the hitbox",
 "SDI - SDI MULTIPLIER, the multipler of how easy it is to smash DI out of the attack", 
 "IND - INDIRECTIVENESS, if the hitbox is disjointed and seperate from the character", 
 "FLP - ANGLE FLIPPER, if the hitbox knockback angle changes based on the relative position of the enemy",
-"DEL - DELETE, to delete the hitbox, requires confirmation"]
+"DEL - DELETE, to delete the hitbox, requires confirmation",
+"* - MOVE, to move the place of the hitbox"]
 
 //["SHP", "WID", "HEI", "X", "Y", "ROT"]
 /*

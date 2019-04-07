@@ -22,7 +22,8 @@ if (surface_exists(surface)) {
 				draw_text(width/2, (i+1)*23, string("/\\ /\\ /\\ /\\ HITBOXES ||||||  HURTBOXES \\/ \\/ \\/ \\/"))
 			} else {
 				draw_set_colour(c_white)
-				draw_text(812, (i+1)*23, "X")
+				draw_text(816, (i+1)*23, "X")
+				draw_text(838, (i+1)*23, "*")
 				for (var o = 0; o < array_length_2d(_table, i); o++) {
 					if (o mod 2 = 0) {
 						draw_set_colour(c_black)
