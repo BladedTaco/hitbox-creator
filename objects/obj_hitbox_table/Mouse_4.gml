@@ -5,9 +5,9 @@ if ((sprite > -1) and (frame > -1) and hitbox) { //if there is data to edit
 	var _my = window_mouse_get_y() - y
 	var _table = table_list[frame] //get array
 
-	if ((_mx > 0) and (_mx < width)) {
+	if ((_mx > 0) and (_mx < width) and (_my > 0) and (_my < height)) {
 		_mx = clamp(floor(_mx/32), 0, 25) //get x index
-		_my = floor(_my/23) - 1	//get y index
+		_my = floor((_my + y_off[frame])/23) - 1	//get y index
 		if (_my = -1) { //show description
 			show_message(desc[_mx])
 		} else if (_my < array_height_2d(_table)) { //change value or delete
@@ -17,7 +17,7 @@ if ((sprite > -1) and (frame > -1) and hitbox) { //if there is data to edit
 				} else { //delete
 					if (show_question("Are you sure you want to delete hitbox " + string(_my) + "?")) {
 						hurtbox[frame] -= 1
-						if (array_height_2d(_table) = 2) {
+						if (array_height_2d(_table) = 2) { //if last hitbox, set to null array
 							_table = []
 							_table[1, 1] = -10
 							_table[1, 0] = -10
@@ -45,6 +45,7 @@ if ((sprite > -1) and (frame > -1) and hitbox) { //if there is data to edit
 					}
 				}
 			}
+			max_y[frame] = max(0, (array_height_2d(table_list[frame])-9)*23) //update max_y
 			event_user(2)
 		}
 	}

@@ -10,7 +10,7 @@ if (surface_exists(surface)) {
 	var _table = table_list[frame]
 	
 	if (_table[0, 0] + _table[1, 0] != -20) {
-		for (var i = 0; i < array_length_2d(_table, 0)/2; i++) {
+		for (var i = 0; i < 13; i++) {
 			draw_rectangle_colour(i*64 - 32, 0, i*64, 1024, c_dkgray, c_dkgray, c_black, c_black, false)
 		}
 		if (i > 2) { //if there is data
