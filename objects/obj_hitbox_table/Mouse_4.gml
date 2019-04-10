@@ -28,7 +28,7 @@ if ((sprite > -1) and (frame > -1) and hitbox) { //if there is data to edit
 						}
 					}
 				} else { //move
-					var _int = get_integer("Change priority of hitbox " + string(_my), _my)
+					var _int = get_integer("Change priority of hitbox " + string(_my), "")
 					_int = clamp(_int, 0, hurtbox[frame] - 1)
 					table_list[frame] = scr_array_swap_entry(_table, 0, _my, _int)
 				}
@@ -48,7 +48,7 @@ if ((sprite > -1) and (frame > -1) and hitbox) { //if there is data to edit
 						}
 					}
 				} else { //move
-					var _int = get_integer("Change priority of hitbox " + string(_my - hurtbox[frame] - 1), _my - hurtbox[frame] - 1)
+					var _int = get_integer("Change priority of hitbox " + string(_my - hurtbox[frame] - 1), "")
 					table_list[frame] = scr_array_swap_entry(_table, 0, _my, _int + hurtbox[frame] + 1)
 				}
 			}

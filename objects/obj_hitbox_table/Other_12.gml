@@ -15,6 +15,7 @@ if (surface_exists(surface)) {
 		}
 		if (i > 2) { //if there is data
 			draw_rectangle_colour(i*64 - 32, 0, i*64, 1024, c_red, c_red, c_maroon, c_maroon, false)
+			draw_rectangle_colour(i*64, 0, i*64 + 32, 1024, c_teal, c_teal, c_aqua, c_aqua, false)
 		}
 		hitbox = true
 		for (i = 0; i < array_height_2d(_table); i++) {
@@ -42,6 +43,8 @@ if (surface_exists(surface)) {
 			}
 			draw_text(16 + i*32, 0, title[i])
 		}
+		draw_set_colour(c_white)
+		draw_text(838, 0, "*")
 	} else {
 		draw_text(width/2, 0, "NO HITBOXES OR HURTBOXES")
 		hitbox = false
