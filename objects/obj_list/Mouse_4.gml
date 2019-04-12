@@ -2,7 +2,7 @@
 var _spr = -1
 var _x = x + 2*border
 var _y = y + 65 + (current_index - menu_index)*16
-if (point_in_rectangle(window_mouse_get_x(), window_mouse_get_y(), _x, _y - 7, _x + string_width(list[current_index]), _y + 7)) {
+if (point_in_rectangle(mouse_x, mouse_y, _x, _y - 7, _x + string_width(list[current_index]), _y + 7)) {
 	//get sprite
 	for (var i = 0; i < array_height_2d(obj_data.sprite_array); i++) {
 		if (string("spr_" + character + "_" + list[current_index]) = obj_data.sprite_array[i, NAME]) {

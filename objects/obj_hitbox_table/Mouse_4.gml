@@ -1,8 +1,8 @@
 /// @description show description
 
 if ((sprite > -1) and (frame > -1) and hitbox) { //if there is data to edit
-	var _mx = window_mouse_get_x() - x
-	var _my = window_mouse_get_y() - y
+	var _mx = mouse_x - x
+	var _my = mouse_y - y
 	var _table = table_list[frame] //get array
 
 	if ((_mx > 0) and (_mx < width) and (_my > 0) and (_my < height)) {
