@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "0cadbae2-d6d8-470a-8940-98965500d47a",
+            "Value": {
+                "id": "e3069c04-4ea2-456e-8170-25b7972707b2",
+                "resourcePath": "objects\\obj_clipboard\\obj_clipboard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "117e3ae3-d8a1-4a30-be0c-fe65a71ae99a",
             "Value": {
                 "id": "35c5f5c4-d02e-4dc5-95ac-11f9ae928c30",
