@@ -6,9 +6,32 @@ if ((sprite > -1) and (frame > -1)) {
 	y_off = []
 	max_y = []
 	hurtbox = []
-
+	
+	
 	var _table, _list, j;
-
+	
+	_list = obj_data.hitbox_list[obj_data.sprite_array[sprite, SURFACE]]
+	if (sprite = _list[0, 0]) { //base sprite, make empty
+		_table = []
+		_table[1, 1] = -10
+		_table[1, 0] = -10
+		_table[0, 0] = -10
+		table_list[0] = _table //update frame table
+		y_off[0] = 0 //update y offset
+		max_y[0] = max(0, (array_height_2d(_table)-9)*23) //update max_y
+		event_user(2)
+		//remove buttons to avoid crashes
+		obj_button_add.x = -abs(obj_button_add.x)
+		obj_button_clipboard.x = -abs(obj_button_clipboard.x)
+		obj_button_save.x = -abs(obj_button_save.x)
+		exit;
+	}
+	
+	//make sure buttons are in position
+	obj_button_add.x = abs(obj_button_add.x)
+	obj_button_clipboard.x = abs(obj_button_clipboard.x)
+	obj_button_save.x = abs(obj_button_save.x)
+	
 	for (var _frame = 0; _frame < obj_data.sprite_array[sprite, NUM]; _frame++) {
 		_table = array_create(1, -10) //create an array reference
 		_list = obj_data.hitbox_list[obj_data.sprite_array[sprite, SURFACE]] //get hitbox list of character
