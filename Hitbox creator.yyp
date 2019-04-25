@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "27170217-a2f8-47e4-baa8-c264ec15a206",
+            "Value": {
+                "id": "50c9e311-4cad-467b-8789-92ce46c1e766",
+                "resourcePath": "objects\\obj_init_helper\\obj_init_helper.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "2760ed43-663d-4204-ba9b-5c378afcd78c",
             "Value": {
                 "id": "d2661440-ed1c-48b5-a3c4-dbc27ed069e5",
