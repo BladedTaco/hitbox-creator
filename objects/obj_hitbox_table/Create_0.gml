@@ -12,6 +12,7 @@ frame = -1
 hitbox = false
 hurtbox = []
 caller = noone;
+caller_data = [];
 selection_mode = false;
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"
