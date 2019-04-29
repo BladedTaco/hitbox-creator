@@ -11,6 +11,8 @@ sprite = -1
 frame = -1
 hitbox = false
 hurtbox = []
+caller = noone;
+selection_mode = false;
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"
 , "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP", "DEL", "*"]

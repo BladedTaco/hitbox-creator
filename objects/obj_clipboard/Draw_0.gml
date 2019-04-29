@@ -4,7 +4,7 @@ draw_set_colour(c_white)
 draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
 
 	if !(surface_exists(surface)) {
-		surface = surface_create(1024, 512)
+		surface = surface_create(2048, 512)
 		event_user(2)
 	}
 	
