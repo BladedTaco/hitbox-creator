@@ -3,6 +3,7 @@ event_inherited();
 if ((obj_hitbox_table.sprite > -1) and (obj_hitbox_table.frame > -1)) { //if there is a sprite selected
 	with(obj_hitbox_table) {
 		caller = other.id
+		caller_string = "Please select the hitbox(es) to copy"
 		event_user(3)	
 	}
 }

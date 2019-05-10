@@ -1,5 +1,8 @@
 /// @description receive hitbox selection
 
+obj_clipboard.caller_data = caller_data
+exit;
+
 var _table = obj_hitbox_table.table_list[obj_hitbox_table.frame]
 var _data = []
 
