@@ -38,5 +38,13 @@ if (selection_mode) {
 	
 	draw_set_alpha(1)
 	draw_set_colour(c_white)
-	draw_text(200, 200, caller_string)
+	draw_set_halign(fa_left)
+	draw_set_valign(fa_top)
+	draw_text(225, 200, caller_string)
+	draw_text(225, 300, string_hash_to_newline(
+@"Left Click -- select hitbox, end selection
+Shift + Left Click -- Toggle range of hitboxes
+Ctrl + Left Click -- Toggle a hitboxes selection
+Right Click -- To cancel selection
+"))
 }
