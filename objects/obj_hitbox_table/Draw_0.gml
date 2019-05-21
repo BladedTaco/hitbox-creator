@@ -39,30 +39,34 @@ if ((sprite > -1) and (frame > -1)) {
 		_mx = clamp(floor(_mx/32), 0, 26) //get x index
 		_my = floor((_my + y_off[frame])/23) - 1 //get y index
 		if (_my = -1) { //on a description
-			_my += 1 - y_off[frame]/23
-
-			draw_rectangle(
-				max(x + _mx*32, x),
-				max(y + _my*23, y),
-				min(x + (_mx+1)*32, x + width),
-				min(y + (_my+1)*23, y + height),
-				false
-			)
-
-			_my -= 1 - y_off[frame]/23
-		} else if (_my < array_height_2d(_table)) { //on a hitbox
-			if ((_my < hurtbox[frame]) or (_my > hurtbox[frame])) {
+			if (!selection_mode) {
 				_my += 1 - y_off[frame]/23
-				
+
 				draw_rectangle(
-					x,
+					max(x + _mx*32, x),
 					max(y + _my*23, y),
-					x + width,
+					min(x + (_mx+1)*32, x + width),
 					min(y + (_my+1)*23, y + height),
 					false
 				)
-				
+
 				_my -= 1 - y_off[frame]/23
+			}
+		} else if ((_my < array_height_2d(_table))) { //on a hitbox
+			if !(selection_mode and (caller_type == BETWEEN)) {
+				if ((_my < hurtbox[frame]) or (_my > hurtbox[frame])) {
+					_my += 1 - y_off[frame]/23
+				
+					draw_rectangle(
+						x,
+						max(y + _my*23, y),
+						x + width,
+						min(y + (_my+1)*23, y + height),
+						false
+					)
+				
+					_my -= 1 - y_off[frame]/23
+				}
 			}
 		}
 		draw_set_colour(c_white)

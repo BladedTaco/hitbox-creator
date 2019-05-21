@@ -8,9 +8,23 @@ if (selection_mode) {
 	draw_rectangle(-10, y + 1, x, y + height - 1, false)	
 	draw_rectangle(x + width, y + 1, room_width + 10, y + height - 1, false)	
 	
+	
+	var _my
+	
+	//draw between hover if needed
+	if ((active) and (caller_type = BETWEEN)) {
+		draw_set_colour(c_aqua)
+		draw_set_alpha(0.4)
+		_my = floor((mouse_y - y + 12 + y_off[frame])/23) - 1
+		if ((_my <= array_height_2d(table_list[frame])) and (_my >= 0)) { //acceptable range
+			_my += 1 - y_off[frame]/23
+			draw_line_width(x, max(y + _my*23 - 2, y), x + width, min(y + _my*23 - 2, y + height), 6)
+			_my -= 1 - y_off[frame]/23
+		}
+	}
+	
 	draw_set_colour(c_blue)
 	draw_set_alpha(0.4)
-	var _my
 	//draw over selected
 	for (var i = 0; i < array_length_1d(caller_data); i++) {
 		_my = (caller_data[i] + 1)*23 - y_off[frame]
@@ -36,15 +50,20 @@ if (selection_mode) {
 		)	
 	}
 	
+	var control_string = @"Left Click -- select hitbox, end selection
+Shift + Left Click -- Toggle range of hitboxes
+Ctrl + Left Click -- Toggle a hitboxes selection
+Right Click -- To cancel selection"
+	
+	if (!caller_multiselect) {
+			var control_string = @"Left Click -- select hitbox and end selection
+Right Click -- To cancel selection"
+	}
+	
 	draw_set_alpha(1)
 	draw_set_colour(c_white)
 	draw_set_halign(fa_left)
 	draw_set_valign(fa_top)
 	draw_text(225, 200, caller_string)
-	draw_text(225, 300, string_hash_to_newline(
-@"Left Click -- select hitbox, end selection
-Shift + Left Click -- Toggle range of hitboxes
-Ctrl + Left Click -- Toggle a hitboxes selection
-Right Click -- To cancel selection
-"))
+	draw_text(225, 300, control_string)
 }

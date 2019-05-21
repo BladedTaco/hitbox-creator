@@ -11,8 +11,13 @@ if ((sprite > -1) and (frame > -1) and hitbox){ //if there is data to edit
 		
 		if (selection_mode) { //select a hitbox
 			if ((_my >= 0) and (_my != hurtbox[frame]) and (_my < array_height_2d(_table))) { //selected a hitbox
+				//check for between
+				if (caller_type = BETWEEN) {
+					_my = floor((mouse_y - y + y_off[frame])/23) - 1.5	//get y index	
+				}
+				
 				//shift and control
-				if (keyboard_check(vk_shift)) { //select many
+				if (keyboard_check(vk_shift) and caller_multiselect) { //select many
 					if (caller_shift = -1) { //start multi-select
 						caller_shift = _my
 					} else { //end multi select
@@ -30,7 +35,7 @@ if ((sprite > -1) and (frame > -1) and hitbox){ //if there is data to edit
 						}
 						caller_shift = -1
 					}
-				} else if (keyboard_check(vk_control)) { //select one on or off
+				} else if (keyboard_check(vk_control) and caller_multiselect) { //select one on or off
 					for (var i = array_length_1d(caller_data); i > 0; i--) {
 						if (caller_data[i-1] = _my) {
 							caller_data = scr_array_remove_entry(caller_data, i-1)

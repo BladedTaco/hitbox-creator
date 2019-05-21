@@ -1,9 +1,11 @@
 /// @description handle button press
 event_inherited();
-if ((obj_hitbox_table.sprite > -1) and (obj_hitbox_table.frame > -1)) { //if there is a sprite selected
-	with(obj_hitbox_table) {
+with(obj_hitbox_table) {
+	if ((sprite > -1) and (frame > -1)) { //if there is a sprite selected
 		caller = other.id
 		caller_string = "Please select the hitbox(es) to copy"
+		caller_type = GIVEN_NUMBER
+		caller_sub_type = -1
 		event_user(3)	
 	}
 }

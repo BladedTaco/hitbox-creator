@@ -1,3 +1,5 @@
 /// @description selection mode escaping
-caller_data = []
-event_user(3)
+if (selection_mode) {
+	caller_data = []
+	event_user(3)
+}

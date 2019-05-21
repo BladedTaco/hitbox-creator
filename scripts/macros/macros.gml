@@ -13,3 +13,7 @@
 
 //surface macros
 #macro SURFACE_POWER 13 //increase if sprites are getting cut off sprite sheet
+
+//callback macros
+#macro GIVEN_NUMBER 0 
+#macro BETWEEN 1
