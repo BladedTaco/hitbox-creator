@@ -1,7 +1,8 @@
 /// @description toggle hitbox selection mode
 
 if (selection_mode) { //return to normal behaviour and send back data
-	if (array_length_1d(caller_data > 0)) { //data to send
+	show_debug_message(caller_data)
+	if (array_length_1d(caller_data) > 0) { //data to send
 		caller_data = array_sort_1d(caller_data, 0)
 	
 		//call the event for the caller and transfer data
@@ -22,7 +23,7 @@ if (selection_mode) { //return to normal behaviour and send back data
 		}
 	}
 	
-	caller_data = []
+	caller_data = [];
 	if ((caller_type = BETWEEN) or ((caller_type = GIVEN_NUMBER) and (caller_sub_type = 1))) { //single option
 		caller_multiselect = false;	
 	} else { //many options

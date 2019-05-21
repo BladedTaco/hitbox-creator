@@ -13,18 +13,40 @@ if (selection_mode) {
 	
 	//draw between hover if needed
 	if ((active) and (caller_type = BETWEEN)) {
-		draw_set_colour(c_aqua)
-		draw_set_alpha(0.4)
-		_my = floor((mouse_y - y + 12 + y_off[frame])/23) - 1
-		if ((_my <= array_height_2d(table_list[frame])) and (_my >= 0)) { //acceptable range
-			_my += 1 - y_off[frame]/23
-			draw_line_width(x, max(y + _my*23 - 2, y), x + width, min(y + _my*23 - 2, y + height), 6)
-			_my -= 1 - y_off[frame]/23
+		if (hitbox) { //already some data
+			draw_set_colour(c_aqua)
+			draw_set_alpha(0.4)
+			_my = floor((mouse_y - y + 12 + y_off[frame])/23) - 1
+			if ((_my <= array_height_2d(table_list[frame])) and (_my >= 0)) { //acceptable range
+				_my += 1 - y_off[frame]/23
+				draw_line_width(x, max(y + _my*23 - 2, y), x + width, min(y + _my*23 - 2, y + height), 6)
+				_my -= 1 - y_off[frame]/23
+			}
+		} else { //no data yet
+			draw_set_colour(c_dkgray)
+			draw_set_alpha(1)
+			draw_set_halign(fa_center)
+			draw_set_valign(fa_top)
+			draw_text(x + width/2, y + 23 + border, "Add hitbox")
+			draw_text(x + width/2, y + 46 + border, "Add hurtbox")
+			draw_set_colour(c_aqua)
+			draw_set_alpha(0.4)
+			_my = floor((mouse_y - y + y_off[frame])/23) - 1
+			if ((_my < array_height_2d(table_list[frame])) and (_my >= 0)) { //acceptable range
+				_my += 1 - y_off[frame]/23
+				draw_rectangle(
+					x,
+					max(y + _my*23, y),
+					x + width,
+					min(y + (_my+1)*23, y + height),
+					false
+				)
+				_my -= 1 - y_off[frame]/23
+			}
 		}
 	}
 	
 	draw_set_colour(c_blue)
-	draw_set_alpha(0.4)
 	//draw over selected
 	for (var i = 0; i < array_length_1d(caller_data); i++) {
 		_my = (caller_data[i] + 1)*23 - y_off[frame]

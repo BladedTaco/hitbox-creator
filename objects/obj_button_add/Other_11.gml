@@ -1,15 +1,9 @@
 /// @description callback - hitbox selection
 with (obj_hitbox_table) {
+	show_debug_message(other.caller_data)
 	if ((sprite > -1) and (frame > -1)) { //if there is a sprite selected
-		//var _int = show_question("Hitbox (Yes) or Hurtbox (No)") 
-		//if (_int) { //hitbox
-		//	_int = clamp(get_integer("which row would you like to insert the hitbox", ""), 0, min(9, hurtbox[frame]))
-		//	hurtbox[frame]++
-		//} else { //hurtbox
-		//	_int = clamp(get_integer("which row would you like to insert the hurtbox", ""), 0, 9)
-		//	_int += hurtbox[frame] + 1
-		//}
-		var _int = caller_data[0]
+
+		var _int = other.caller_data[0]
 		if (hitbox) { //if there is already some data
 			scr_array_add_entry(table_list[frame], _int,
 			0, [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
