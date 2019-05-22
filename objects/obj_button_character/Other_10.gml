@@ -1,4 +1,5 @@
 /// @description
+mouseover_text = string("View " + character + "'s animations")
 if (!surface_exists(surface)) {
 	surface = surface_create(128, 128)
 }

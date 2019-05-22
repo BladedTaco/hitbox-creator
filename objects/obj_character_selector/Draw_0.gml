@@ -1,5 +1,4 @@
 /// @description draw canvas
-draw_self();
 draw_set_colour(c_white)
 draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
 
@@ -21,3 +20,5 @@ with (obj_button_character) { //draw character buttons
 }
 
 shader_reset() //reset the shader
+
+event_inherited();
