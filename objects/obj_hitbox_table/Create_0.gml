@@ -12,12 +12,14 @@ frame = -1
 hitbox = false
 hurtbox = []
 caller = noone;
+caller_event = -1
 caller_data = [];
 caller_string = ""
 caller_shift = -1
 caller_type = -1
 caller_sub_type = -1
 caller_multiselect = true;
+caller_sort = true;
 selection_mode = false;
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"

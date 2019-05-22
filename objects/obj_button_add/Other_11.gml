@@ -1,9 +1,10 @@
 /// @description callback - hitbox selection
 with (obj_hitbox_table) {
-	show_debug_message(other.caller_data)
 	if ((sprite > -1) and (frame > -1)) { //if there is a sprite selected
-
 		var _int = other.caller_data[0]
+		if (hurtbox[frame] >= _int) {
+			hurtbox[frame] += 1	
+		}
 		if (hitbox) { //if there is already some data
 			scr_array_add_entry(table_list[frame], _int,
 			0, [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])

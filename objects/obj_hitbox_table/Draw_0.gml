@@ -59,9 +59,9 @@ if ((sprite > -1) and (frame > -1)) {
 				
 					draw_rectangle(
 						x,
-						max(y + _my*23, y),
+						max(y + _my*23 + 1, y),
 						x + width,
-						min(y + (_my+1)*23, y + height),
+						min(y + (_my+1)*23 - 1, y + height),
 						false
 					)
 				

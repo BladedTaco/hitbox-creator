@@ -20,6 +20,9 @@ if (surface_exists(surface)) {
 		hitbox = true
 		for (i = 0; i < array_height_2d(_table); i++) {
 			if (_table[i, 0] = -10) {
+				draw_set_colour(c_dkgray)
+				draw_rectangle(0, (i+1)*23, width, (i+2)*23, false)
+				draw_set_colour(c_white)
 				draw_text(width/2, (i+1)*23, string("/\\ /\\ /\\ /\\ HITBOXES ||||||  HURTBOXES \\/ \\/ \\/ \\/"))
 			} else {
 				draw_set_colour(c_white)

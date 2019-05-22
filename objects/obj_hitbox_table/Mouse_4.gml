@@ -82,9 +82,13 @@ if ((sprite > -1) and (frame > -1)) { //if there is data to edit
 								}
 							}
 						} else { //move
-							var _int = get_integer("Change priority of hitbox " + string(_my), "")
-							_int = clamp(_int, 0, hurtbox[frame] - 1)
-							table_list[frame] = scr_array_swap_entry(_table, 0, _my, _int)
+							caller_type = BETWEEN
+							caller_event = 4
+							caller_string = "Select where to move this hitbox to"
+							caller = id
+							caller_sort = false;
+							event_user(3)
+							caller_data = [_my]
 						}
 					} else if (_my > hurtbox[frame]) {
 						if (_mx < 25) { //change value
@@ -102,8 +106,13 @@ if ((sprite > -1) and (frame > -1)) { //if there is data to edit
 								}
 							}
 						} else { //move
-							var _int = get_integer("Change priority of hitbox " + string(_my - hurtbox[frame] - 1), "")
-							table_list[frame] = scr_array_swap_entry(_table, 0, _my, _int + hurtbox[frame] + 1)
+							caller_type = BETWEEN
+							caller_event = 4
+							caller_string = "Select where to move this hurtbox to"
+							caller = id
+							caller_sort = false;
+							event_user(3)
+							caller_data = [_my]
 						}
 					}
 					max_y[frame] = max(0, (array_height_2d(table_list[frame])-9)*23) //update max_y

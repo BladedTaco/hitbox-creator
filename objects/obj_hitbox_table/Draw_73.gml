@@ -47,6 +47,7 @@ if (selection_mode) {
 	}
 	
 	draw_set_colour(c_blue)
+	draw_set_alpha(0.4)
 	//draw over selected
 	for (var i = 0; i < array_length_1d(caller_data); i++) {
 		_my = (caller_data[i] + 1)*23 - y_off[frame]
