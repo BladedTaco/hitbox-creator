@@ -21,4 +21,6 @@ with (obj_button_character) { //draw character buttons
 
 shader_reset() //reset the shader
 
-event_inherited();
+with (obj_button_character) { //check for mouseover text draw
+	event_perform(ev_draw, ev_draw_end)	
+}
