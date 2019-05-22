@@ -1,5 +1,4 @@
 /// @description show description
-
 if ((sprite > -1) and (frame > -1)) { //if there is data to edit
 	if (hitbox) {
 		var _mx = mouse_x - x

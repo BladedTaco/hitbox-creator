@@ -26,7 +26,13 @@ if (selection_mode) { //return to normal behaviour and send back data
 		}
 	}
 	
+	if (instance_exists(obj_button_pause)) {
+		with (obj_button_pause) {
+			instance_change(obj_button_play, false)
+		}
+	}
 	caller_data = [];
+	caller_started = true;
 	if ((caller_type = BETWEEN) or ((caller_type = GIVEN_NUMBER) and (caller_sub_type = 1))) { //single option
 		caller_multiselect = false;	
 	} else { //many options

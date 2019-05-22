@@ -3,10 +3,12 @@ if (selection_mode) {
 	//grey out surrounding
 	draw_set_alpha(0.75)
 	draw_set_colour(c_dkgray)
-	draw_rectangle(-10, -10, room_width + 10, y, false)	
-	draw_rectangle(-10, y + height, room_width + 10, room_height + 10, false)	
-	draw_rectangle(-10, y + 1, x, y + height - 1, false)	
-	draw_rectangle(x + width, y + 1, room_width + 10, y + height - 1, false)	
+	draw_rectangle(-10, -10, room_width + 10, obj_canvas.y - 1, false) //top
+	draw_rectangle(-10, y + height + border, room_width + 10, room_height + 10, false) //bottom	
+	draw_rectangle(-10, obj_canvas.y, x - 1, y + height - 1 + border, false) //left
+	draw_rectangle(x + width + border, obj_canvas.y, room_width + 10, y + height - 1 + border, false) //right
+	draw_rectangle(x, obj_canvas.y + obj_canvas.height + obj_canvas.border, x + width - 1 + border, y - 1, false) //middle
+	
 	
 	
 	var _my
