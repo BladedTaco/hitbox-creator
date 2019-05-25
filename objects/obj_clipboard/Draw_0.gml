@@ -24,4 +24,3 @@ draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
 	shader_reset() //reset the shader
 
 draw_set_colour(c_black)
-draw_text(x + 20, y + 10, string(caller_data))

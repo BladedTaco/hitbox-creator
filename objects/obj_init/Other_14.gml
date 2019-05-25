@@ -35,15 +35,17 @@ for (var j = 0; j < array_length_1d(hitbox_list); j++) {
 	_box2 = hurtbox_list[j]
 	k = _box[0, 0]
 	//set null value array
-	for (i = array_height_2d(_box); i >= 0; i--) {
+	for (i = array_height_2d(_box) - 1; i >= 0; i--) {
 		for (o = frame_max*25; o >= 0; o--) {
-			_box[@ i, o] = -10
-			_box2[@ i, o] = -10
+			_box[i, o] = -10
+			_box2[i, o] = -10
 		}
 	}
-	_box[@ 0, 0] = k
-	_box2[@ 0, 0] = k
+	_box[0, 0] = k
+	_box2[0, 0] = k
 	k = 0
+	hitbox_list[j] = _box 
+	hurtbox_list[j] = _box2
 }
 
 repeat (2) { //once for hitboxes, once hurtboxes

@@ -74,6 +74,16 @@ if (directory_exists_fmns(working_directory + "SPRITES\\")) {
 show_debug_message("COPYING VIEW DIRECTORY")
 directory_copy_fmns("C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\views\\", working_directory + "VIEWS\\")
 
+var _sec = current_second
+
+while (_sec > 45) {
+	_sec = current_second	
+}
+while(abs(current_second  - _sec) <  10) {
+	
+}
+
+
 _file = []
 
 //"2842a6b5-5a70-40cb-a868-36a692e71c2e" sptire view
@@ -103,8 +113,12 @@ while (_file[0] != "") {
 //add id data to sprite array
 show_debug_message("ADDING IDS TO SPRITE ARRAY")
 for (i = 0; i < array_length_1d(sprite_list); i++) {
+	if (i = 19) {
+		i = 18
+		i = 19
+	}
 	for (o = 0; o < array_height_2d(sprite_array); o++) {
-		if (sprite_array[o, ID] = sprite_list[i]) {
+		if (string(sprite_array[o, ID]) == sprite_list[i]) {
 			sprite_array[o, ID] = i
 			break;
 		}
