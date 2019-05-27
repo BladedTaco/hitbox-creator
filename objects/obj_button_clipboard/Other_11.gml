@@ -13,11 +13,14 @@ with (obj_clipboard) { //with the clipboard
 			_hitbox = max(i + 1, _hitbox) //set hitbox
 		}
 	}
+	//set default name
 	var _str = obj_data.sprite_array[obj_canvas.sprite, NAME] //get name
 	_str = string_delete(_str, 1, 4) //remove spr_ prefix
 	_str = string_replace_all(_str, "_", " ") //remove all _'s
+	_str = _str + " - " + string(obj_canvas.frame)
 	_str = _str + ": " + string(_hitbox) + " | " + string(array_length_1d(other.caller_data) - _hitbox)
 	name[_num] = _str
+	hitbox[_num] = _hitbox //set how many hitboxes there are
 	event_user(2)
 }
 

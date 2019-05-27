@@ -8,3 +8,4 @@ surface = -1
 active = false
 data = []
 name = []
+hitbox = []

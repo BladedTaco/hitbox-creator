@@ -8,6 +8,7 @@ if (surface_exists(surface)) {
 	draw_rectangle_colour(0, 0, 1024, 512, c_ltgray, c_ltgray, c_gray, c_gray, false)
 	
 	var _table = table_list[frame]
+	max_y[frame] = max(0, (array_height_2d(_table)-9)*23) //update max_y
 	
 	if (_table[0, 0] + _table[1, 0] != -20) {
 		for (var i = 0; i < 13; i++) {
@@ -19,6 +20,13 @@ if (surface_exists(surface)) {
 		}
 		hitbox = true
 		for (i = 0; i < array_height_2d(_table); i++) {
+			if (_table[i, 0] = 1) {
+				_table[i, 0] = "REC"
+			} else if (_table[i, 0] = 2) {
+				_table[i, 0] = "CIR"
+			} else if (_table[i, 0] = 3) {
+				_table[i, 0] = "TRI"
+			}
 			if (_table[i, 0] = -10) {
 				draw_set_colour(c_dkgray)
 				draw_rectangle(0, (i+1)*23, width, (i+2)*23, false)
@@ -34,7 +42,7 @@ if (surface_exists(surface)) {
 					} else {
 						draw_set_colour(c_white)
 					}
-					draw_text(16 + o*32, (i+1)*23, string(_table[i, o]))
+					draw_text(16 + o*32, (i+1)*23, string_copy(string(_table[i, o]), 1, 3))
 				}	
 			}
 		}

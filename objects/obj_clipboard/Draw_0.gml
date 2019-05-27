@@ -21,6 +21,18 @@ draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
 
 	draw_surface(surface, x, y - y_off)	
 
+	if (active) {
+		var _my = floor((mouse_y - y - border - y_off)/32)
+		if (_my < array_length_1d(name)) {
+			draw_set_colour(c_aqua)
+			draw_set_alpha(0.4)
+			draw_rectangle(x, y + _my*32, x + width, y + 32 +_my*32, false)
+			draw_set_alpha(1)
+		}
+	}
+	
 	shader_reset() //reset the shader
 
 draw_set_colour(c_black)
+
+
