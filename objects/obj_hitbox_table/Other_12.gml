@@ -47,7 +47,7 @@ if (surface_exists(surface)) {
 			}
 		}
 		for (i = 0; i < array_length_1d(title); i++) {
-			if (i mod 2 = 0) {
+			if (i mod 2 = 0) {		
 				draw_set_colour(c_black)
 			} else {
 				draw_set_colour(c_white)

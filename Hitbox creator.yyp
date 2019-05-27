@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "abc75d07-06ec-4996-aed8-7e80a8e7d0f3",
+            "Value": {
+                "id": "49a6e5fb-7f46-49dd-9265-ef738671068b",
+                "resourcePath": "shaders\\shd_max_alpha\\shd_max_alpha.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "b04a8b8d-2c7e-4868-8c93-75f5966fad8b",
             "Value": {
                 "id": "1102880f-1126-4365-978f-093e5b6891d9",

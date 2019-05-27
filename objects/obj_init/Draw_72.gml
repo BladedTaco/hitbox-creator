@@ -7,3 +7,4 @@ with (obj_canvas) {
 		event_user(0) //recreate canvas
 	}
 }
+
