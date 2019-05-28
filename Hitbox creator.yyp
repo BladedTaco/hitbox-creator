@@ -287,6 +287,14 @@
             }
         },
         {
+            "Key": "74beda2d-367f-4198-a989-239c61820c65",
+            "Value": {
+                "id": "526a83e3-27d8-437b-b9b3-c7a8b29881c4",
+                "resourcePath": "sprites\\spr_button\\spr_button.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "7965a8f8-bd0a-4b3e-b77e-63dd1aaf7c9c",
             "Value": {
                 "id": "3bef115e-79b2-42a4-be27-49f548f2fbc2",
@@ -316,6 +324,14 @@
                 "id": "ec697d66-836c-4e2c-a3a8-bee9e0cd02d4",
                 "resourcePath": "datafiles_yy\\FileManager.dll.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "7d03c974-c188-4793-89dd-5ce64e226c1d",
+            "Value": {
+                "id": "a48f70e3-22ef-4ed7-9664-2cd1f02c5ff5",
+                "resourcePath": "objects\\obj_button_export\\obj_button_export.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -535,6 +551,14 @@
             }
         },
         {
+            "Key": "abdb25f8-ddcf-4d85-abaf-1d7437eedca2",
+            "Value": {
+                "id": "6dc8ae78-a659-4964-bded-37f2100ddced",
+                "resourcePath": "objects\\obj_button_export_clipboard\\obj_button_export_clipboard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b04a8b8d-2c7e-4868-8c93-75f5966fad8b",
             "Value": {
                 "id": "1102880f-1126-4365-978f-093e5b6891d9",
@@ -711,6 +735,14 @@
             }
         },
         {
+            "Key": "e1304911-60af-451f-90c8-e9e70b77dcc2",
+            "Value": {
+                "id": "92dbf4c1-08fa-40ab-bcb1-3640823557b5",
+                "resourcePath": "sprites\\spr_button_export\\spr_button_export.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "e291b011-2ee6-4e09-b24a-0a0fc3a046bb",
             "Value": {
                 "id": "47890b69-a45a-4b80-ab4f-7c53df5acefa",
@@ -780,6 +812,14 @@
                 "id": "b64b2abe-6b8a-4da5-9b35-7c7ac5f220c3",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f4298982-1c22-453f-8e7c-7bf4acffae12",
+            "Value": {
+                "id": "d43e753d-9e0b-4db0-8c67-4d3b79813278",
+                "resourcePath": "sprites\\spr_button_export_clipboard\\spr_button_export_clipboard.yy",
+                "resourceType": "GMSprite"
             }
         },
         {

@@ -61,4 +61,11 @@ if (surface_exists(surface)) {
 		hitbox = false
 	}
 	surface_reset_target()
+	
+	if (hitbox) { //onyl add clipboard button if there is data
+		obj_button_clipboard.x = abs(obj_button_clipboard.x)
+	} else {
+		obj_button_clipboard.x = -abs(obj_button_clipboard.x)
+	}
+
 }

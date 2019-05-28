@@ -19,10 +19,3 @@ for (var i = 0; true; i++) { //for as long as it takes
 
 //hand off data to data object
 event_user(3)
-
-
-var _file = "Surfaces\\Surface_0" //get the surface file
-	if (file_exists(_file)) { //check if the file exists
-		//create and populate the surface
-		sprite_replace(sprite, _file, 1, false, false, 0, 0)
-	}

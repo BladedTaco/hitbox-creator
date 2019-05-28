@@ -1,6 +1,6 @@
 /// @description remove hitbox group
 
-var _my = floor((mouse_y - y - border - y_off)/32)
+var _my = floor((mouse_y - y - border - y_off)/separation)
 
 if (_my < array_length_1d(name)) { //name selected
 	//remove it if confirmed

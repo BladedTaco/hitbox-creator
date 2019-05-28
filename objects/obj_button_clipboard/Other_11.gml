@@ -21,6 +21,7 @@ with (obj_clipboard) { //with the clipboard
 	_str = _str + ": " + string(_hitbox) + " | " + string(array_length_1d(other.caller_data) - _hitbox)
 	name[_num] = _str
 	hitbox[_num] = _hitbox //set how many hitboxes there are
+	desc[_num] = "Click to add description"
 	event_user(2)
 }
 

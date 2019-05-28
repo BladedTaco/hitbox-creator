@@ -22,11 +22,20 @@ draw_rectangle(x + border, y + border, x + width - 1, y + height - 1, false)
 	draw_surface(surface, x, y - y_off)	
 
 	if (active) {
-		var _my = floor((mouse_y - y - border - y_off)/32)
-		if (_my < array_length_1d(name)) {
-			draw_set_colour(c_aqua)
-			draw_set_alpha(0.4)
-			draw_rectangle(x, y + _my*32, x + width, y + 32 +_my*32, false)
+		var _my = floor(2*(mouse_y - y - border - y_off)/separation)
+		if (_my/2 < array_length_1d(name)) {
+
+			if (_my mod 2 = 0) { //given name and data
+				draw_set_alpha(0.4)
+				draw_set_colour(c_aqua)
+				draw_rectangle(x, y + _my*separation/2, x + width, y + (_my+2)*separation/2, false)
+			} else { //description
+				draw_set_alpha(0.3)
+				draw_set_colour(c_aqua)
+				draw_rectangle(x, y + (_my-1)*separation/2, x + width, y + (_my+1)*separation/2, false)
+				draw_set_colour(c_lime)
+				draw_rectangle(x + separation, y + _my*separation/2, x + width, y + (_my+1)*separation/2, false)
+			}	
 			draw_set_alpha(1)
 		}
 	}
