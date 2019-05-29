@@ -663,6 +663,14 @@
             }
         },
         {
+            "Key": "d1b2395f-8559-45b2-9ceb-57eb50426ec1",
+            "Value": {
+                "id": "99e7dff9-409d-4c64-aee2-6a5395d1f4bd",
+                "resourcePath": "sprites\\spr_2x2_pixel\\spr_2x2_pixel.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "d500bd69-3f97-4ae4-a5a4-464c4e71d86b",
             "Value": {
                 "id": "290df5ab-7a2f-42b5-b47e-7702525c34a2",

@@ -17,6 +17,7 @@ frame_width = 0
 frame_height = 0
 canvas_colour = c_red
 rainbow_mode = false
+selected = true;
 
 frame = 2
 sprite = 0

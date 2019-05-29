@@ -11,7 +11,11 @@ hitbox
 hitbox
 1
 {
-11
+1
+10
+10
+10
+10
 }
 hitbox
 2
