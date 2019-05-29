@@ -86,7 +86,6 @@ while(abs(current_second  - _sec) <  10) {
 
 _file = []
 
-//"2842a6b5-5a70-40cb-a868-36a692e71c2e" sptire view
 _file[0] = file_find_first(working_directory + "VIEWS\\*", fa_directory) //find the first pallet sprite
 while (_file[0] != "") {
 	_file[1] = file_text_open_read(working_directory + "VIEWS\\" + _file[0])

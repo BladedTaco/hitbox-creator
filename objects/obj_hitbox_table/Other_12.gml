@@ -20,12 +20,8 @@ if (surface_exists(surface)) {
 		}
 		hitbox = true
 		for (i = 0; i < array_height_2d(_table); i++) {
-			if (_table[i, 0] = 1) {
-				_table[i, 0] = "REC"
-			} else if (_table[i, 0] = 2) {
-				_table[i, 0] = "CIR"
-			} else if (_table[i, 0] = 3) {
-				_table[i, 0] = "TRI"
+			if ((_table[i, 0] - 1 < SHAPE_NUMBER) && (_table[i, 0] > 0)) {
+				_table[i, 0] = SHAPES[_table[i, 0]-1]
 			}
 			if (_table[i, 0] = -10) {
 				draw_set_colour(c_dkgray)

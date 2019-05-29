@@ -17,3 +17,9 @@
 //callback macros
 #macro GIVEN_NUMBER 0 
 #macro BETWEEN 1
+
+//shapes
+global.shape = ["REC", "CIR", "TRI"];
+global.shape[0] = "REC"
+#macro SHAPES global.shape
+#macro SHAPE_NUMBER array_length_1d(global.shape)

@@ -391,6 +391,14 @@
             }
         },
         {
+            "Key": "8977edbd-200d-4539-85fd-a7401f7a99b3",
+            "Value": {
+                "id": "49f2a973-32d9-4a17-94d8-8f7a235dc8e6",
+                "resourcePath": "objects\\obj_hitbox\\obj_hitbox.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8bd19ba0-2fc5-4052-819b-1bd4d5227d35",
             "Value": {
                 "id": "69c3f4dd-5722-48ac-9b31-7ec284ba7a7f",

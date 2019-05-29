@@ -1,4 +1,5 @@
-/// @description 
+/// @description export clipboard
 event_inherited();
-
-//EXPORT CLIPBOARD
+with (obj_clipboard) {
+	event_user(1)	
+}

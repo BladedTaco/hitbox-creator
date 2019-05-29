@@ -11,3 +11,5 @@ name = [];
 hitbox = [];
 desc = [];
 separation = 48;
+
+event_user(0)

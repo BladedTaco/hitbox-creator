@@ -13,6 +13,10 @@ shader_set_uniform_f(u_bounds, x + border, y + border, x + width, y + height);
 
 draw_surface_part_ext(canvas, frame_x, frame_y, frame_width, frame_height, x + border - x_off*zoom, y + border - y_off*zoom, zoom, zoom, c_white, 1)
 
+with (obj_hitbox) {
+	event_perform(ev_draw, 0)
+}	
+
 shader_reset() //reset the shader
 
 draw_healthbar(x + 1, y + height + 8, x + width + 2, y + height + 12, (frame/(obj_data.sprite_array[sprite, NUM]-1))*100,

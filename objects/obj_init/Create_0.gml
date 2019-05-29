@@ -1,4 +1,5 @@
 /// @description init
+macros();
 //create surface and sprite
 surface = []
 surface_width = 0
