@@ -28,6 +28,8 @@ if (sprite > -1) { //if there is a sprite to draw
 		if (frame =  i) {
 			frame_x = _col*frame_width
 			frame_y = _row*frame_height
+			frame_off_x = obj_data.sprite_array[sprite, X_OFF]
+			frame_off_y = obj_data.sprite_array[sprite, Y_OFF]
 		}
 		//get place to draw next frame
 		_col++ //move one space across

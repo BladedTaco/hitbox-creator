@@ -783,6 +783,14 @@
             }
         },
         {
+            "Key": "e68222da-a18e-4c2a-886c-18fe9d68c936",
+            "Value": {
+                "id": "f632a3e4-5315-476f-b4e7-d2b0862c43b9",
+                "resourcePath": "shaders\\shd_clip_no_tex\\shd_clip_no_tex.yy",
+                "resourceType": "GMShader"
+            }
+        },
+        {
             "Key": "eb2fb46f-d35d-4a1b-bf28-ba76eb1242af",
             "Value": {
                 "id": "04407c8f-7dbe-4574-982b-aa579bc54c5e",
