@@ -17,6 +17,8 @@ draw_surface_part_ext(canvas, frame_x, frame_y, frame_width, frame_height, _pos[
 
 
 shader_reset() //reset the shader
+//update the origin position
+sprite_origin_pos = [_pos[0] + frame_off_x*zoom + zoom/2, _pos[1] + frame_off_y*zoom + zoom/2]
 
 with (obj_hitbox) {
 	event_perform(ev_draw, 0)
@@ -30,7 +32,6 @@ shader_set_uniform_f(u_bounds, x + border, y + border, x + width, y + height);
 draw_set_alpha(0.6)
 //draw a circle at sprite origin
 draw_set_colour(c_lime)
-sprite_origin_pos = [_pos[0] + frame_off_x*zoom + zoom/2, _pos[1] + frame_off_y*zoom + zoom/2]
 draw_circle(sprite_origin_pos[0], sprite_origin_pos[1], 2 + zoom/4, false)
 
 shader_reset() //reset the shader

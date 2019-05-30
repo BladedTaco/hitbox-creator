@@ -12,7 +12,6 @@ if (obj_hitbox_table.hitbox) {
 	start_y = y
 	image_angle = _table[index, 5]
 	visible = true;
-	zoom = 0;
 } else {
 	shape = 0
 	image_xscale = 0
@@ -25,6 +24,5 @@ if (obj_hitbox_table.hitbox) {
 	start_y = y
 	image_angle = 0
 	visible = false;
-	zoom = 0;
 }
 

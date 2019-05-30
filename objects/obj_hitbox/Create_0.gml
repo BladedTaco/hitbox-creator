@@ -14,8 +14,3 @@ offset = [0, 0]
 var o = obj_canvas
 bounds = [o.x + o.border, o.y + o.border, o.x + o.width, o.y + o.height]
 selected = false;
-
-zoom = 0;
-
-y_off = 0
-x_off = 0

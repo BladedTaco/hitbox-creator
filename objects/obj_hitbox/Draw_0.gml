@@ -2,17 +2,9 @@
 
 
 var z = obj_canvas.zoom
-if (z != zoom) {
-	zoom = 1
-	x_off = 0
-	y_off = 0
-	if (z = zoom) and false {
-		
-	}
-}
 
-x = start_x + obj_canvas.sprite_origin_pos[0] + x_off
-y = start_y + obj_canvas.sprite_origin_pos[1] + y_off
+x = start_x*z + obj_canvas.sprite_origin_pos[0]
+y = start_y*z + obj_canvas.sprite_origin_pos[1]
 image_xscale = start_width*z
 image_yscale = start_height*z
 
