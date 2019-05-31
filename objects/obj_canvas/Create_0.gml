@@ -21,6 +21,7 @@ sprite_origin_pos = [0,0]
 canvas_colour = c_red
 rainbow_mode = false
 selected = true;
+offset = [0,0]
 
 frame = 2
 sprite = 0
