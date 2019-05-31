@@ -58,10 +58,19 @@ if (surface_exists(surface)) {
 	}
 	surface_reset_target()
 	
-	if (hitbox) { //onyl add clipboard button if there is data
-		obj_button_clipboard.x = abs(obj_button_clipboard.x)
+	if (hitbox) { //if there is data
+		obj_button_clipboard.x = abs(obj_button_clipboard.x) //make sure clipbaord button is visible
+			for (i = array_length_1d(_table) - 1; i >= 0; i--) { //for each hitbox
+				if (i != hurtbox[frame]) { //if not the seperator
+					//make the hitbox
+					with (instance_create_depth(0, 0, 0, obj_hitbox)) {
+						index = i
+						event_user(0)
+					}
+				}
+			}
 	} else {
-		obj_button_clipboard.x = -abs(obj_button_clipboard.x)
+		obj_button_clipboard.x = -abs(obj_button_clipboard.x) //make sure clipbaord button is invisible
 	}
 
 }
