@@ -20,3 +20,18 @@ draw_rectangle(x - image_xscale/2, y - image_yscale/2, x + image_xscale/2, y + i
 draw_set_alpha(1)
 
 shader_reset();
+
+if (selected) {
+	//draw the updated position
+	var _x = x + image_xscale + 5
+	var _y = y - image_yscale + 5
+	var _str = string(start_x) + ", " + string(start_y)
+	draw_set_alpha(0.4)
+	draw_set_colour(c_black)
+	draw_rectangle(_x, _y - string_height(_str) - 4, _x + string_width(_str) + 4, _y, false)
+	draw_set_alpha(1)
+	draw_set_colour(c_white)
+	draw_set_halign(fa_left)
+	draw_set_valign(fa_bottom)
+	draw_text(_x + 2, _y - 2, _str)
+}

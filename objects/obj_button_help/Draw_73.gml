@@ -16,7 +16,7 @@ if (image_blend = c_dkgray) { //draw help
 	//draw each region in a different colour
 	for (var i = _len - 1; i >= 0; i--) {
 		o = object_list[i]
-		draw_set_colour(make_colour_hsv(255*i/_len, 255, 200))
+		draw_set_colour(make_colour_hsv(255*i/_len, 255, 255))
 		draw_rectangle(o.x + o.border, o.y + o.border, o.x + o.width, o.y + o.height, false)
 	}
 	
