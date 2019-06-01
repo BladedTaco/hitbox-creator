@@ -1,3 +1,4 @@
+//a shader to restrict drawing to an area
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 varying vec3 v_vPosition;

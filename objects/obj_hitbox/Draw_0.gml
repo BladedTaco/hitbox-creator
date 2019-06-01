@@ -9,16 +9,25 @@ image_xscale = start_width*z
 image_yscale = start_height*z
 
 
+_dir += index
+
 //set clipping mask shader
-shader_set(shd_clip)
-var u_bounds = shader_get_uniform(shd_clip, "u_bounds")
+shader_set(shd_clip_rotation)
+var u_bounds = shader_get_uniform(shd_clip_rotation, "u_bounds")
+var dir = shader_get_uniform(shd_clip_rotation, "_dir")
 shader_set_uniform_f(u_bounds, bounds[0], bounds[1], bounds[2], bounds[3]);
+shader_set_uniform_f(dir, degtorad(_dir))
+
+var _pos = [];
+_pos = draw_set_rotation(x, y, _dir)
 
 draw_set_alpha(0.3)
 draw_set_colour(c_aqua)
-draw_rectangle(x - image_xscale/2, y - image_yscale/2, x + image_xscale/2, y + image_yscale/2, false)
+draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
 draw_set_alpha(1)
 
+//reset shader and rotation
+draw_reset_rotation()
 shader_reset();
 
 if (selected) {
@@ -35,3 +44,10 @@ if (selected) {
 	draw_set_valign(fa_bottom)
 	draw_text(_x + 2, _y - 2, _str)
 }
+
+
+/*
+0.00	0		0		0
+0		-0.00	0		0
+0		0		0.00	0
+-800	-448	16000	1

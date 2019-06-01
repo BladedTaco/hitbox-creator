@@ -1,7 +1,4 @@
-//
 // takes a colour blended onto a 0 alpha black and makes it a 1 alpha original colour
-//
-
 varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 

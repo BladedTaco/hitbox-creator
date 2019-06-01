@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "3732edb3-21e2-423e-a6e9-b446a2b47f0f",
+            "Value": {
+                "id": "0caa58de-3bdb-41fa-a527-905fb3faa010",
+                "resourcePath": "scripts\\scr_get_rotated_position\\scr_get_rotated_position.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3d8d2bda-d99d-4540-afee-42f4ee9977e9",
             "Value": {
                 "id": "638c948d-1d1d-4ebc-96de-857a3f6900b6",
@@ -180,6 +188,14 @@
                 "id": "1f33a677-caf7-4921-b779-9e9c08f84ffc",
                 "resourcePath": "objects\\obj_canvas\\obj_canvas.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "4d4f730a-3298-4994-9434-a0032c54189c",
+            "Value": {
+                "id": "5436a327-861b-473a-9502-f770964e8d66",
+                "resourcePath": "shaders\\shd_clip_rotation\\shd_clip_rotation.yy",
+                "resourceType": "GMShader"
             }
         },
         {
@@ -308,6 +324,14 @@
                 "id": "526a83e3-27d8-437b-b9b3-c7a8b29881c4",
                 "resourcePath": "sprites\\spr_button\\spr_button.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "779bef39-4095-4ee8-bbca-508bebd98db0",
+            "Value": {
+                "id": "952aaa8f-2ff4-4996-aa13-940890362694",
+                "resourcePath": "scripts\\draw_set_rotation\\draw_set_rotation.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -687,6 +711,14 @@
             }
         },
         {
+            "Key": "d1aef23a-f398-4a14-84ff-c84ab84a1eab",
+            "Value": {
+                "id": "b264c203-5251-47d2-a4dd-b68025470958",
+                "resourcePath": "scripts\\draw_reset_rotation\\draw_reset_rotation.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d1b2395f-8559-45b2-9ceb-57eb50426ec1",
             "Value": {
                 "id": "99e7dff9-409d-4c64-aee2-6a5395d1f4bd",
@@ -942,7 +974,10 @@
         "ec3d94e9-c45c-4ec8-b3c1-ffdb50802fd3",
         "f60d799f-59ca-44d5-80c9-c8075a9a2088",
         "a489fee1-56f4-4ec9-8100-1fdbf6c78c20",
-        "67f9dab8-11b6-4b06-936c-85460273ce1f"
+        "67f9dab8-11b6-4b06-936c-85460273ce1f",
+        "779bef39-4095-4ee8-bbca-508bebd98db0",
+        "3732edb3-21e2-423e-a6e9-b446a2b47f0f",
+        "d1aef23a-f398-4a14-84ff-c84ab84a1eab"
     ],
     "tutorial": ""
 }
