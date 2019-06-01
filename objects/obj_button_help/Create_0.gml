@@ -25,7 +25,7 @@ scr_add_help_text(o_pos[0], o_pos[1] + 26,		"SCROLL UP - Zoom in")
 scr_add_help_text(o_pos[0], o_pos[1] + 26*2,	"SCROLL DOWN - Zoom out")
 scr_add_help_text(o_pos[0], o_pos[1] + 26*3,	"RIGHT CLICK - Centre sprite")
 scr_add_help_text(o_pos[0], o_pos[1] + 26*4,	"LEFT CLICK - Interact with hitboxes")
-scr_add_help_text(o_pos[0], o_pos[1] + 26*5,	"CONTROL CLICK - Select Multiple Hitboxes")
+scr_add_help_text(o_pos[0], o_pos[1] + 26*5,	"CONTROL: HOLD - Multi-hitbox select mode")
 
 //hitbox table controls
 scr_add_help_text(o_pos[2], o_pos[3],			"LEFT CLICK - Edit entry")
