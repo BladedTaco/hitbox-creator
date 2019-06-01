@@ -1,6 +1,9 @@
 /// @description allow canvas to move again
-selected = false;
-obj_canvas.selected = true;
-with (obj_hitbox_table) {
-	event_perform(ev_other, ev_user2)
+if (selected and !keyboard_check(vk_control)) {
+	selected = false;
+	with (obj_hitbox_table) {
+		event_perform(ev_other, ev_user2)
+	}
 }
+
+obj_canvas.selected = true;

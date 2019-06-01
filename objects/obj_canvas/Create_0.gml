@@ -22,6 +22,7 @@ canvas_colour = c_red
 rainbow_mode = false
 selected = true;
 offset = [0,0]
+hitboxes = [];
 
 frame = 2
 sprite = 0

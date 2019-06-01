@@ -20,10 +20,6 @@ shader_reset() //reset the shader
 //update the origin position
 sprite_origin_pos = [_pos[0] + frame_off_x*zoom + zoom/2, _pos[1] + frame_off_y*zoom + zoom/2]
 
-with (obj_hitbox) {
-	event_perform(ev_draw, 0)
-}	
-
 //set new clipping mask shader
 shader_set(shd_clip_no_tex)
 var u_bounds = shader_get_uniform(shd_clip_no_tex, "u_bounds")

@@ -53,6 +53,7 @@ if (surface_exists(surface)) {
 		draw_set_colour(c_white)
 		draw_text(838, 0, "*")
 	} else {
+		//show no hitboxes and destroy all hitbox objects
 		draw_text(width/2, 0, "NO HITBOXES OR HURTBOXES")
 		hitbox = false
 	}
@@ -62,17 +63,25 @@ if (surface_exists(surface)) {
 		obj_button_clipboard.x = abs(obj_button_clipboard.x) //make sure clipboard button is visible
 		with (obj_hitbox) {
 			instance_destroy();
+			obj_canvas.hitboxes = [];
 		}
+		var _boxes = [];
 		for (i = array_height_2d(_table) - 1; i >= 0; i--) { //for each hitbox
 			if (i != hurtbox[frame]) { //if not the seperator
 				//make the hitbox
-				with (instance_create_depth(0, 0, 0, obj_hitbox)) {
+				_boxes[i] = instance_create_depth(0, 0, 0, obj_hitbox)
+				with (_boxes[i]) {
 					index = i
 					event_user(0)
 				}
 			}
 		}
+		obj_canvas.hitboxes = scr_array_remove_entry(_boxes, hurtbox[frame])
 	} else {
+		with (obj_hitbox) {
+			instance_destroy();
+			obj_canvas.hitboxes = [];
+		}
 		obj_button_clipboard.x = -abs(obj_button_clipboard.x) //make sure clipbaord button is invisible
 	}
 

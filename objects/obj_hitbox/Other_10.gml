@@ -10,7 +10,7 @@ if (obj_hitbox_table.hitbox) {
 	y = _table[index, 4]
 	start_x = x
 	start_y = y
-	image_angle = _table[index, 5]
+	image_angle = -_table[index, 5]
 	visible = true;
 } else {
 	shape = 0

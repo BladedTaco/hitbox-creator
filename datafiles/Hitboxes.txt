@@ -6,7 +6,7 @@ frame
 hitbox
 0
 {
-0
+1
 10
 10
 10
@@ -15,7 +15,7 @@ hitbox
 hitbox
 1
 {
-1
+2
 10
 10
 10
@@ -24,7 +24,7 @@ hitbox
 hitbox
 2
 {
-2
+3
 10
 10
 10
