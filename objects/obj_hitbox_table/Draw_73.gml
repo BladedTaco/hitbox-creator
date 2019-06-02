@@ -75,14 +75,14 @@ if (selection_mode) {
 		)	
 	}
 	
-	var control_string = @"Left Click -- select hitbox, end selection
-Shift + Left Click -- Toggle range of hitboxes
-Ctrl + Left Click -- Toggle a hitboxes selection
-Right Click -- To cancel selection"
+	var control_string = @"	Left Click -- select hitbox, end selection
+							Shift + Left Click -- Toggle range of hitboxes
+							Ctrl + Left Click -- Toggle a hitboxes selection
+							Right Click -- To cancel selection"
 	
 	if (!caller_multiselect) {
-			var control_string = @"Left Click -- select hitbox and end selection
-Right Click -- To cancel selection"
+			var control_string = @"	Left Click -- select hitbox and end selection
+									Right Click -- To cancel selection"
 	}
 	
 	draw_set_alpha(1)
@@ -91,4 +91,15 @@ Right Click -- To cancel selection"
 	draw_set_valign(fa_top)
 	draw_text(225, 200, caller_string)
 	draw_text(225, 300, control_string)
+}
+
+if (update > 0) {
+	update /= 1.3;
+	draw_set_alpha(update/2.4)
+	draw_set_colour(c_aqua)
+	draw_rectangle(x + border, y + border, x + border + width, y + border + height, false)
+	draw_set_alpha(1)
+	if (update < 0.01) {
+		update = 0	
+	}
 }

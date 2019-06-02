@@ -1,6 +1,7 @@
 /// @description populate surface
 
 if (surface_exists(surface)) {
+	update = 1;
 	surface_set_target(surface)
 
 	draw_set_valign(fa_top)

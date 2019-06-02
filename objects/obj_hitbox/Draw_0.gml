@@ -1,5 +1,11 @@
 /// @description draw htibox
 
+if (image_angle > 0) {
+	image_angle += 3
+	if (image_angle > 360) {
+		image_angle = 1	
+	}
+}
 
 var z = obj_canvas.zoom
 
@@ -44,7 +50,6 @@ switch (shape) {
 		draw_line_width(_pos[0] + 5, _pos[1] - 5, _pos[0] - 5, _pos[1] + 5, 5)
 	break;
 }
-draw_set_alpha(1)
 
 //reset shader and rotation
 draw_reset_rotation()
@@ -65,4 +70,9 @@ if (selected) {
 	draw_text(_x + 2, _y - 2, _str)
 }
 
+draw_set_alpha(0.5)
+draw_set_halign(fa_center)
+draw_set_valign(fa_middle)
 draw_text(x, y, index)
+
+draw_set_alpha(1)

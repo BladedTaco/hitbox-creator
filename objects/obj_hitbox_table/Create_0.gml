@@ -22,6 +22,7 @@ caller_multiselect = true;
 caller_sort = true;
 caller_started = false;
 selection_mode = false;
+update = false;
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"
 , "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP", "DEL", "*"]
