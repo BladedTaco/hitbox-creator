@@ -8,6 +8,7 @@ if (_my < array_length_1d(name)) { //name selected
 		name = scr_array_remove_entry(name, _my)
 		data = scr_array_remove_entry(data, _my)
 		hitbox = scr_array_remove_entry(hitbox, _my)
+		sprite = scr_array_remove_entry(sprite, _my)
 	}
 }
 

@@ -13,6 +13,7 @@ shader_set_uniform_f(u_bounds, x + border, y + border, x + width, y + height);
 
 var _pos = [x + border - x_off*zoom, y + border - y_off*zoom]
 
+//draw the sprite
 draw_surface_part_ext(canvas, frame_x, frame_y, frame_width, frame_height, _pos[0], _pos[1], zoom, zoom, c_white, 1)
 
 

@@ -46,8 +46,8 @@ switch (shape) {
 	break;
 	
 	default: //no shape defined
-		draw_line_width(_pos[0] - 5, _pos[1] - 5, _pos[0] + 5, _pos[1] + 5, 5)
-		draw_line_width(_pos[0] + 5, _pos[1] - 5, _pos[0] - 5, _pos[1] + 5, 5)
+		draw_line_width(_pos[0] - 15, _pos[1] - 15, _pos[0] + 15, _pos[1] + 15, 5)
+		draw_line_width(_pos[0] + 15, _pos[1] - 15, _pos[0] - 15, _pos[1] + 15, 5)
 	break;
 }
 
@@ -70,7 +70,8 @@ if (selected) {
 	draw_text(_x + 2, _y - 2, _str)
 }
 
-draw_set_alpha(0.5)
+draw_set_alpha(0.85)
+draw_set_colour(c_white)
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
 draw_text(x, y, index)

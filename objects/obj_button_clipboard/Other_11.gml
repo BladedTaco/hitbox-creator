@@ -22,6 +22,7 @@ with (obj_clipboard) { //with the clipboard
 	name[_num] = _str
 	hitbox[_num] = _hitbox //set how many hitboxes there are
 	desc[_num] = "Click to add description"
+	sprite[_num] = obj_canvas.sprite
 	event_user(2)
 }
 

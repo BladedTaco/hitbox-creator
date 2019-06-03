@@ -10,6 +10,9 @@ data = [];
 name = [];
 hitbox = [];
 desc = [];
+sprite = [];
 separation = 48;
+selected = -1;
+surf = -1;
 
 event_user(0)
