@@ -23,3 +23,8 @@ global.shape = ["REC", "CIR", "TRI"];
 global.shape[0] = "REC"
 #macro SHAPES global.shape
 #macro SHAPE_NUMBER array_length_1d(global.shape)
+
+enum HITBOX_COL_ {
+	HITBOX = c_red,
+	HURTBOX = c_aqua
+}

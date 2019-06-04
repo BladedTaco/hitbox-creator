@@ -1,6 +1,6 @@
 /// @description add hitbox group
 if ((obj_hitbox_table.sprite > -1) and (obj_hitbox_table.frame > -1)) {
-	var _my = floor(2*(mouse_y - y - border - y_off)/separation)
+	var _my = floor(2*(mouse_y - y - border + y_off)/separation)
 	if (_my mod 2 = 0) { //clicking to add
 		_my /= 2 //set to proper value
 		var _num = 0; //the position to insert into the table

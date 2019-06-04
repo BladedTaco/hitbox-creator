@@ -1,7 +1,7 @@
 /// @description init variables
 y_off = []
 max_y = []
-border = 2
+border = 4
 width = image_xscale - border
 height = image_yscale - border
 active = false

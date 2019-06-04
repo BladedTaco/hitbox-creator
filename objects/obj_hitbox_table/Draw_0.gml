@@ -66,6 +66,7 @@ if ((sprite > -1) and (frame > -1)) {
 					)
 				
 					_my -= 1 - y_off[frame]/23
+					obj_canvas.hitboxes[_my - (_my >= hurtbox[frame])].glow = true;
 				}
 			}
 		}

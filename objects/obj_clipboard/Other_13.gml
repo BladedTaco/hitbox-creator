@@ -14,5 +14,3 @@ draw_clear_alpha(c_white, 1)
 
 surface_reset_target();
 
-
-//Y OFF CLAMPING PROBLEMS

@@ -46,18 +46,21 @@ shader_reset() //reset the shader
 draw_set_colour(c_black)
 
 if (active) { //for entry visual
-	_my = floor(_my/2)
-	_dy = floor(_dy/2)
-	if (_my < array_length_1d(name)) { //selecting an entry
-		if ((_my = selected) and surface_exists(surf)) {
+	if (_my/2 < array_length_1d(name)) { //selecting an entry
+		if ((_my/2 = selected) and surface_exists(surf)) {
 			//draw surface with clipping
 			
 			//get boundaries
 			var _bounds = [];
 			_bounds[0] = x + border + width
-			_bounds[1] = y + _dy*separation
+			_bounds[1] = y + _dy*separation/2
 			_bounds[2] = x + border + width + 200
-			_bounds[3] = y + (_dy+1)*separation
+			_bounds[3] = y + (_dy+2)*separation/2
+			
+			if (_my mod 2 = 1) { //change y bounds
+				_bounds[1] = y + (_dy-1)*separation/2
+				_bounds[3] = y + (_dy+1)*separation/2
+			}
 			
 			//set clipping mask shader
 			shader_set(shd_clip)
@@ -69,7 +72,7 @@ if (active) { //for entry visual
 			shader_reset();
 		} else { //new entry or no surface
 			//create surface
-			selected = _my
+			selected = _my/2
 			event_user(3)
 		}
 	}

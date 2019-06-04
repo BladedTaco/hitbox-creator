@@ -11,13 +11,27 @@ while (surface_get_height(surface) < max_y + height) {
 	surface_resize(surface, surface_get_width(surface), surface_get_height(surface)*2)	
 }
 
-//draw each entry
-surface_set_target(surface)
+surface_set_target(surface) //set the draw target
+
+//draw the background
 draw_clear(c_ltgray)
+draw_set_colour(c_dkgray)
+for (var i = 0; i <= array_length_1d(name); i+=2) {
+	draw_rectangle(0, (i-1)*separation, 512, i*separation, false)
+}
+
+//draw each entry
 draw_set_halign(fa_left)
 draw_set_valign(fa_top)
 draw_set_colour(c_black)
-for (var i = array_length_1d(name) - 1; i >= 0; i--) {
+for (i = array_length_1d(name) - 1; i >= 0; i--) {
+	//set draw colour
+	if (i mod 2 = 0) {
+		draw_set_colour(c_black)
+	} else {
+		draw_set_colour(c_white)
+	}
+	//draw text
 	draw_text(border, border + i*separation, name[i]) 	
 	draw_text(border + separation, border + (i+0.5)*separation, desc[i]) 	
 }
