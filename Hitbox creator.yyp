@@ -511,6 +511,14 @@
             }
         },
         {
+            "Key": "8d6d8d8d-6afb-4f1e-bb8d-3b905a8826ee",
+            "Value": {
+                "id": "9c928dfb-69d5-46bc-9cdc-379e384dd865",
+                "resourcePath": "scripts\\scr_draw_ellipse_outline\\scr_draw_ellipse_outline.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "9284572d-3dc1-49c1-9248-7735d4febdb1",
             "Value": {
                 "id": "d9463ee5-fd9d-477d-9207-f815f588f42d",
@@ -531,6 +539,14 @@
             "Value": {
                 "id": "3d3e6a05-ce3a-4525-9280-99232f6dfa74",
                 "resourcePath": "scripts\\macros\\macros.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "965942fc-c3ed-4adf-aa46-92ba56c45ef1",
+            "Value": {
+                "id": "aaca89ec-3763-4cd7-b29a-7c9698b9405d",
+                "resourcePath": "scripts\\scr_draw_polygon_outline\\scr_draw_polygon_outline.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -1033,7 +1049,9 @@
         "67f9dab8-11b6-4b06-936c-85460273ce1f",
         "779bef39-4095-4ee8-bbca-508bebd98db0",
         "3732edb3-21e2-423e-a6e9-b446a2b47f0f",
-        "d1aef23a-f398-4a14-84ff-c84ab84a1eab"
+        "d1aef23a-f398-4a14-84ff-c84ab84a1eab",
+        "8d6d8d8d-6afb-4f1e-bb8d-3b905a8826ee",
+        "965942fc-c3ed-4adf-aa46-92ba56c45ef1"
     ],
     "tutorial": ""
 }

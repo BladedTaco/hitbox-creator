@@ -43,24 +43,25 @@ if (glow) { //if being selected in htibox table
 	depth = index
 }
 
+var _col = (c_white - hitbox_colour) //get inverse of colour for outline drawing to make sure shape is always visible
+
 switch (shape) {
 	case 1: //Rectangle
 		draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
-		draw_set_colour(c_white - hitbox_colour)
-		draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, true)
+		draw_set_colour(_col)
+		scr_draw_polygon_outline(_pos[0], _pos[1], image_xscale/2, image_yscale/2, 3 + z, 360, 1, 4)
 	break;
 	
 	case 2: //Ellipse
 		draw_ellipse(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
-		draw_set_colour(c_white - hitbox_colour)
-		draw_ellipse(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, true)
+		draw_set_colour(_col)
+		scr_draw_ellipse_outline(_pos[0], _pos[1], image_xscale/2, image_yscale/2, 3 + z, 360, 1)
 	break;
 	
 	case 3: //Triangle
 		draw_triangle(_pos[0] - image_xscale/2, _pos[1] + image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, _pos[0], _pos[1] - image_yscale/2, false)
-		draw_set_colour(c_white - hitbox_colour)
-		draw_triangle(_pos[0] - image_xscale/2, _pos[1] + image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, _pos[0], _pos[1] - image_yscale/2, true)
-	
+		draw_set_colour(_col)
+		scr_draw_polygon_outline(_pos[0], _pos[1], image_xscale/2, image_yscale/2, 3 + z, 360, 1, 3)
 	break;
 	
 	default: //no shape defined
