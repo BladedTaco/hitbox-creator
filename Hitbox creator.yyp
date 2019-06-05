@@ -263,6 +263,14 @@
             }
         },
         {
+            "Key": "579b2c49-a863-44dd-a3a0-c7fde2653535",
+            "Value": {
+                "id": "0bc16097-7b90-4c78-88fc-09056ee7daef",
+                "resourcePath": "scripts\\scr_draw_triangle_outline\\scr_draw_triangle_outline.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "58e1ce5c-3c25-4685-85cd-5923fb929429",
             "Value": {
                 "id": "41f86e30-2ca7-4596-a64a-4e99c5828f48",
@@ -1051,7 +1059,8 @@
         "3732edb3-21e2-423e-a6e9-b446a2b47f0f",
         "d1aef23a-f398-4a14-84ff-c84ab84a1eab",
         "8d6d8d8d-6afb-4f1e-bb8d-3b905a8826ee",
-        "965942fc-c3ed-4adf-aa46-92ba56c45ef1"
+        "965942fc-c3ed-4adf-aa46-92ba56c45ef1",
+        "579b2c49-a863-44dd-a3a0-c7fde2653535"
     ],
     "tutorial": ""
 }

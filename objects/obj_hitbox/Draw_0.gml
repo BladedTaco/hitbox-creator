@@ -59,14 +59,23 @@ switch (shape) {
 	break;
 	
 	case 3: //Triangle
+		//draw_triangle(
+		//_pos[0] + lengthdir_x(image_xscale/2, 90 ), _pos[1] + lengthdir_y(image_yscale/2, 90 ),
+		//_pos[0] + lengthdir_x(image_xscale/2, 210), _pos[1] + lengthdir_y(image_yscale/2, 210),
+		//_pos[0] + lengthdir_x(image_xscale/2, 330), _pos[1] + lengthdir_y(image_yscale/2, 330),
+		//false)
 		draw_triangle(
-		_pos[0] + lengthdir_x(image_xscale/2, 90 ), _pos[1] + lengthdir_y(image_yscale/2, 90 ),
-		_pos[0] + lengthdir_x(image_xscale/2, 210), _pos[1] + lengthdir_y(image_yscale/2, 210),
-		_pos[0] + lengthdir_x(image_xscale/2, 330), _pos[1] + lengthdir_y(image_yscale/2, 330),
+		_pos[0] - image_xscale/2, _pos[1] + image_yscale/2,
+		_pos[0] + image_xscale/2, _pos[1] + image_yscale/2,
+		_pos[0], _pos[1] - image_yscale/2,
 		false)
-		//draw_triangle(_pos[0] - image_xscale/2, _pos[1] + image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, _pos[0], _pos[1] - image_yscale/2, false)
 		draw_set_colour(_col)
-		scr_draw_polygon_outline(_pos[0], _pos[1], image_xscale/2, image_yscale/2, 3 + z, 360, 1, 3, 30)
+		//equilateral triangle
+		//scr_draw_polygon_outline(_pos[0], _pos[1], image_xscale/2, image_yscale/2, 3 + z, 360, 1, 3, 30)
+		
+		//proper isoscles given equal height and base
+		scr_draw_triangle_outline(_pos[0], _pos[1], image_xscale, image_yscale, 3 + z, 360, 1, 3, 0)
+		//scr_draw_polygon_outline(_pos[0], _pos[1] + const_l*b, image_xscale/sqrt(2), 5 + b*const_l, 3 + z, 360, 1, 3, 30)
 	break;
 	
 	default: //no shape defined
