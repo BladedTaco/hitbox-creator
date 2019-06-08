@@ -13,6 +13,7 @@ if (array_length_1d(name) = 0) { //no data
 	_temp[| 2] = hitbox
 	_temp[| 3] = data
 	_temp[| 4] = sprite
+	_temp[| 5] = frame
 	_data[? "clipboard_data"] = ds_list_write(_temp)
 	ds_map_secure_save(_data, "clipboard_data")
 	ds_map_destroy(_data)

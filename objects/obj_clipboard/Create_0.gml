@@ -11,8 +11,11 @@ name = [];
 hitbox = [];
 desc = [];
 sprite = [];
+frame = [];
 separation = 48;
 selected = -1;
 surf = -1;
+frame_width = 0;
+frame_height = 0;
 
 event_user(0)

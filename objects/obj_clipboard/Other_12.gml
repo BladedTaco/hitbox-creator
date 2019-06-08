@@ -38,9 +38,3 @@ for (i = array_length_1d(name) - 1; i >= 0; i--) {
 
 
 surface_reset_target()
-
-//if (array_length_1d(name) > 0) { //the clipboard has data
-//	obj_button_export_clipboard.x = abs(obj_button_export_clipboard.x)
-//} else { //the clipboard does not have data
-//	obj_button_export_clipboard.x = -abs(obj_button_export_clipboard.x)
-//}

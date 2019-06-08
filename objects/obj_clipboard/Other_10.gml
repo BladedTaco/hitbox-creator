@@ -10,6 +10,7 @@ if (file_exists("clipboard_data")) { //able to load sprite sheets
 	hitbox = _temp[| 2]
 	data = _temp[| 3]
 	sprite = _temp[| 4]
+	frame = _temp[| 5]
 	ds_map_destroy(_data)
 	ds_list_destroy(_temp)
 	show_debug_message("CLIPBOARD LOADED")
