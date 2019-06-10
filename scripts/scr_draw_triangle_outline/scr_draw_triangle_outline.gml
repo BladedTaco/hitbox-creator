@@ -55,21 +55,22 @@ switch (argument[6]) { //based on outline type
 	break;
 }
 
-var major_inner = major - inner_offset
-var minor_inner = minor - inner_offset
-var major_outer = major + outer_offset
-var minor_outer = minor + outer_offset
+
 
 //translate bceause its not an equilateral triangle
 yy += const_l*minor/sqrt(2)
 major /= sqrt(2)
 minor = minor/2 + (const_l * minor/sqrt(2))
 
-major_inner /= sqrt(2)
-minor_inner = minor_inner/2 + (const_l * minor_inner/sqrt(2))
-major_outer /= sqrt(2)
-minor_outer = minor_outer/2 + (const_l * minor_outer/sqrt(2))
+//major_inner /= sqrt(2)
+//minor_inner = minor_inner/2 + (const_l * minor_inner/sqrt(2))
+//major_outer /= sqrt(2)
+//minor_outer = minor_outer/2 + (const_l * minor_outer/sqrt(2))
 
+var major_inner = max(major - inner_offset, 0)
+var minor_inner = max(minor - inner_offset, 0)
+var major_outer = max(major + outer_offset, 0)
+var minor_outer = max(minor + outer_offset, 0)
 
 
 //start the primitive

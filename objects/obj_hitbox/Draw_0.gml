@@ -21,7 +21,7 @@ var dir = shader_get_uniform(shd_clip_rotation_no_tex, "_dir")
 shader_set_uniform_f_array(u_bounds, bounds);
 shader_set_uniform_f(dir, degtorad(image_angle))
 
-
+//set draw options
 draw_set_alpha(0.35)
 draw_set_colour(hitbox_colour)
 
@@ -34,6 +34,8 @@ if (glow) { //if being selected in htibox table
 } else {
 	depth = index
 }
+
+//draw the hitbox with outline
 scr_draw_shape(shape, x, y, image_xscale, image_yscale, image_angle, 3 + z)
 
 /*

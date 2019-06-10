@@ -47,12 +47,12 @@ if (active) { //for entry visual
 			//get boundaries
 			var _bounds = [];
 			_bounds[0] = x + border + width
-			_bounds[1] = y + _dy*separation/2 - frame_height
+			_bounds[1] = y + (_dy + 2)*separation/2 - frame_height
 			_bounds[2] = _bounds[0] + frame_width
 			_bounds[3] = _bounds[1] + frame_height
 			
 			if (_my mod 2 = 1) { //change y bounds
-				_bounds[1] = y + (_dy-1)*separation/2 - frame_height
+				_bounds[1] = y + (_dy+1)*separation/2 - frame_height
 				_bounds[3] = _bounds[1] + frame_height
 			}
 			
