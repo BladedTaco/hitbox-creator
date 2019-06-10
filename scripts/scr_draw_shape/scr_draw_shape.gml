@@ -24,24 +24,27 @@ var _col = (c_white - draw_get_colour()) //get inverse of colour for outline dra
 
 switch (_shape) {
 	case 1: //Rectangle
-		draw_rectangle(_pos[0] - _maj/2, _pos[1] - _min/2, _pos[0] + _maj/2, _pos[1] + _min/2, false)
+		//draw_rectangle(_pos[0] - _maj/2, _pos[1] - _min/2, _pos[0] + _maj/2, _pos[1] + _min/2, false)
+		scr_draw_polygon_outline(_pos[0], _pos[1], _maj/sqrt(2), _min/sqrt(2), _maj, 360, 0, 4, 45)
 		draw_set_colour(_col)
 		scr_draw_polygon_outline(_pos[0], _pos[1], _maj/sqrt(2), _min/sqrt(2), _outline, 360, 1, 4, 45)
 	break;
 	
 	case 2: //Ellipse
-		draw_ellipse(_pos[0] - _maj/2, _pos[1] - _min/2, _pos[0] + _maj/2, _pos[1] + _min/2, false)
+		//draw_ellipse(_pos[0] - _maj/2, _pos[1] - _min/2, _pos[0] + _maj/2, _pos[1] + _min/2, false)
+		scr_draw_ellipse_outline(_pos[0], _pos[1], _maj/2, _min/2, _maj, 360, 0)
 		draw_set_colour(_col)
 		scr_draw_ellipse_outline(_pos[0], _pos[1], _maj/2, _min/2, _outline, 360, 1)
 	break;
 	
 	case 3: //Triangle
-		draw_triangle(
-			_pos[0] - _maj/2, _pos[1] + _min/2,
-			_pos[0] + _maj/2, _pos[1] + _min/2,
-			_pos[0], _pos[1] - _min/2,
-			false
-		)
+		//draw_triangle(
+		//	_pos[0] - _maj/2, _pos[1] + _min/2,
+		//	_pos[0] + _maj/2, _pos[1] + _min/2,
+		//	_pos[0], _pos[1] - _min/2,
+		//	false
+		//)
+		scr_draw_triangle_outline(_pos[0], _pos[1], _maj, _min, _maj, 360, 0, 3, 0)
 		draw_set_colour(_col)
 		scr_draw_triangle_outline(_pos[0], _pos[1], _maj, _min, _outline, 360, 1, 3, 0)
 	break;

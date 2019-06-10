@@ -6,7 +6,7 @@ if (surface_exists(surf)) {
 }
 
 //create new surface
-surf = surface_create(256, 256)
+surf = surface_create(1024, 1024)
 surface_set_target(surf)
 draw_clear_alpha(c_dkgray, 1)
 
@@ -17,7 +17,7 @@ var z = 3 //zoom
 var _x, _y, _maj, _min, _rot, _pos, _bounds;
 _maj = obj_data.sprite_array[sprite[selected], WIDTH]
 _min = obj_data.sprite_array[sprite[selected], HEIGHT]
-_bounds = [0, 0, _maj, _min]
+_bounds = [0, 0, _maj*z, _min*z]
 _pos = [];
 
 //get boundaries of hitboxes
@@ -31,21 +31,24 @@ for (var i = 0; i < array_length_2d(data, selected)/25; i++) { //for each hitbox
 	
 	for (var o = 0; o < 4; o++) { //for each corner
 		//get corner position
+		_pos = [];
 		_pos = scr_get_rotated_position(_maj*sign(o - 1.5), _min*sign((o mod 1.8) - 0.9), _rot)
 		_pos[0] += _x + obj_data.sprite_array[sprite[selected], X_OFF]
 		_pos[1] += _y + obj_data.sprite_array[sprite[selected], Y_OFF]
 	
 		//update bounds
-		_bounds[0] = min(_bounds[0], _pos[0])
-		_bounds[1] = min(_bounds[1], _pos[1])
-		_bounds[2] = max(_bounds[2], _pos[0])
-		_bounds[3] = max(_bounds[3], _pos[1])
+		_bounds[0] = min(_bounds[0], _pos[0]*z)
+		_bounds[1] = min(_bounds[1], _pos[1]*z)
+		_bounds[2] = max(_bounds[2], _pos[0]*z)
+		_bounds[3] = max(_bounds[3], _pos[1]*z)
 	}
 }
 
+show_debug_message(_bounds)
+
 //set the dimensions
-frame_width = (_bounds[2] - _bounds[0])*z
-frame_height = (_bounds[3] - _bounds[1])*z
+frame_width = (_bounds[2] - _bounds[0])
+frame_height = (_bounds[3] - _bounds[1])
 
 //draw the base sprite
 draw_surface_part_ext(

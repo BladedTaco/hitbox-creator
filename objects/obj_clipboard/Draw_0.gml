@@ -52,10 +52,12 @@ if (active) { //for entry visual
 			_bounds[3] = _bounds[1] + frame_height
 			
 			if (_my mod 2 = 1) { //change y bounds
-				_bounds[1] = y + (_dy-1)*separation/2
+				_bounds[1] = y + (_dy-1)*separation/2 - frame_height
 				_bounds[3] = _bounds[1] + frame_height
 			}
 			
+			draw_set_colour(c_dkgray)
+			draw_rectangle(_bounds[0], _bounds[1], _bounds[2], _bounds[3], false)
 			//set clipping mask shader
 			shader_set(shd_clip)
 			var u_bounds = shader_get_uniform(shd_clip, "u_bounds")

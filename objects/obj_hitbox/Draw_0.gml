@@ -21,6 +21,22 @@ var dir = shader_get_uniform(shd_clip_rotation_no_tex, "_dir")
 shader_set_uniform_f_array(u_bounds, bounds);
 shader_set_uniform_f(dir, degtorad(image_angle))
 
+
+draw_set_alpha(0.35)
+draw_set_colour(hitbox_colour)
+
+if (glow) { //if being selected in htibox table
+	//glow more brightly
+	draw_set_alpha(0.85)
+	draw_set_colour($ffff50)
+	glow = false;
+	depth = -1
+} else {
+	depth = index
+}
+scr_draw_shape(shape, x, y, image_xscale, image_yscale, image_angle, 3 + z)
+
+/*
 var _pos = [];
 _pos = draw_set_rotation(x, y, image_angle)
 	
@@ -78,7 +94,11 @@ switch (shape) {
 
 //reset shader and rotation
 draw_reset_rotation()
+
+*/
+
 shader_reset();
+
 
 if (selected) {
 	//draw the updated position
@@ -99,6 +119,6 @@ draw_set_alpha(0.85)
 draw_set_colour(c_white)
 draw_set_halign(fa_center)
 draw_set_valign(fa_middle)
-draw_text(x, y, index)
+//draw_text(x, y, index)
 
 draw_set_alpha(1)
