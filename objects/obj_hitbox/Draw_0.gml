@@ -38,6 +38,16 @@ if (glow) { //if being selected in htibox table
 //draw the hitbox with outline
 scr_draw_shape(shape, x, y, image_xscale, image_yscale, image_angle, 3 + z)
 
+
+var _pos = [];
+_pos = draw_set_rotation(x, y, image_angle)
+if (shape != 1) {	
+	draw_set_alpha(0.15)
+	draw_set_colour(c_navy)
+	draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
+}
+draw_reset_rotation()
+
 /*
 var _pos = [];
 _pos = draw_set_rotation(x, y, image_angle)

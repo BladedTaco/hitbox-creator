@@ -44,8 +44,6 @@ for (var i = 0; i < array_length_2d(data, selected)/25; i++) { //for each hitbox
 	}
 }
 
-show_debug_message(_bounds)
-
 //set the dimensions
 frame_width = (_bounds[2] - _bounds[0])
 frame_height = (_bounds[3] - _bounds[1])
@@ -80,6 +78,18 @@ for (var i = 0; i < array_length_2d(data, selected)/25; i++) { //for each hitbox
 		5
 	)
 }
+
+draw_set_colour(c_lime) 
+draw_set_alpha(0.6)
+
+
+
+draw_circle(
+	round(obj_data.sprite_array[sprite[selected], X_OFF]*z - _bounds[0]),
+	round(obj_data.sprite_array[sprite[selected], Y_OFF]*z - _bounds[1]),
+	2.5, false
+)
+
 draw_set_alpha(1)
 
 surface_reset_target();
