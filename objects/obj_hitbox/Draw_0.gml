@@ -1,13 +1,8 @@
 /// @description draw hitbox
 
-if (image_angle > 0) and !rotating {
-	image_angle += 3
-	if (image_angle > 360) {
-		image_angle = 1	
-	}
-}
-
 var z = obj_canvas.zoom
+
+draw_text(x, y, side)
 
 x = start_x*z + obj_canvas.sprite_origin_pos[0]
 y = start_y*z + obj_canvas.sprite_origin_pos[1]

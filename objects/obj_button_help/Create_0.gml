@@ -15,7 +15,7 @@ for (var i = array_length_1d(object_list) - 1; i >= 0; i--) {
 //set text positions and data
 //init text array and length
 text_array = []
-text_array[32, 2] = "" //change this to the amount of entries
+text_array[32, 2] = "" //TODO change this to the amount of entries
 text_length = 0
 
 //add each entry
@@ -27,6 +27,9 @@ scr_add_help_text(o_pos[0], o_pos[1] + 26*3,	"RIGHT CLICK - Centre sprite")
 scr_add_help_text(o_pos[0], o_pos[1] + 26*4,	"RIGHT CLICK & SHIFT - Centre sprite origin")
 scr_add_help_text(o_pos[0], o_pos[1] + 26*5,	"LEFT CLICK - Interact with hitboxes")
 scr_add_help_text(o_pos[0], o_pos[1] + 26*6,	"CONTROL: HOLD - Multi-hitbox select mode")
+scr_add_help_text(o_pos[0], o_pos[1] + 26*7,	"SHIFT + L-CLICK: ON HITBOX CENTER - Rotate hitbox")
+scr_add_help_text(o_pos[0], o_pos[1] + 26*8,	"SHIFT + L-CLICK: ON HITBOX EDGE - 1D hibox resizing")
+scr_add_help_text(o_pos[0], o_pos[1] + 26*9,	"SHIFT + L-CLICK: ON HITBOX CORNER - 2D hitbox resizing")
 
 //hitbox table controls
 scr_add_help_text(o_pos[2], o_pos[3],			"LEFT CLICK - Edit entry")

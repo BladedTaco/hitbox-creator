@@ -35,7 +35,7 @@ var const_l = 0.12132034356
 
 switch (argument[6]) { //based on outline type
 	case 0: //inner
-		inner_offset = min(argument[4], major, minor);
+		inner_offset = max(argument[4], major, minor);
 		outer_offset = 0;
 	break;
 	
@@ -87,7 +87,7 @@ for(i = 0; i <= steps; i++) {
 	draw_vertex(xx + (major_inner) * cos(ang), yy + (minor_inner) * sin(ang));
 	//add outer width
 	//draw_vertex(xx + lengthdir_x(major + outer_offset, angle * i / steps), yy + lengthdir_y(minor + outer_offset, angle * i / steps));
-	draw_vertex(xx + (major_outer)* cos(ang), yy + (minor_outer)* sin(ang));
+	draw_vertex(xx + (major_outer) * cos(ang), yy + (minor_outer) * sin(ang));
 }
 
 //draw the shape

@@ -26,19 +26,19 @@ if (active) {
 						selected = true; //set as selected
 						if (keyboard_check(vk_shift)) { //resizing
 							//set offset and side of selection
-							offset = [mouse_x, mouse_y]
-							side = [sign(mouse_x - x), sign(mouse_y - y)]
+							offset = [_m[0], _m[1]]
+							side = [sign(_m[0] - _x[0]), sign(_m[1] - _x[1])]
 							
 							//check for single dimension resizing
-							if (abs(mouse_x - x)/other.zoom < start_width/6) {
+							if (abs(_m[0] - _x[0])/other.zoom < start_width/6) {
 								side[0] = 0
 							}
-							if (abs(mouse_y - y)/other.zoom < start_height/6) {
+							if (abs(_m[1] - _x[1])/other.zoom < start_height/6) {
 								side[1] = 0
 							}
 							
 							//check for rotating
-							if ((side[0] = 0) and (side[1] = 0)) {
+							if ((side[0] == 0) and (side[1] == 0)) {
 								rotating = true;
 								offset = [image_angle, -point_direction(x, y, mouse_x, mouse_y)]
 							}

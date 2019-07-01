@@ -4,6 +4,7 @@ if (obj_canvas.active) {
 		resizing = false;
 		rotating = false;
 		selected = false;
+		side = [0, 0];
 		with (obj_hitbox_table) {
 			event_perform(ev_other, ev_user2)
 		}

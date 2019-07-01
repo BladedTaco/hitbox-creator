@@ -18,4 +18,4 @@ glow = false;
 hitbox_colour = c_aqua
 resizing = false;
 side = [0, 0];
-rotating = true;
+rotating = false;
