@@ -1,6 +1,6 @@
 /// @description draw hitbox
 
-if (image_angle > 0) {
+if (image_angle > 0) and !rotating {
 	image_angle += 3
 	if (image_angle > 360) {
 		image_angle = 1	
@@ -21,6 +21,21 @@ var dir = shader_get_uniform(shd_clip_rotation_no_tex, "_dir")
 shader_set_uniform_f_array(u_bounds, bounds);
 shader_set_uniform_f(dir, degtorad(image_angle))
 
+//draw hitbox hitboxes
+var _pos = [];
+_pos = draw_set_rotation(x, y, image_angle)
+//draw center 1/3rd scale square
+draw_set_alpha(0.2)
+draw_set_colour(c_navy)
+draw_rectangle(_pos[0] - image_xscale/6, _pos[1] - image_yscale/6, _pos[0] + image_xscale/6, _pos[1] + image_yscale/6, false)
+
+//draw clickable area
+if (shape != 1) {	
+	draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
+}
+
+draw_reset_rotation()
+
 //set draw options
 draw_set_alpha(0.35)
 draw_set_colour(hitbox_colour)
@@ -38,79 +53,7 @@ if (glow) { //if being selected in htibox table
 //draw the hitbox with outline
 scr_draw_shape(shape, x, y, image_xscale, image_yscale, image_angle, 3 + z)
 
-
-var _pos = [];
-_pos = draw_set_rotation(x, y, image_angle)
-if (shape != 1) {	
-	draw_set_alpha(0.15)
-	draw_set_colour(c_navy)
-	draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
-}
-draw_reset_rotation()
-
-/*
-var _pos = [];
-_pos = draw_set_rotation(x, y, image_angle)
-	
-if (shape != 1) {	
-	draw_set_alpha(0.15)
-	draw_set_colour(c_navy)
-	draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
-}
-
-draw_set_alpha(0.35)
-draw_set_colour(hitbox_colour)
-
-if (glow) { //if being selected in htibox table
-	//glow more brightly
-	draw_set_alpha(0.85)
-	draw_set_colour($ffff50)
-	glow = false;
-	depth = -1
-} else {
-	depth = index
-}
-
-var _col = (c_white - hitbox_colour) //get inverse of colour for outline drawing to make sure shape is always visible
-
-switch (shape) {
-	case 1: //Rectangle
-		draw_rectangle(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
-		draw_set_colour(_col)
-		scr_draw_polygon_outline(_pos[0], _pos[1], image_xscale/sqrt(2), image_yscale/sqrt(2), 3 + z, 360, 1, 4, 45)
-	break;
-	
-	case 2: //Ellipse
-		draw_ellipse(_pos[0] - image_xscale/2, _pos[1] - image_yscale/2, _pos[0] + image_xscale/2, _pos[1] + image_yscale/2, false)
-		draw_set_colour(_col)
-		scr_draw_ellipse_outline(_pos[0], _pos[1], image_xscale/2, image_yscale/2, 3 + z, 360, 1)
-	break;
-	
-	case 3: //Triangle
-		draw_triangle(
-			_pos[0] - image_xscale/2, _pos[1] + image_yscale/2,
-			_pos[0] + image_xscale/2, _pos[1] + image_yscale/2,
-			_pos[0], _pos[1] - image_yscale/2,
-			false
-		)
-		draw_set_colour(_col)
-		scr_draw_triangle_outline(_pos[0], _pos[1], image_xscale, image_yscale, 3 + z, 360, 1, 3, 0)
-	break;
-	
-	default: //no shape defined
-		draw_line_width(_pos[0] - 15, _pos[1] - 15, _pos[0] + 15, _pos[1] + 15, 5)
-		draw_line_width(_pos[0] + 15, _pos[1] - 15, _pos[0] - 15, _pos[1] + 15, 5)
-	break;
-}
-
-
-//reset shader and rotation
-draw_reset_rotation()
-
-*/
-
 shader_reset();
-
 
 if (selected) {
 	//draw the updated position

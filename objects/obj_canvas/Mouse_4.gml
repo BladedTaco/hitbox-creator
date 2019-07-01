@@ -24,7 +24,27 @@ if (active) {
 				if (point_in_rectangle(_m[0], _m[1], _x[0] - image_xscale/2, _x[1] - image_yscale/2, _x[0] + image_xscale/2, _x[1] + image_yscale/2)) { //check for collision with box
 					if (point_in_rectangle(mouse_x, mouse_y, bounds[0], bounds[1], bounds[2], bounds[3])) { //check for boundaries of canvas
 						selected = true; //set as selected
-						offset = [mouse_x - start_x*obj_canvas.zoom, mouse_y - start_y*obj_canvas.zoom]
+						if (keyboard_check(vk_shift)) { //resizing
+							//set offset and side of selection
+							offset = [mouse_x, mouse_y]
+							side = [sign(mouse_x - x), sign(mouse_y - y)]
+							
+							//check for single dimension resizing
+							if (abs(mouse_x - x)/other.zoom < start_width/6) {
+								side[0] = 0
+							}
+							if (abs(mouse_y - y)/other.zoom < start_height/6) {
+								side[1] = 0
+							}
+							
+							//check for rotating
+							if ((side[0] = 0) and (side[1] = 0)) {
+								rotating = true;
+								offset = [image_angle, -point_direction(x, y, mouse_x, mouse_y)]
+							}
+						} else { //moving
+							offset = [mouse_x - start_x*obj_canvas.zoom, mouse_y - start_y*obj_canvas.zoom]
+						}
 						obj_canvas.selected = false;
 						if (instance_exists(obj_button_hitbox_single_select)) { //if single select mode
 							_check = false

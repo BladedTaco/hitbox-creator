@@ -919,6 +919,14 @@
             }
         },
         {
+            "Key": "e2f17716-ceed-4352-9f17-d743a87072f2",
+            "Value": {
+                "id": "972b8d2b-2442-44e9-8f12-bf3ec0c7f4e3",
+                "resourcePath": "notes\\hitbox old draw code.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "e50d167c-56d9-4dbf-a472-c1edd82eae06",
             "Value": {
                 "id": "d0b94840-91d6-47e7-8326-9582b2f4163e",
