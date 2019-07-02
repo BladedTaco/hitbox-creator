@@ -1,11 +1,11 @@
 /// @description move hitbox
 if (selected) {
 	if (obj_canvas.active) { //if inside the canvas
-		if (keyboard_check(vk_shift) or resizing) { //resize
+		if (resizing) { //resize
 			//check for initial shift press
 			if (rotating) { //changing orientation
 				var _d = -point_direction(x, y, mouse_x, mouse_y)
-				image_angle = offset[0] - (offset[1] - _d)
+				image_angle = round((offset[0] - (offset[1] - _d))/5)*5
 
 				//update the table
 				var _table = obj_hitbox_table.table_list[obj_hitbox_table.frame]
@@ -16,11 +16,7 @@ if (selected) {
 				var _x = [];
 				_m = scr_get_rotated_position(mouse_x, mouse_y, image_angle)
 				_x = scr_get_rotated_position(x, y, image_angle)
-				
-				if !(resizing) {
-					offset = [_m[0], _m[1]]
-				}
-				
+
 				//change the size
 				//check width
 				var _min = 0.15
@@ -53,7 +49,6 @@ if (selected) {
 				_table[@ index, 3] = start_x
 				_table[@ index, 4] = start_y
 			}
-			resizing = true;
 		} else { //move
 			//update the position
 			start_x = (mouse_x - offset[0])/obj_canvas.zoom

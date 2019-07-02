@@ -24,10 +24,11 @@ if (active) {
 				if (point_in_rectangle(_m[0], _m[1], _x[0] - image_xscale/2, _x[1] - image_yscale/2, _x[0] + image_xscale/2, _x[1] + image_yscale/2)) { //check for collision with box
 					if (point_in_rectangle(mouse_x, mouse_y, bounds[0], bounds[1], bounds[2], bounds[3])) { //check for boundaries of canvas
 						selected = true; //set as selected
-						if (keyboard_check(vk_shift)) { //resizing
+						if (keyboard_check(vk_shift) and !keyboard_check(vk_control) and instance_exists(obj_button_hitbox_single_select)) { //resizing
 							//set offset and side of selection
 							offset = [_m[0], _m[1]]
 							side = [sign(_m[0] - _x[0]), sign(_m[1] - _x[1])]
+							resizing = true;
 							
 							//check for single dimension resizing
 							if (abs(_m[0] - _x[0])/other.zoom < start_width/6) {

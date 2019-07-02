@@ -55,6 +55,7 @@ if (surface_exists(surface)) {
 		draw_text(838, 0, "*")
 	} else {
 		//show no hitboxes and destroy all hitbox objects
+		draw_set_colour(c_black)
 		draw_text(width/2, 0, "NO HITBOXES OR HURTBOXES")
 		hitbox = false
 	}

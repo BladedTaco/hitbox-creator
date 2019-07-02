@@ -2,8 +2,6 @@
 
 var z = obj_canvas.zoom
 
-draw_text(x, y, side)
-
 x = start_x*z + obj_canvas.sprite_origin_pos[0]
 y = start_y*z + obj_canvas.sprite_origin_pos[1]
 image_xscale = start_width*z
