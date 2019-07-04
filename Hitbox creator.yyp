@@ -79,6 +79,14 @@
             }
         },
         {
+            "Key": "1416899a-0f1c-471e-9734-7cf7bb42eba3",
+            "Value": {
+                "id": "241de17c-49f4-4229-8daf-2348100e209c",
+                "resourcePath": "scripts\\script_temp\\script_temp.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "15fdacfc-8aab-4b12-a05e-3530df997cd4",
             "Value": {
                 "id": "e10a4161-9f2f-42d1-859c-d5c42e2faf97",
@@ -711,6 +719,14 @@
             }
         },
         {
+            "Key": "ae699220-bc4c-4796-910b-3d8d04fe3b42",
+            "Value": {
+                "id": "76e76098-a087-4a16-bcca-2ad497229639",
+                "resourcePath": "objects\\obj_button_export_to_game\\obj_button_export_to_game.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "b04a8b8d-2c7e-4868-8c93-75f5966fad8b",
             "Value": {
                 "id": "1102880f-1126-4365-978f-093e5b6891d9",
@@ -820,6 +836,14 @@
                 "id": "99e7dff9-409d-4c64-aee2-6a5395d1f4bd",
                 "resourcePath": "sprites\\spr_2x2_pixel\\spr_2x2_pixel.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "d44a08c7-4eb4-4316-9fe0-51a03bccfeb3",
+            "Value": {
+                "id": "3ac9dc5a-0d29-47ca-be1d-b3dbc6e50715",
+                "resourcePath": "scripts\\scr_export\\scr_export.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -1085,7 +1109,9 @@
         "8d6d8d8d-6afb-4f1e-bb8d-3b905a8826ee",
         "965942fc-c3ed-4adf-aa46-92ba56c45ef1",
         "579b2c49-a863-44dd-a3a0-c7fde2653535",
-        "675caf8e-335a-4d09-88a3-0007f700d709"
+        "675caf8e-335a-4d09-88a3-0007f700d709",
+        "d44a08c7-4eb4-4316-9fe0-51a03bccfeb3",
+        "1416899a-0f1c-471e-9734-7cf7bb42eba3"
     ],
     "tutorial": ""
 }

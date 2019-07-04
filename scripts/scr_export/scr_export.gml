@@ -1,0 +1,1 @@
+//make exporting happen over multiple steps so a progress bar can be added e.g. check after each sprite if delta_time > 250 or something
