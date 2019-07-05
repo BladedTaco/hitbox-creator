@@ -743,6 +743,14 @@
             }
         },
         {
+            "Key": "b1671cc2-9d96-4ea1-83af-58e88aaa158f",
+            "Value": {
+                "id": "60e42237-7af9-4515-ae25-c2038283ff27",
+                "resourcePath": "sprites\\spr_button_export_to_game\\spr_button_export_to_game.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b391a122-5636-407c-a2f2-d3cae117a389",
             "Value": {
                 "id": "a483e22d-b703-4129-9a5d-f5990afcc4e5",
