@@ -9,5 +9,5 @@ hitbox = -1
 time = -1;
 hurtbox_string = ""
 hitbox_string = ""
-hitbox = false;
+hurtbox = false;
 draw_state = 0

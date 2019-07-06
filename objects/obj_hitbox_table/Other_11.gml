@@ -1,6 +1,7 @@
 /// @description save table
 
 if ((sprite > -1) and (frame > -1)) {
+	saved = true;
 	//get some arrays
 	var _table, _list;
 

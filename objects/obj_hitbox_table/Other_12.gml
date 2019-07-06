@@ -1,6 +1,7 @@
 /// @description populate surface
 
 if (surface_exists(surface)) {
+	saved = false;
 	update = 1;
 	surface_set_target(surface)
 

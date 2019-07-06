@@ -6,35 +6,31 @@ switch (argument[0]) { //type
 		//set exporting flag
 		exporting = true;
 		
-		//deactivate unneeded objects
-		instance_deactivate_all(true);
-		instance_activate_object(obj_data);
-		
 		//set starting variables
-		sprite = -1;
-		frame = -1;
-		hitbox = -1;
+		sprite = 0;
+		frame = 0;
+		hitbox = 0;
 		time = current_time;
 		hurtbox_string = ""
 		hitbox_string = ""
-		hitbox = false;
+		hurtbox = false;
 	break;
 	
 	case 1: //STEP
 		
 		time = current_time //get time in milliseconds
-		hitbox = false;
 		var _str = ""
 		var i = 0
-		var _list = obj_data.hitbox_list[obj_data.sprite_array[sprite, SURFACE]]
+		var _list = []
 		var f_num, data, h;
 		
 		
-		while (current_time - time < 200) { //while less than 1/5 of a second spent in this script
+		while (current_time - time < 50) { //while less than 1/20 of a second spent in this script
 			//write one sprite into the string
 			i = 0
+			hurtbox = false;
 			repeat(2) { //once for hitboxes, once for hurtboxes
-				if (hitbox) {
+				if (hurtbox) {
 					_list = obj_data.hitbox_list[obj_data.sprite_array[sprite, SURFACE]]	
 				} else { //hurtbox
 					_list = obj_data.hurtbox_list[obj_data.sprite_array[sprite, SURFACE]]	
@@ -55,12 +51,16 @@ switch (argument[0]) { //type
 				*/
 				
 				//check for data in sprite
+				//check if it is a base sprite
+				if (string_copy(obj_data.sprite_array[sprite, NAME], 9, 4) = "base") {
+					break;
+				}
 				
 				//check the first entry of the first hitbox of each frame for data
 				data = false;
 				f_num = obj_data.sprite_array[sprite, NUM]
 				for (f_num = obj_data.sprite_array[sprite, NUM] - 1; f_num >= 0; f_num--) {
-					if (_list[(sprite - _list[0, 0])*10 + f_num, 0] != -10) {
+					if (_list[(sprite - _list[0, 0])*10, f_num*25] != -10) {
 						data = true;
 						break;
 					}
@@ -73,17 +73,18 @@ switch (argument[0]) { //type
 					frame = 0
 					repeat (f_num) { //for each frame
 						//if the first hitbox has data
-						if (_list[(sprite - _list[0, 0])*10 + frame, 0] != -10) {
+						if (_list[(sprite - _list[0, 0])*10, frame*25] != -10) {
 							//write frame info
 							_str += "frame\n" + string(frame) + "\n{\n"
 							//for each hitbox, if it has data in the first entry
-							while (_list[(sprite - _list[0, 0])*10 + frame, 25*hitbox] != -10) {
+							hitbox = 0;
+							while (_list[(sprite - _list[0, 0])*10 + hitbox, 25*frame] != -10) {
 								//write hitbox info
 								_str += "hitbox\n" + string(hitbox) + "\n{\n"
 								//write data
 								for (h = 0; h < 25; h++) { //for each data point
 									//add the data point to the string
-									_str += string(_list[(sprite - _list[0, 0])*10 + frame, 25*hitbox + h]) + "\n"
+									_str += string(_list[(sprite - _list[0, 0])*10 + hitbox, 25*frame + h]) + "\n"
 								}
 								_str += "}\n"
 								hitbox++
@@ -94,13 +95,13 @@ switch (argument[0]) { //type
 					}
 					_str += "}\n"
 				
-					if (hitbox) {
+					if (hurtbox) {
 						hitbox_string += _str	
 					} else {
 						hurtbox_string += _str
 					}
 					_str = ""
-					hitbox = true;
+					hurtbox = true;
 				}
 			}
 			sprite++
@@ -131,15 +132,14 @@ switch (argument[0]) { //type
 	break;
 	
 	case 3: //FINISH
-		var _file = file_text_open_write("Hitboxes.txt")
+		var _file = file_text_open_write(working_directory + "Hitboxes.txt")
 		file_text_write_string(_file, hitbox_string)
 		file_text_close(_file);
 		
-		_file = file_text_open_write("Hurtboxes.txt")
+		_file = file_text_open_write(working_directory + "Hurtboxes.txt")
 		file_text_write_string(_file, hurtbox_string)
 		file_text_close(_file);
 		
-		instance_activate_all();
 		exporting = false;
 	break;
 	

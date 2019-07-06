@@ -1,3 +1,3 @@
 /// @description 
 event_inherited();
-mouseover_text = "Export hitboxes"
+mouseover_text = "Finalise hitboxes and export to game"

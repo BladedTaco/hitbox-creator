@@ -6,7 +6,7 @@ if (obj_canvas.active) {
 		selected = false;
 		side = [0, 0];
 		with (obj_hitbox_table) {
-			event_perform(ev_other, ev_user2)
+			event_user(2)
 		}
 	}
 

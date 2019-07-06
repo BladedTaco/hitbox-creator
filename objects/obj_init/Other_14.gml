@@ -50,9 +50,9 @@ for (var j = 0; j < array_length_1d(hitbox_list); j++) {
 
 repeat (2) { //once for hitboxes, once hurtboxes
 	if (_hitbox) { //hitboxes
-		_file = file_text_open_read("Hitboxes.txt")
+		_file = file_text_open_read(working_directory + "Hitboxes.txt")
 	} else { //hurtboxes
-		_file = file_text_open_read("Hurtboxes.txt")	
+		_file = file_text_open_read(working_directory + "Hurtboxes.txt")	
 	}
 	i = 0;
 	while (!file_text_eof(_file)) { //while there is file left to read
