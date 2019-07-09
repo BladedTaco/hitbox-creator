@@ -9,6 +9,7 @@
     "option_windows_copy_exe_to_dest": false,
     "option_windows_copyright_info": "(c) 2018 Me",
     "option_windows_description_info": "A hitbox creator for Atavistic Sanctum",
+    "option_windows_disable_sandbox": true,
     "option_windows_display_cursor": true,
     "option_windows_display_name": "Atavistic Sanctum Hitbox Creator Dev Tool",
     "option_windows_enable_steam": false,
@@ -26,6 +27,7 @@
     "option_windows_sleep_margin": 10,
     "option_windows_splash_screen": "${options_dir}\\windows\\splash\\splash.png",
     "option_windows_start_fullscreen": false,
+    "option_windows_steam_use_alternative_launcher": false,
     "option_windows_texture_page": "2048x2048",
     "option_windows_use_splash": true,
     "option_windows_version": {
