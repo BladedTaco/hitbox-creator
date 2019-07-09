@@ -24,6 +24,9 @@ global.shape[0] = "REC"
 #macro SHAPES global.shape
 #macro SHAPE_NUMBER array_length_1d(global.shape)
 
+//files
+global.output_file = "C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\scripts\\add_moves_autogen.gml"
+
 enum SHAPES_ {
 	REC,
 	CIR,
