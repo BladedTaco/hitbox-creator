@@ -22,9 +22,11 @@ if (point_in_rectangle(_mx, _my, _x, _y - 7, _x + string_width(list[current_inde
 
 if (_spr > -1) {
 	if ((obj_hitbox_table.saved = false) and (obj_button_save.x > 0)) {
-		if (show_question("Would you like to save first?")) {
-			with (obj_hitbox_table) {
-				event_user(1)
+		if (scr_check_for_hitbox_changes()) {
+			if (show_question("Would you like to save first?")) {
+				with (obj_hitbox_table) {
+					event_user(1)
+				}
 			}
 		}
 	}
