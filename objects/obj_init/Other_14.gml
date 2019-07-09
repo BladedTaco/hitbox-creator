@@ -61,7 +61,7 @@ repeat (2) { //once for hitboxes, once hurtboxes
 		while (string(sprite_array[i, NAME]) != string(_str)) { //if not the right name
 			i = (i + 1) mod array_height_2d(sprite_array) //loop through until it is found
 			if (i = 0) {
-				show_debug_message(_str)
+				//show_debug_message(_str)
 				if (!show_question("LOOPING THROUGH ARRAY, CONTINUE SEARCHING?")) {
 					exit;
 				}

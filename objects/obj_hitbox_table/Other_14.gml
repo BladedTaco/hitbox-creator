@@ -4,7 +4,7 @@ if (array_length_1d(caller_data) = 1) { //destination == source
 	exit;	
 }
 
-show_debug_message(caller_data)
+show_debug_message(string("Caller Data: " + string(caller_data)))
 
 var _source = caller_data[0]
 var _dest = caller_data[1]
