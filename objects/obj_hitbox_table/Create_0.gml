@@ -24,6 +24,13 @@ caller_started = false;
 selection_mode = false;
 update = false;
 saved = true;
+
+//set table ranges and increments
+//		  "SHP",			"WID", "HEI",	"X",	"Y",	"ROT",	"DMG",	"DIR",	"BKB",	"SKB", "STN",	"FKB",	"EFF",	"G/A",	"SHD",	"PRI",	"SND",		"RFT",	"ABS",	"BLK", "RBD", "TYP",	"SDI",	"IND", "FLP"
+min_val = [0,				1,		1,		-999,	-999,	0,		-99,	0,		-99,	-99,	-1,		0,		0,		0,		-10,	-99,	0,			0,		0,		0,		0,		0,		0,		0,		0]
+max_val = [SHAPE_NUMBER,	999,	999,	999,	999,	360,	99,		365,	99,		99,		99,		1,		10,		2,		10,		99,		infinity,	1,		1,		1,		1,		99,		10,		1,		1]
+inc_val = [1,				1,		1,		1,		1,		5,		1,		1,		1,		1,		1,		1,		1,		1,		0.1,	1,		1,			1,		1,		1,		1,		1,		0.1,	1,		1]
+																																												
 //set column titles
 title = ["SHP", "WID", "HEI", "X", "Y", "ROT", "DMG", "DIR", "BKB", "SKB", "STN", "FKB", "EFF"
 , "G/A", "SHD", "PRI", "SND", "RFT", "ABS", "BLK", "RBD", "TYP", "SDI", "IND", "FLP", "DEL", "*"]

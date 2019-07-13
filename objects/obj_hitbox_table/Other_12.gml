@@ -12,7 +12,7 @@ if (surface_exists(surface)) {
 	var _table = table_list[frame]
 	max_y[frame] = max(0, (array_height_2d(_table)-9)*23) //update max_y
 	
-	if (_table[0, 0] + _table[1, 0] != -20) {
+	if (_table[0, 0] + _table[1, 0] != -20) { //data
 		for (var i = 0; i < 13; i++) {
 			draw_rectangle_colour(i*64 - 32, 0, i*64, 1024, c_dkgray, c_dkgray, c_black, c_black, false)
 		}

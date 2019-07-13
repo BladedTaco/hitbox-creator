@@ -35,6 +35,8 @@ scr_add_help_text(o_pos[0], o_pos[1] + 26*9,	"SHIFT + L-CLICK: ON HITBOX CORNER 
 scr_add_help_text(o_pos[2], o_pos[3],			"LEFT CLICK - Edit entry")
 scr_add_help_text(o_pos[2], o_pos[3] + 26,		"SCROLL UP - Move entries down")
 scr_add_help_text(o_pos[2], o_pos[3] + 26*2,	"SCROLL DOWN - Move entries up")
+scr_add_help_text(o_pos[2], o_pos[3] + 26*3,	"SHIFT + SCROLL UP - Increment entry value")
+scr_add_help_text(o_pos[2], o_pos[3] + 26*4,	"SHIFT + SCROLL DOWN - Decrement entry value")
 
 //clipboard controls
 scr_add_help_text(o_pos[4], o_pos[5],			"LEFT CLICK: ON ENTRY - Add to table")
