@@ -38,7 +38,7 @@ if ((sprite > -1) and (frame > -1)) {
 		var _table = table_list[frame]
 		_mx = clamp(floor(_mx/32), 0, 26) //get x index
 		_my = floor((_my + y_off[frame])/23) - 1 //get y index
-		if (_my = -1) { //on a description
+		if ((_my = -1) or (_my = hurtbox[frame])) { //on a description
 			if (!selection_mode) {
 				_my += 1 - y_off[frame]/23
 

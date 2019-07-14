@@ -61,8 +61,12 @@ if ((sprite > -1) and (frame > -1)) { //if there is data to edit
 					event_user(3)
 				}
 			} else { //change data or show description
-				if (_my = -1) { //show description
-					show_message(desc[_mx])
+				if ((_my = -1) or (_my = hurtbox[frame])) { //show description
+					if (_my < 0) {
+						show_message_async(desc[_mx])
+					} else {
+						show_message_async(desc_alt[_mx])
+					}
 				} else if (_my < array_height_2d(_table)) { //change value or delete
 					if (_my < hurtbox[frame]) {
 						if (_mx < 25) { //change value

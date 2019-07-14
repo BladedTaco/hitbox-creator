@@ -9,8 +9,12 @@ if (active) {
 			_my = floor((_my + y_off[frame])/23) - 1	//get y index
 
 			if ((_mx > -1) and (_mx < 25) and (_my >= 0) and (_my < array_height_2d(_table)) and (_my != hurtbox[frame])) { //if hitbox
-				_table[@ _my, _mx] = clamp(_table[@ _my, _mx] + inc_val[_mx], min_val[_mx], max_val[_mx])
-				event_user(2)
+				if (_my < hurtbox[frame]) { //hitbox
+					_table[@ _my, _mx] = clamp(_table[@ _my, _mx] + inc_val[_mx], min_val[_mx], max_val[_mx])
+				} else { //hurtbox
+					_table[@ _my, _mx] = clamp(_table[@ _my, _mx] + inc_val_alt[_mx], min_val_alt[_mx], max_val_alt[_mx])
+				}
+				event_user(2) //update table
 			}
 		}
 	} else {

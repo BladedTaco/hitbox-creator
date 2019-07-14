@@ -9,11 +9,17 @@ if (backup_result != 0) {
 	if (backup_result > 0) {
 		backup_result--	
 		draw_set_alpha(2*backup_result/room_speed/5)
-		draw_text(room_width/2, 100, "Backup File successfully saved!")
+		var _w = string_width("Backup File successfully saved!")
+		draw_rectangle(room_width/2 - _w/1.75, 25, room_width/2 + _w/1.75, 75, false)
+		draw_set_colour(c_white)
+		draw_text(room_width/2, 50, "Backup File successfully saved!")
 	} else {
 		backup_result++
 		draw_set_alpha(2*backup_result/room_speed/5)
-		draw_text(room_width/2, 100, "Backup File failed to save ;(")
+		var _w = string_width("Backup File failed to save ;(")
+		draw_rectangle(room_width/2 - _w/1.75, 25, room_width/2 + _w/1.75, 75, false)
+		draw_set_colour(c_white)
+		draw_text(room_width/2, 50, "Backup File failed to save ;(")
 	}
 }
 
