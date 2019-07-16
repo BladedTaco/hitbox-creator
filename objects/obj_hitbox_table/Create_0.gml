@@ -46,7 +46,7 @@ desc = ["SHP - SHAPE, the shape of the hitbox",
 "Y - Y, the vertical position of the centre of the hitbox", 
 "ROT - ROTATION, the rotation of the hitbox shape.", 
 "DMG - DAMAGE, the damage value inflicted by the hitbox", 
-"DIR - DIRECTION the direction the knockback is applied in", 
+"DIR - DIRECTION, the direction the knockback is applied in", 
 "BKB - BASE KNOCKBACK, the knockback that is always the same regardless of enemy damage", 
 "SKB - SCALING KNOCKBACK, the knockback that changes based on the enemys percent", 
 "STN - HITSTUN, the amount of frames the hitbox applies of histun", 
@@ -74,60 +74,25 @@ desc_alt = ["SHP - SHAPE, the shape of the hitbox",
 "HEI - HEIGHT, the vertical size of the hitbox (pre rotation)", 
 "X - X, the horizontal position of the centre of the hitbox", 
 "Y - Y, the vertical position of the centre of the hitbox", 
-"ROT - ROTATION, the rotation of the hitbox shape.", 
-"sound - the sound effect to play",
-"SDI mul - the multiplier to SDI strength",
-"damageable - if it interacts with hitboxes",
-"intangible - if it interacts with hurtboxes",
-"contact damage - if hurts other hurtboxes",
-"strong - if it takes damage",
-"braced - if it takes knockback",
-"strong armour - the damage it takes before it is affected",
-"braced armour - the knockback it takes before it is affected",
-"reflective - if it reflects",
-"shielding - if its a shield",
-"absorbing - if it absorbs",
-"grabbing - if its a grabber",
-"special - if it runs a special script",
-"knockback mul - the multiplier to knockback",
-"damage mul - the multiplier to damage",
-"hitstun mul - the multiplier to hitstun",
-"grab hitbox - the hitbox that takes damage and stuff from grabs",
-"solid - if the hitbox is able to clip the stage",
+"ROT - ROTATION, the rotation of the hitbox shape", 
+"SND - SOUND EFFECT, the index of the sound group to play from",
+"SDI - SDI MULTIPLIER, the multiplier to SDI strength",
+"DMG - DAMAGEABLE, if it interacts with hitboxes",
+"TAN - TANGIBILE, if it interacts with hurtboxes",
+"DAM - CONTACT DAMAGE, the damage applied to overlapping hurtboxes",
+"STR - STRONG, if it doesnt take damage",
+"HEV - HEAVY, if it doesnt take knockback",
+"SAR - STRONG ARMOUR, the damage it takes before it is affected",
+"HAR - HEAVY ARMOUR, the knockback it takes before it is affected",
+"RFT - REFLECTIVE, if it is a reflector",
+"SHD - SHIELDING, if it is a shield",
+"ABS - ABSORBING, the type of projectiles it absorbs",
+"GRB - GRABBER, if it is a grab box",
+"SCR - SCRIPT, the index of any special scripts to run",
+"KMU - KNOCKBACK MULTIPLIER, the multiplier to knockback",
+"DMU - DAMAGE MULTIPLIER, the multiplier to damage",
+"HMU - HITSTUN MUTLTIPLIER, the multiplier to hitstun",
+"GHB - GRAB HURTBOX, the hitbox that takes damage and stuff from grabs",
+"SLD - SOLID, if the hitbox is able to clip the stage",
 "DEL - DELETE, to delete the hitbox, requires confirmation",
 "* - MOVE, to move the place of the hitbox"]
-
-
-//["SHP", "WID", "HEI", "X", "Y", "ROT"]
-/*
-NEW HITBOX PROPERTIES
-sprite
-image
-hitbox
-- - - - - - - - - - - - --  -- - - - -  - -- 
-shape - ADD TRIANGLE, allows isocles and equilateral; ADD SEMI-CIRCLE
-width
-height
-x
-y
-rotation
-damage,
-direction
-base
-scaling
-hitstun
-- - - - - - - - - - new properties
-fixed knockback?
-effect type
-groundedness/airness
-shield damage
-clang / priority
-sound effect
-reflectiveness
-absorptiveness
-blockability
-rebound
-type?
-SDI mul
-directiveness? indirect
-angle flipper?
