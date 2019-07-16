@@ -12,7 +12,7 @@ image = 0
 
 //copy the directory
 show_debug_message("COPYING DIRECTORY")
-directory_copy_fmns("C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\sprites\\", working_directory + "SPRITES\\")
+directory_copy_fmns(global.input_folder + "sprites\\", working_directory + "SPRITES\\")
 
 show_debug_message("FINDING CHARACTERS")
 var _file = file_find_first(working_directory + "SPRITES\\pal_*", fa_directory) //find the first pallet sprite
@@ -72,7 +72,7 @@ if (directory_exists_fmns(working_directory + "SPRITES\\")) {
 
 //sort sprite ids
 show_debug_message("COPYING VIEW DIRECTORY")
-directory_copy_fmns("C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\views\\", working_directory + "VIEWS\\")
+directory_copy_fmns(global.input_folder + "views\\", working_directory + "VIEWS\\")
 
 var _sec = current_second
 

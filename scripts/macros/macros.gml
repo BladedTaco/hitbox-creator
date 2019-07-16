@@ -25,7 +25,14 @@ global.shape[0] = "REC"
 #macro SHAPE_NUMBER array_length_1d(global.shape)
 
 //files
+scr_settings();
+if (global.output_file = "") {
 global.output_file = "C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\scripts\\add_moves_autogen\\add_moves_autogen.gml"
+}
+if (global.input_folder = "") {
+	global.input_folder = "C:\\Users\\v2tac\\Desktop\\The catalyst\\Atavistic Sanctum\\Atavistic Sanctum\\"
+}
+
 
 enum SHAPES_ {
 	REC,
@@ -37,3 +44,4 @@ enum HITBOX_COL_ {
 	HITBOX = c_orange,
 	HURTBOX = c_aqua
 }
+

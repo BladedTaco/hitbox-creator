@@ -5,7 +5,7 @@ if (async_load[? "id"] = backup) {
 	
 	if (global.output_file = "") { //no output file
 		//ask for the output file
-		global.output_file = get_save_filename("Gamemaker Code File|*.gml", "")
+		global.output_file = get_save_filename("Output File - Gamemaker Code File|*.gml", "")
 	}
 	
 	file_copy(working_directory + "default\\Output_Buffer.buff", global.output_file)
