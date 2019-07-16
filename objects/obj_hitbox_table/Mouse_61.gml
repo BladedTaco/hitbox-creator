@@ -5,7 +5,7 @@ if (active) {
 			var _mx = mouse_x - x
 			var _my = mouse_y - y
 			var _table = table_list[frame] //get array
-			_mx = clamp(floor(_mx/32), -1, 26) //get x index
+			_mx = clamp(floor(_mx/spacing), -1, 26) //get x index
 			_my = floor((_my + y_off[frame])/23) - 1	//get y index
 
 			if ((_mx > -1) and (_mx < 25) and (_my >= 0) and (_my < array_height_2d(_table)) and (_my != hurtbox[frame])) { //if hitbox

@@ -6,7 +6,7 @@ if ((sprite > -1) and (frame > -1)) { //if there is data to edit
 		var _table = table_list[frame] //get array
 
 		if ((_mx > 0) and (_mx < width) and (_my > 0) and (_my < height)) { //if within bounds of hitboxes
-			_mx = clamp(floor(_mx/32), 0, 26) //get x index
+			_mx = clamp(floor(_mx/spacing), 0, 26) //get x index
 			_my = floor((_my + y_off[frame])/23) - 1	//get y index
 		
 			if (selection_mode) { //select a hitbox

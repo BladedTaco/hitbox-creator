@@ -6,7 +6,7 @@ draw_text_colour(x + width/2 - 95, y + height/2, "Please select a sprite", c_aqu
 
 if ((sprite > -1) and (frame > -1)) {
 	if !(surface_exists(surface)) {
-		surface = surface_create(1024, 512)
+		surface = surface_create(2048, 512)
 		event_user(2)
 	}
 	
@@ -36,16 +36,16 @@ if ((sprite > -1) and (frame > -1)) {
 		var _mx = mouse_x - x
 		var _my = mouse_y - y
 		var _table = table_list[frame]
-		_mx = clamp(floor(_mx/32), 0, 26) //get x index
+		_mx = clamp(floor(_mx/spacing), 0, 26) //get x index
 		_my = floor((_my + y_off[frame])/23) - 1 //get y index
 		if ((_my = -1) or (_my = hurtbox[frame])) { //on a description
 			if (!selection_mode) {
 				_my += 1 - y_off[frame]/23
 
 				draw_rectangle(
-					max(x + _mx*32, x),
+					max(x + _mx*spacing, x),
 					max(y + _my*23, y),
-					min(x + (_mx+1)*32, x + width),
+					min(x + (_mx+1)*spacing, x + width),
 					min(y + (_my+1)*23, y + height),
 					false
 				)

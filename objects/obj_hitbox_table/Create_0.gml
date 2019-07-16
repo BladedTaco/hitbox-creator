@@ -24,6 +24,7 @@ caller_started = false;
 selection_mode = false;
 update = false;
 saved = true;
+spacing = 32;
 
 //set table ranges and increments
 //		  "SHP",			"WID", "HEI",	"X",	"Y",	"ROT",	"DMG",	"DIR",	"BKB",	"SKB", "STN",	"FKB",	"EFF",	"G/A",	"SHD",	"PRI",	"SND",		"RFT",	"ABS",	"BLK", "HIT",	"COL",	"SDI",	"IND", "FLP"
@@ -96,3 +97,7 @@ desc_alt = ["SHP - SHAPE, the shape of the hitbox",
 "SLD - SOLID, if the hitbox is able to clip the stage",
 "DEL - DELETE, to delete the hitbox, requires confirmation",
 "* - MOVE, to move the place of the hitbox"]
+
+
+
+spacing = max((width - 12)/(array_length_1d(title)-1), spacing)

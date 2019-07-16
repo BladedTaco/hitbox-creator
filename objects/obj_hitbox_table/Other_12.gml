@@ -17,15 +17,15 @@ if (surface_exists(surface)) {
 
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_center)
-	draw_rectangle_colour(0, 0, 1024, _surf_height, c_ltgray, c_ltgray, c_gray, c_gray, false)
+	draw_rectangle_colour(0, 0, surface_get_width(surface), _surf_height, c_ltgray, c_ltgray, c_gray, c_gray, false)
 
 	if (_table[0, 0] + _table[1, 0] != -20) { //data
 		for (i = 0; i < 13; i++) {
-			draw_rectangle_colour(i*64 - 32, 0, i*64, _surf_height, c_dkgray, c_dkgray, c_black, c_black, false)
+			draw_rectangle_colour(i*spacing*2 - spacing, 0, i*spacing*2, _surf_height, c_dkgray, c_dkgray, c_black, c_black, false)
 		}
 		if (i > 2) { //if there is data
-			draw_rectangle_colour(i*64 - 32, 0, i*64, _surf_height, c_red, c_red, c_maroon, c_maroon, false)
-			draw_rectangle_colour(i*64, 0, i*64 + 32, _surf_height, c_teal, c_teal, c_aqua, c_aqua, false)
+			draw_rectangle_colour(i*spacing*2 - spacing, 0, i*spacing*2, _surf_height, c_red, c_red, c_maroon, c_maroon, false)
+			draw_rectangle_colour(i*spacing*2, 0, i*spacing*2 + spacing, _surf_height, c_teal, c_teal, c_aqua, c_aqua, false)
 		}
 		hitbox = true
 		for (i = 0; i < array_height_2d(_table); i++) {
@@ -38,22 +38,22 @@ if (surface_exists(surface)) {
 					if (o mod 2 = 0) {		
 						draw_set_colour(c_black)
 						if (o < array_length_1d(title_alt) - 2) {
-							draw_rectangle_colour(o*32 + 1, (i+1)*23, o*32 + 31, _surf_height, $dfa0df, $dfa0df, $fafffa, $fafffa, false)
+							draw_rectangle_colour(o*spacing + 1, (i+1)*23, o*spacing + spacing - 1, _surf_height, $dfa0df, $dfa0df, $fafffa, $fafffa, false)
 						}
 					} else {
 						draw_set_colour(c_white)
 						if (o < array_length_1d(title_alt) - 2) {
-							draw_rectangle_colour(o*32, (i+1)*23, o*32 + 31, _surf_height, $300030, $300030, $003000, $003000, false)
+							draw_rectangle_colour(o*spacing, (i+1)*23, o*spacing + spacing - 1, _surf_height, $300030, $300030, $003000, $003000, false)
 						}
 					}
-					draw_text(16 + o*32, (i+1)*23, title_alt[o])
+					draw_text(spacing/2 + o*spacing, (i+1)*23, title_alt[o])
 				}
 				draw_set_colour(c_white)
-				draw_text(838, (i+1)*23, "*")
+				draw_text(26*spacing + 6, (i+1)*23, "*")
 			} else {
 				draw_set_colour(c_white)
-				draw_text(816, (i+1)*23, "X")
-				draw_text(838, (i+1)*23, "*")
+				draw_text(51*spacing/2, (i+1)*23, "X")
+				draw_text(26*spacing + 6, (i+1)*23, "*")
 				for (o = 0; o < array_length_2d(_table, i); o++) {
 					if (o mod 2 = 0) {
 						draw_set_colour(c_black)
@@ -62,9 +62,9 @@ if (surface_exists(surface)) {
 					}
 					if (string_copy(string(_table[i, o]), 1, 1) = "-") { //negative number
 						draw_set_colour(c_red)	
-						draw_text(16 + o*32, (i+1)*23, string_copy(string(_table[i, o]), 2, 3))
+						draw_text(spacing/2 + o*spacing, (i+1)*23, string_copy(string(_table[i, o]), 2, 3))
 					} else {
-						draw_text(16 + o*32, (i+1)*23, string_copy(string(_table[i, o]), 1, 3))
+						draw_text(spacing/2 + o*spacing, (i+1)*23, string_copy(string(_table[i, o]), 1, 3))
 					}
 				}	
 			}
@@ -75,10 +75,10 @@ if (surface_exists(surface)) {
 			} else {
 				draw_set_colour(c_white)
 			}
-			draw_text(16 + i*32, 0, title[i])
+			draw_text(spacing/2 + i*spacing, 0, title[i])
 		}
 		draw_set_colour(c_white)
-		draw_text(838, 0, "*")
+		draw_text(26*spacing + 6, 0, "*")
 	} else {
 		//show no hitboxes and destroy all hitbox objects
 		draw_set_colour(c_black)
