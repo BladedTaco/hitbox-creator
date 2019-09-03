@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "88a9ed07-07de-4639-8f95-172ba9fe02d0",
+            "Value": {
+                "id": "a2d5e22c-2e3b-4686-9865-62e2afa44bf3",
+                "resourcePath": "datafiles_yy\\hitbox.txt.yy",
+                "resourceType": "GMIncludedFile"
+            }
+        },
+        {
             "Key": "88d6620f-7ffa-4c14-a740-d2dca45679e6",
             "Value": {
                 "id": "b40a80f4-fba5-45c0-b62e-e49d0a7141af",
@@ -855,6 +863,14 @@
             }
         },
         {
+            "Key": "cab01dd6-dad5-4945-beca-62d16cd819c9",
+            "Value": {
+                "id": "efbbde0b-bc24-443a-ad91-38a842b71ad2",
+                "resourcePath": "scripts\\scr_inject\\scr_inject.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cc98d028-7bdd-4680-85f3-c87a7baa481e",
             "Value": {
                 "id": "cb2745f1-c583-4d92-ae76-683e926b163d",
@@ -1161,7 +1177,8 @@
         "675caf8e-335a-4d09-88a3-0007f700d709",
         "d44a08c7-4eb4-4316-9fe0-51a03bccfeb3",
         "381cf042-8967-4aeb-b2b4-ee8bef4ace0a",
-        "52a0f161-f0b5-4d54-98d5-58725649aaf2"
+        "52a0f161-f0b5-4d54-98d5-58725649aaf2",
+        "cab01dd6-dad5-4945-beca-62d16cd819c9"
     ],
     "tutorial": ""
 }
