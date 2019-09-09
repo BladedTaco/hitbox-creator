@@ -14,6 +14,8 @@ for (var i = 0 ; i < min(array_length_1d(list), 50); i++) {
 	if (point_in_rectangle(mouse_x, mouse_y, _x, _y - 7, _x + string_width(list[menu_index + i]), _y + 7)) {
 		draw_set_colour(c_white)
 		current_index = menu_index + i
+	} else if (string("spr_" + character + "_" + list[i + menu_index]) = obj_data.sprite_array[obj_canvas.sprite, NAME]) {
+		draw_set_colour(c_red)
 	} else {
 		draw_set_colour(c_black)
 	}

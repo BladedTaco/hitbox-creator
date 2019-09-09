@@ -19,27 +19,64 @@ var j_d = [];
 j_d = [0, 63, 123, 173, array_height_2d(c)]
 
 
-//convert
-repeat(2) {
-	for (var j = 3; j >= 0; j--) {
-		if (rerun) {
-			_array = obj_data.hurtbox_list[j]
-		} else {
-			_array = obj_data.hitbox_list[j]
-		}
-		for (var i = j_d[j+1] - 1; i >= j_d[j]; i--) {
-			for (var o = array_length_2d(c, i) - 1; o >= 0; o--) {
-				_f = o div 100
-				_i = (o mod 100) div 11
-				_e = o mod 11
+////convert
+//repeat(2) {
+//	for (var j = 3; j >= 0; j--) {
+//		if (rerun) {
+//			_array = obj_data.hurtbox_list[j]
+//		} else {
+//			_array = obj_data.hitbox_list[j]
+//		}
+//		for (var i = j_d[j+1] - 1; i >= j_d[j]; i--) {
+//			for (var o = array_length_2d(c, i) - 1; o >= 0; o--) {
+//				_f = o div 100
+//				_i = (o div 11) mod 100
+//				_e = o mod 11
 			
-				_s = i - j_d[j]
-				_array[@ _s*10 + _i, _f*25 + _e] = c[i, o]
-			}	
+//				_s = i - j_d[j]
+//				_array[@ _s*10 + _i, _f*25 + _e] = c[i, o]
+//			}	
+//		}
+//	}
+//	c = b
+//}
+
+rerun = false;
+var j = 0;
+var _alt_sprite = 0;
+
+repeat(2) {
+	if (rerun) {
+		_array = obj_data.hurtbox_list[j]
+	} else {
+		_array = obj_data.hitbox_list[j]
+	}
+	for (var _sprite = 1; _sprite < j_d[1]; _sprite++) {
+		for (var _index = 0; _index < floor(array_length_2d(c, _sprite)/100); _index++) {
+			for (var _num = 0; _num < 9; _num++) {
+				for (var _entry = 0; _entry < 11; _entry++) {
+					_alt_sprite = _sprite 
+					//if (_sprite < j_d[1]) {
+					//	j = 0;
+					//} else if (_sprite < j_d[2]) {
+					//	_alt_sprite = _sprite - j_d[1]
+					//	j = 1
+					//} else if (_sprite < j_d[3]) {
+					//	_alt_sprite = _sprite - j_d[2]
+					//	j = 2
+					//} else if (_sprite < j_d[4]) {
+					//	_alt_sprite = _sprite - j_d[3]
+					//	j = 3
+					//}
+					_array[@ _alt_sprite*10 + _num, _index*25 + _entry] = c[_sprite + 1, _index*100 + _num*11 + _entry];
+				}
+			}
 		}
 	}
-	c = b
+	rerun = true;
+	c = b;
 }
+
 /*
 
 [sprite, image_index*100 + index*11 + entry]
@@ -48,20 +85,21 @@ character_array[character]
 [sprite_conversion*10 + index, image_index*25 + entry]
 
 
-creator = global.bbox[10]
-shape = global.bbox[0]
-_maj = global.bbox[1]
-_min = global.bbox[2]
-_dir = global.bbox[3]
-_dir = degtorad(_dir)
-if (global.bbox[4]) { //hitbox
-hitbox = true
-d = global.bbox[5] //damage
-a = global.bbox[6] //direction of knocbkac
-b = global.bbox[7] //base knocback
-s = global.bbox[8] //scaling knocback
-h = global.bbox[9]*creator.hitstun //hitstun multiplie
-	
+global.hitbox[i, o + 0] = argument[3]		//shape
+global.hitbox[i, o + 1] = argument[4]		//major axis
+global.hitbox[i, o + 2] = argument[5]		//minor axis
+global.hitbox[i, o + 3] = argument[6]		//x
+global.hitbox[i, o + 4] = argument[7]		//y
+global.hitbox[i, o + 5] = argument[8]		//rotation
+global.hitbox[i, o + 6] = argument[9]		//damage
+global.hitbox[i, o + 7] = argument[10]		//direction
+global.hitbox[i, o + 8] = argument[11]		//base knocback
+global.hitbox[i, o + 9] = argument[12]		//scaling knockback
+if (argument_count > 13) {
+	global.hitbox[i, o + 10] = argument[13]	//hitstun multiplier
+} else {
+	global.hitbox[i, o + 10] = 1			//hitstun multiplier
+}
 	
 mapping
 shape, maj, min, x, y, rot, dmg, dir, bkb, skb, hitstun
