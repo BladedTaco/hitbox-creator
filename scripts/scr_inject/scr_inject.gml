@@ -46,28 +46,35 @@ var j = 0;
 var _alt_sprite = 0;
 
 repeat(2) {
-	if (rerun) {
-		_array = obj_data.hurtbox_list[j]
-	} else {
-		_array = obj_data.hitbox_list[j]
-	}
-	for (var _sprite = 1; _sprite < j_d[1]; _sprite++) {
+	for (var _sprite = 0; _sprite < j_d[4] - 1; _sprite++) {
+		
+		_alt_sprite = _sprite 
+		if (_sprite < j_d[1]) {
+			j = 0;
+		} else if (_sprite < j_d[2]) {
+			_alt_sprite = _sprite - j_d[1]
+			j = 1
+		} else if (_sprite < j_d[3]) {
+			_alt_sprite = _sprite - j_d[2]
+			j = 2
+		} else if (_sprite < j_d[4]) {
+			_alt_sprite = _sprite - j_d[3]
+			j = 3
+		}
+		
+		if (_alt_sprite == 0) {
+			continue
+		}
+		
+		if (rerun) {
+			_array = obj_data.hurtbox_list[j]
+		} else {
+			_array = obj_data.hitbox_list[j]
+		}
+		
 		for (var _index = 0; _index < floor(array_length_2d(c, _sprite)/100); _index++) {
 			for (var _num = 0; _num < 9; _num++) {
 				for (var _entry = 0; _entry < 11; _entry++) {
-					_alt_sprite = _sprite 
-					//if (_sprite < j_d[1]) {
-					//	j = 0;
-					//} else if (_sprite < j_d[2]) {
-					//	_alt_sprite = _sprite - j_d[1]
-					//	j = 1
-					//} else if (_sprite < j_d[3]) {
-					//	_alt_sprite = _sprite - j_d[2]
-					//	j = 2
-					//} else if (_sprite < j_d[4]) {
-					//	_alt_sprite = _sprite - j_d[3]
-					//	j = 3
-					//}
 					_array[@ _alt_sprite*10 + _num, _index*25 + _entry] = c[_sprite + 1, _index*100 + _num*11 + _entry];
 				}
 			}
