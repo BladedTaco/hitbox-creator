@@ -14,18 +14,46 @@ image = 0
 show_debug_message("COPYING DIRECTORY")
 directory_copy_fmns(global.input_folder + "sprites\\", working_directory + "SPRITES\\")
 
+
 show_debug_message("FINDING CHARACTERS")
-var _file = file_find_first(working_directory + "SPRITES\\pal_*", fa_directory) //find the first pallet sprite
+var _files = [];
+_files[0] = file_find_first(working_directory + "SPRITES\\pal_*", fa_directory) //find the first pallet sprite
 var _char = []
-while (_file != "") {
-	_char[array_length_1d(_char)] = string_copy(_file, string_length(_file) - 2, 3)
-	_file = file_find_next()
+var i = 0;
+while (_files[i] != "") {
+	_files[++i] = file_find_next()
+}
+file_find_close();
+
+var _entry = [];
+_entry = [0, 3, 2, 1] //alphabetical to ordered conversion of characters
+
+while (array_length_1d(_entry) < array_length_1d(_files)) {
+	_entry[array_length_1d(_entry)] = array_length_1d(_entry)	
+}
+
+for (var i = 0; i < array_length_1d(_files) - 1; i++) {
+	_char[array_length_1d(_char)] = string_copy(_files[_entry[i]], string_length(_files[_entry[i]]) - 2, 3)
 	surface[array_length_1d(surface)] = surface_create(power(2, SURFACE_POWER), power(2, SURFACE_POWER))
 	surface_set_target(surface[array_length_1d(surface)-1])
 	draw_clear_alpha(c_white, 0)
 	surface_reset_target()
 }
-file_find_close();
+
+var _file;
+
+//show_debug_message("FINDING CHARACTERS")
+//var _file = file_find_first(working_directory + "SPRITES\\pal_*", fa_directory) //find the first pallet sprite
+//var _char = []
+//while (_file != "") {
+//	_char[array_length_1d(_char)] = string_copy(_file, string_length(_file) - 2, 3)
+//	_file = file_find_next()
+//	surface[array_length_1d(surface)] = surface_create(power(2, SURFACE_POWER), power(2, SURFACE_POWER))
+//	surface_set_target(surface[array_length_1d(surface)-1])
+//	draw_clear_alpha(c_white, 0)
+//	surface_reset_target()
+//}
+//file_find_close();
 show_debug_message(_char)
 for (var i = 0; i < array_length_1d(_char); i++) {
 	_file = file_find_first(working_directory + "SPRITES\\spr_" + _char[i] + "*", fa_directory) //find the first balloony sprite
