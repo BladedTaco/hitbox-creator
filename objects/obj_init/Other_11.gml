@@ -27,6 +27,8 @@ file_find_close();
 
 var _entry = [];
 _entry = [0, 3, 2, 1] //alphabetical to ordered conversion of characters
+//TODO this needs to be updated for every new character
+
 
 while (array_length_1d(_entry) < array_length_1d(_files)) {
 	_entry[array_length_1d(_entry)] = array_length_1d(_entry)	
