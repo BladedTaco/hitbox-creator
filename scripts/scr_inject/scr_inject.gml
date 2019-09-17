@@ -11,7 +11,6 @@ var c = a;
 ds_map_destroy(_data)
 ds_list_destroy(_temp)
 	
-var _s, _f, _i, _e;
 var _array = [];
 var rerun = false;
 
