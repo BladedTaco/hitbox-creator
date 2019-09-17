@@ -38,9 +38,9 @@ if (glow) { //if being selected in htibox table
 	draw_set_alpha(0.85)
 	draw_set_colour($ffff50)
 	glow = false;
-	depth = -1
+	depth = -100
 } else {
-	depth = index
+	depth = index - 50
 }
 
 //draw the hitbox with outline
