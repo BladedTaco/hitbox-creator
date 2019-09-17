@@ -73,12 +73,11 @@ repeat(2) { //hurtboxes, then hitboxes
 	}
 	//replace last ], newline with ] newline for end of sprites
 	buffer_seek(_buff, buffer_seek_relative, -2)
-	buffer_write(_buff, buffer_text, "\n]\n\n")
+	buffer_write(_buff, buffer_text, "\n];\n\n")
 	_list = obj_data.hitbox_list //change which list
 	_list_name = "hitbox_list"
 }
 
-buffer_write(_buff, buffer_string, "") //write null terminator
 
 show_debug_message(buffer_tell(_buff)) //output size of buffer
 
