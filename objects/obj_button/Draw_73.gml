@@ -1,5 +1,5 @@
 /// @description 
-if (image_blend = c_ltgray) {
+if ((image_blend = c_ltgray) or (image_blend = c_maroon)) {
 	//draw mouseover text
 	if (mouseover_text != "") {
 		var _mx = mouse_x 

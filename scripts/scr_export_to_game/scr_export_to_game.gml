@@ -37,7 +37,7 @@ repeat(2) { //hurtboxes, then hitboxes
 		for (i = 0; i < array_height_2d(_table)/10 - 1; i++) { //for each sprite
 			buffer_write(_buff, buffer_text, "\t[ //" + string(obj_data.sprite_array[i + _table[0, 0], NAME]) + " \n")
 			//for (o = 0; o < floor(array_length_2d(_table, i)/25); o++) { //for each frame
-			for (o = 0; o < obj_data.sprite_array[i, NUM]; o++) { //for each frame
+			for (o = 0; o < obj_data.sprite_array[i + _table[0, 0], NUM]; o++) { //for each frame
 				//check for break
 				if (_table[i*10, o*25] = -10) { //if the first data point of the first hitbox is null
 					//end this loop

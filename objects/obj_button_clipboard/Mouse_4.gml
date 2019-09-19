@@ -2,6 +2,7 @@
 event_inherited();
 with(obj_hitbox_table) {
 	if ((sprite > -1) and (frame > -1)) { //if there is a sprite selected
+		obj_button_export_clipboard.image_blend = c_red
 		caller = other.id
 		caller_string = "Please select the hitbox(es) to copy"
 		caller_type = GIVEN_NUMBER

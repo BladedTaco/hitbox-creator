@@ -1,2 +1,6 @@
 /// @description hover blend
-image_blend = c_ltgray
+if (image_blend = c_red) {
+	image_blend = c_maroon
+} else {
+	image_blend = c_ltgray
+}

@@ -18,7 +18,7 @@ if ((obj_hitbox_table.sprite > -1) and (obj_hitbox_table.frame > -1)) {
 		}
 	
 		if ((_hurtbox + hitbox[_my] <= 10) and ((i - hitbox[_my]) + (_len - _hurtbox) <= 10)) { //data fits
-	
+			obj_button_export_clipboard.image_blend = c_red
 			for (i = i; i >= 0; i--) { //for each hitbox
 				if (i < hitbox[_my]) { //adding a hitbox
 					obj_hitbox_table.hurtbox[obj_hitbox_table.frame] += 1 //increase the frames hurtbox value
@@ -42,6 +42,7 @@ if ((obj_hitbox_table.sprite > -1) and (obj_hitbox_table.frame > -1)) {
 	} else { //change description
 		var _str = get_string("Please enter the new description", "")
 		if (_str != "") { //description added
+			obj_button_export_clipboard.image_blend = c_red
 			desc[(_my - 1)/2] = _str
 			event_user(2) //repopulate surface
 		}
